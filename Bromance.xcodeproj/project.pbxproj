@@ -35,6 +35,7 @@
 		C96BD86A1813057F00325052 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96BD8681813057F00325052 /* SplashViewController.m */; };
 		C96BD86B1813057F00325052 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BD8691813057F00325052 /* SplashViewController.xib */; };
 		C9A6236C18130F2D00CFA25E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A6236B18130F2D00CFA25E /* Message.m */; };
+		C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A6236E18130FE400CFA25E /* Broadcast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		C96BD8691813057F00325052 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		C9A6236A18130F2D00CFA25E /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		C9A6236B18130F2D00CFA25E /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		C9A6236D18130FE400CFA25E /* Broadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broadcast.h; sourceTree = "<group>"; };
+		C9A6236E18130FE400CFA25E /* Broadcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Broadcast.m; sourceTree = "<group>"; };
 		D8C6A0BBD99942BF8E25E3B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +232,8 @@
 			children = (
 				C9A6236A18130F2D00CFA25E /* Message.h */,
 				C9A6236B18130F2D00CFA25E /* Message.m */,
+				C9A6236D18130FE400CFA25E /* Broadcast.h */,
+				C9A6236E18130FE400CFA25E /* Broadcast.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAE372F180CE9030058A7A8 /* AppDelegate.m in Sources */,
+				C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */,
 				C9A6236C18130F2D00CFA25E /* Message.m in Sources */,
 				9BAE372B180CE9020058A7A8 /* main.m in Sources */,
 				C96BD86A1813057F00325052 /* SplashViewController.m in Sources */,
