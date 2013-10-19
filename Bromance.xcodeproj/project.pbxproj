@@ -89,6 +89,7 @@
 			files = (
 				C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */,
 				9BAE371F180CE9020058A7A8 /* Foundation.framework in Frameworks */,
+				C90B39FF18130056003CE519 /* Parse.framework in Frameworks */,
 				C90B3A0F18130106003CE519 /* StoreKit.framework in Frameworks */,
 				C90B3A0D181300FF003CE519 /* Security.framework in Frameworks */,
 				C90B3A0B181300F9003CE519 /* QuartzCore.framework in Frameworks */,
@@ -100,7 +101,6 @@
 				9BAE3723180CE9020058A7A8 /* UIKit.framework in Frameworks */,
 				C90B3A01181300C8003CE519 /* AudioToolbox.framework in Frameworks */,
 				5CA6AD2B517D4EAA89D1B38B /* libPods.a in Frameworks */,
-				C90B39FF18130056003CE519 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +487,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/tcirwin/prj/Bromance,
+					/Users/Justin/Projects/Bromance,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bromance/Bromance-Prefix.pch";
@@ -517,6 +518,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/tcirwin/prj/Bromance,
+					/Users/Justin/Projects/Bromance,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bromance/Bromance-Prefix.pch";

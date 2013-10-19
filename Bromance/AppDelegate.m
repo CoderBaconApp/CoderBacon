@@ -17,9 +17,27 @@
                clientKey:@"TdxysibqfcIxq85ojnw3uB0UhX9mJ98gMkNy2yuu"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    [testObject setObject:@"bar" forKey:@"foo"];
-    [testObject save];
+//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+//    [testObject setObject:@"bar" forKey:@"foo"];
+//    [testObject save];
+    
+    PFUser *user = [PFUser user];
+    user.username = @"JustinDSN";
+    user.password = @"password";
+    [user signUp];
+    [user save];
+    
+    PFUser *user2 = [PFUser user];
+    user2.username = @"Therin.Irwin";
+    user2.password = @"password";
+    [user2 signUp];
+    [user2 save];
+    
+    PFObject *messageObject = [PFObject objectWithClassName:@"Message"];
+    [messageObject setObject:@"Hi Therin From, JustinDSN" forKey:@"text"];
+    messageObject[@"sender"] = [PFObject objectWithoutDataWithClassName:@"User" objectId:user.objectId];
+    messageObject[@"receiver"] = [PFObject objectWithoutDataWithClassName:@"User" objectId:user2.objectId];
+    [messageObject save];
     
     return YES;
 }
