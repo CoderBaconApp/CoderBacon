@@ -31,9 +31,14 @@
 		C90B3A0D181300FF003CE519 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0C181300FF003CE519 /* Security.framework */; };
 		C90B3A0F18130106003CE519 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0E18130106003CE519 /* StoreKit.framework */; };
 		C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A101813010E003CE519 /* SystemConfiguration.framework */; };
+		C9430D5D18133340008F6F1B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9430D5B18133340008F6F1B /* MessageViewController.m */; };
 		C96BD8651813037500325052 /* business_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96BD8641813037500325052 /* business_cat.jpg */; };
 		C96BD86A1813057F00325052 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96BD8681813057F00325052 /* SplashViewController.m */; };
 		C96BD86B1813057F00325052 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96BD8691813057F00325052 /* SplashViewController.xib */; };
+		C9A6236C18130F2D00CFA25E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A6236B18130F2D00CFA25E /* Message.m */; };
+		C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A6236E18130FE400CFA25E /* Broadcast.m */; };
+		C9C80B201817BCB00043B658 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C80B1F1817BCB00043B658 /* MessageCell.m */; };
+		C9C80B221817BCCA0043B658 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C80B211817BCCA0043B658 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +80,19 @@
 		C90B3A0C181300FF003CE519 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C90B3A0E18130106003CE519 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C90B3A101813010E003CE519 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C9430D5A18133340008F6F1B /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		C9430D5B18133340008F6F1B /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		C96BD8641813037500325052 /* business_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = business_cat.jpg; sourceTree = "<group>"; };
 		C96BD8671813057F00325052 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		C96BD8681813057F00325052 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		C96BD8691813057F00325052 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		C9A6236A18130F2D00CFA25E /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		C9A6236B18130F2D00CFA25E /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		C9A6236D18130FE400CFA25E /* Broadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broadcast.h; sourceTree = "<group>"; };
+		C9A6236E18130FE400CFA25E /* Broadcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Broadcast.m; sourceTree = "<group>"; };
+		C9C80B1E1817BCB00043B658 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		C9C80B1F1817BCB00043B658 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		C9C80B211817BCCA0043B658 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		D8C6A0BBD99942BF8E25E3B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +176,8 @@
 		9BAE3724180CE9020058A7A8 /* Bromance */ = {
 			isa = PBXGroup;
 			children = (
+				C9C80B1D1817BC7A0043B658 /* Views */,
+				C9A6236918130F0E00CFA25E /* Models */,
 				C96BD8661813045500325052 /* View Controllers */,
 				9BAE372D180CE9020058A7A8 /* AppDelegate.h */,
 				9BAE372E180CE9030058A7A8 /* AppDelegate.m */,
@@ -208,6 +224,8 @@
 				C96BD8671813057F00325052 /* SplashViewController.h */,
 				C96BD8681813057F00325052 /* SplashViewController.m */,
 				C96BD8691813057F00325052 /* SplashViewController.xib */,
+				C9430D5A18133340008F6F1B /* MessageViewController.h */,
+				C9430D5B18133340008F6F1B /* MessageViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -218,6 +236,27 @@
 				C96BD8641813037500325052 /* business_cat.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		C9A6236918130F0E00CFA25E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9A6236A18130F2D00CFA25E /* Message.h */,
+				C9A6236B18130F2D00CFA25E /* Message.m */,
+				C9A6236D18130FE400CFA25E /* Broadcast.h */,
+				C9A6236E18130FE400CFA25E /* Broadcast.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C9C80B1D1817BC7A0043B658 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9C80B1E1817BCB00043B658 /* MessageCell.h */,
+				C9C80B211817BCCA0043B658 /* MessageCell.xib */,
+				C9C80B1F1817BCB00043B658 /* MessageCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAE3737180CE9030058A7A8 /* Images.xcassets in Resources */,
+				C9C80B221817BCCA0043B658 /* MessageCell.xib in Resources */,
 				9BAE3729180CE9020058A7A8 /* InfoPlist.strings in Resources */,
 				C96BD8651813037500325052 /* business_cat.jpg in Resources */,
 				C96BD86B1813057F00325052 /* SplashViewController.xib in Resources */,
@@ -354,8 +394,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9430D5D18133340008F6F1B /* MessageViewController.m in Sources */,
 				9BAE372F180CE9030058A7A8 /* AppDelegate.m in Sources */,
+				C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */,
+				C9A6236C18130F2D00CFA25E /* Message.m in Sources */,
 				9BAE372B180CE9020058A7A8 /* main.m in Sources */,
+				C9C80B201817BCB00043B658 /* MessageCell.m in Sources */,
 				C96BD86A1813057F00325052 /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

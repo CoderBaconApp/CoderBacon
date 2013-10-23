@@ -1,5 +1,5 @@
 //
-//  SplashViewController.h
+//  MessageViewController.h
 //  Bromance
 //
 //  Created by Therin Irwin on 10/19/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SplashViewController : UIViewController
-
-- (IBAction)facebookLoginButton:(id)sender;
+@interface MessageViewController : UITableViewController
 
 @end
