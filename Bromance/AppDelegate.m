@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Message.h"
 
 @implementation AppDelegate
 
@@ -17,31 +18,10 @@
                clientKey:@"TdxysibqfcIxq85ojnw3uB0UhX9mJ98gMkNy2yuu"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    [testObject setObject:@"bar" forKey:@"foo"];
-//    [testObject save];
-    
-    PFUser *user = [PFUser user];
-    user.username = @"JustinDSN";
-    user.password = @"password";
-    [user signUp];
-    [user save];
-    
-    PFUser *user2 = [PFUser user];
-    user2.username = @"Therin.Irwin";
-    user2.password = @"password";
-    [user2 signUp];
-    [user2 save];
-    
-    PFObject *messageObject = [PFObject objectWithClassName:@"Message"];
-    [messageObject setObject:@"Hi Therin From, JustinDSN" forKey:@"text"];
-    messageObject[@"sender"] = [PFObject objectWithoutDataWithClassName:@"User" objectId:user.objectId];
-    messageObject[@"receiver"] = [PFObject objectWithoutDataWithClassName:@"User" objectId:user2.objectId];
-    [messageObject save];
-    
+
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

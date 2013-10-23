@@ -6,7 +6,9 @@
 //  Copyright (c) 2013 Pamela Ocampo. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "SplashViewController.h"
+#import "Message.h"
 
 @interface SplashViewController ()
 
@@ -26,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +37,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)facebookLoginButton:(id)sender
+{
+    if (![PFUser currentUser]) {
+        [PFUser logInWithUsernameInBackground:@"JustinDSN" password:@"password"
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                NSLog(@"Logged in!");
+                                                [self displayHomepage];
+                                            } else {
+                                                NSLog(@"Error! @%", error);
+                                            }
+                                        }];
+    }
+    else {
+        [self displayHomepage];
+    }
+}
+
+- (void)displayHomepage
+{
+    [self performSegueWithIdentifier:@"navSegue" sender:self];
+}
 @end

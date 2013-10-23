@@ -9,10 +9,12 @@
 #import <Parse/Parse.h>
 #import <Foundation/Foundation.h>
 
-@interface Message : NSObject
+@interface Message : PFObject
 
-@property (strong, nonatomic) NSString* text;
-@property (strong, nonatomic) PFUser* sender;
-@property (strong, nonatomic) PFUser* receiver;
+//@property (strong, nonatomic) NSString* text;
+//@property (strong, nonatomic) PFUser* sender;
+//@property (strong, nonatomic) PFUser* receiver;
+
++ (void)allMessagesForLoggedInUserWithCompletion:(void (^)(NSArray *messages, NSError *error))complete;
 
 @end
