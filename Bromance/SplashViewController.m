@@ -38,7 +38,8 @@
         // Customize the Log In View Controller
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
         [logInViewController setDelegate:self];
-        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
+        
+        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"user_likes", @"user_location", @"user_about_me", @"user_photos", nil]];
         [logInViewController setFields:  PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
         
         // Present Log In View Controller
