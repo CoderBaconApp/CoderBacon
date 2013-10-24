@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SplashViewController : UIViewController
-
-- (IBAction)facebookLoginButton:(id)sender;
+@interface SplashViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @end
