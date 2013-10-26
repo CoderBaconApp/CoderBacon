@@ -11,6 +11,7 @@
 #import "Message.h"
 
 @interface SplashViewController ()
+- (IBAction)loginPressed:(id)sender;
 
 @end
 
@@ -33,18 +34,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
-    if (![PFUser currentUser]) {
-        // Customize the Log In View Controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-        [logInViewController setDelegate:self];
-        
-        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"user_likes", @"user_location", @"user_about_me", @"user_photos", nil]];
-        [logInViewController setFields:  PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
-        
-        // Present Log In View Controller
-        [self presentViewController:logInViewController animated:YES completion:NULL];
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,4 +105,22 @@
     NSLog(@"User dismissed the signUpViewController");
 }
 
+- (IBAction)loginPressed:(id)sender {
+    if (![PFUser currentUser]) {
+        // Customize the Log In View Controller
+        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        [logInViewController setDelegate:self];
+        
+        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"user_likes", @"user_location", @"user_about_me", @"user_photos", nil]];
+        [logInViewController setFields:  PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
+        
+        // Present Log In View Controller
+        [self presentViewController:logInViewController animated:YES completion:NULL];
+    }
+    else {
+        
+        
+        [self performSegueWithIdentifier:@"navSegue" sender:self];
+    }
+}
 @end
