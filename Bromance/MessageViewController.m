@@ -56,7 +56,10 @@
 - (void)reload
 {
     [Message allMessagesForLoggedInUserWithCompletion:^(NSArray *msgs, NSError *error) {
-        if (msgs && msgs.count > 0) {
+        if (error) {
+            NSLog(@"%@", error);
+        }
+        else if (msgs && msgs.count > 0) {
             _messages = msgs;
         }
         
