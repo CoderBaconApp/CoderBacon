@@ -8,9 +8,13 @@
 
 #import "MessageViewController.h"
 #import "Message.h"
+#import "MessageDetailViewController.h"
+
+#define MESSAGE_DETAIL_SEGUE @"MessageDetailSegue"
 
 @interface MessageViewController () {
-    NSArray *_messages;
+    NSMutableDictionary *_messages;
+    NSString *_selectedUser;
 }
 
 @end
@@ -47,15 +51,28 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    PFObject *message = _messages[indexPath.row];
-    cell.text = [message objectForKey:@"text"];
+    NSString *username = [[_messages allKeys] objectAtIndex:indexPath.row];
+    cell.text = username;
     
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    MessageDetailViewController *mdvc = (MessageDetailViewController *)[segue destinationViewController];
+    
+    mdvc.title = _selectedUser;
+    mdvc.messages = _messages[_selectedUser];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    _selectedUser = [[_messages allKeys] objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:MESSAGE_DETAIL_SEGUE sender:self];
+}
+
 - (void)reload
 {
-    [Message allMessagesForLoggedInUserWithCompletion:^(NSArray *msgs, NSError *error) {
+    [Message allMessagesForLoggedInUserWithCompletion:^(NSMutableDictionary *msgs, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
         }

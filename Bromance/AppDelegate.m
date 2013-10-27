@@ -20,9 +20,6 @@
     [PFFacebookUtils initializeFacebook];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
-    Message *message = [[Message alloc] initWithText:@"Hello Therin"];
-    [[message toPFObject] saveInBackground];
 
     return YES;
 }
