@@ -8,6 +8,7 @@
 
 #import "MessageViewController.h"
 #import "Message.h"
+#import "MessageCell.h"
 #import "MessageDetailViewController.h"
 
 #define MESSAGE_DETAIL_SEGUE @"MessageDetailSegue"
@@ -34,6 +35,9 @@
 {
     [super viewDidLoad];
     
+    UINib *messageNib = [UINib nibWithNibName:@"MessageCell" bundle:nil];
+    [self.tableView registerNib:messageNib forCellReuseIdentifier:@"MessageCell"];
+    
     [self reload];
 }
 
@@ -48,11 +52,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"MessageCell";
+    MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSString *username = [[_messages allKeys] objectAtIndex:indexPath.row];
-    cell.text = username;
+    Message *firstMessage = [[_messages objectForKey:username] objectAtIndex:0];
+    
+    cell.lastMessageLabel.text = firstMessage.text;
+    cell.nameLabel.text = username;
     
     return cell;
 }
