@@ -30,6 +30,9 @@
 {
     [super viewDidLoad];
     
+    if ([self isLoggedIn]) {
+        [self closeSplashScreen];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -42,16 +45,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)displayHomepage
+- (void)closeSplashScreen
 {
+    [self saveFacebookUserData];
     [self performSegueWithIdentifier:@"navSegue" sender:self];
+}
+
+- (void)saveFacebookUserData {
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        NSString *name = [result objectForKey:@"first_name"];
+        NSString *location = [[result objectForKey:@"location"] objectForKey:@"name"];
+        
+        [[PFUser currentUser] setObject:name forKey:@"name"];
+        [[PFUser currentUser] setObject:location forKey:@"location"];
+        
+        [[PFUser currentUser] saveInBackground];
+    }];
+}
+
+- (BOOL)isLoggedIn {
+    return [PFUser currentUser] && [[FBSession activeSession] isOpen];
 }
 
 #pragma mark PFLogInViewControllerDelegate
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
-    //Add notification center stuff here if necessary
+    [self closeSplashScreen];
 }
 
 // Sent to the delegate when the log in attempt fails.
@@ -64,63 +84,24 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma mark PFSignUpViewControllerDelegate
-// Sent to the delegate to determine whether the sign up request should be submitted to the server.
-- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
-    BOOL informationComplete = YES;
-    
-    // loop through all of the submitted data
-    for (id key in info) {
-        NSString *field = [info objectForKey:key];
-        if (!field || field.length == 0) { // check completion
-            informationComplete = NO;
-            break;
-        }
-    }
-    
-    // Display an alert if a field wasn't completed
-    if (!informationComplete) {
-        [[[UIAlertView alloc] initWithTitle:@"Missing Information"
-                                    message:@"Make sure you fill out all of the information!"
-                                   delegate:nil
-                          cancelButtonTitle:@"ok"
-                          otherButtonTitles:nil] show];
-    }
-    
-    return informationComplete;
-}
-
-// Sent to the delegate when a PFUser is signed up.
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
-}
-
-// Sent to the delegate when the sign up attempt fails.
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
-    NSLog(@"Failed to sign up...");
-}
-
-// Sent to the delegate when the sign up screen is dismissed.
-- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
-    NSLog(@"User dismissed the signUpViewController");
-}
-
 - (IBAction)loginPressed:(id)sender {
-    if (![PFUser currentUser]) {
-        // Customize the Log In View Controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-        [logInViewController setDelegate:self];
-        
-        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"user_likes", @"user_location", @"user_about_me", @"user_photos", nil]];
-        [logInViewController setFields:  PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
-        
-        // Present Log In View Controller
-        [self presentViewController:logInViewController animated:YES completion:NULL];
+    if (![self isLoggedIn]) {
+        [self logInUser];
     }
     else {
-        
-        
-        [self performSegueWithIdentifier:@"navSegue" sender:self];
+        [self closeSplashScreen];
     }
+}
+
+- (void)logInUser {
+    // Customize the Log In View Controller
+    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    [logInViewController setDelegate:self];
+    
+    [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"user_likes", @"user_location", @"user_about_me", @"user_photos", nil]];
+    [logInViewController setFields:  PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
+    
+    // Present Log In View Controller
+    [self presentViewController:logInViewController animated:YES completion:NULL];
 }
 @end
