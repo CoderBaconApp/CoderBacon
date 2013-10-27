@@ -20,6 +20,11 @@
     [PFFacebookUtils initializeFacebook];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    PFUser *other = [PFQuery getUserObjectWithId:@"gV1xlnz3oa"];
+    
+    Message *msg = [[Message alloc] initWithText:@"cool beans" andReceiver:other];
+    [[msg toPFObject] save];
 
     return YES;
 }
