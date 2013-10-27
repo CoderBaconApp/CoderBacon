@@ -16,14 +16,14 @@
 
 @implementation Message
 
-- (id)initWithText:(NSString *) text {
+- (id)initWithText:(NSString *)text andReceiver:(PFUser *)receiver {
     self = [super init];
     
     if (self) {
         // Custom initialization
         self.text = text;
         self.sender = [PFUser currentUser];
-        self.receiver = [PFUser currentUser];
+        self.receiver = receiver;
     }
     return self;
 }
@@ -38,9 +38,8 @@
 
 
 + (Message *) fromPFObject:(PFObject *) object {
-    Message *message = [[Message alloc] initWithText:object[TEXT]];
+    Message *message = [[Message alloc] initWithText:object[TEXT] andReceiver:object[RECEIVER]];
     message.sender = object[SENDER];
-    message.receiver = object[RECEIVER];
     return message;
 }
 
@@ -59,8 +58,7 @@
         
         for (int i = 0; i < messages.count; i++) {
             Message *msg = [Message fromPFObject:messages[i]];
-            PFUser *other = (msg.sender.objectId == [PFUser currentUser].objectId) ? msg.receiver : msg.sender;
-            
+            PFUser *other = ([msg.sender.objectId isEqualToString:[PFUser currentUser].objectId]) ? msg.receiver : msg.sender;
             
             if (!dict[other.objectId]) {
                 dict[other.objectId] = [[NSMutableArray alloc] init];

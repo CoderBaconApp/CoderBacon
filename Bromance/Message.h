@@ -17,7 +17,7 @@
 
 + (void)allMessagesForLoggedInUserWithCompletion:(void (^)(NSMutableDictionary *messages, NSError *error))complete;
 + (Message *) fromPFObject:(PFObject *) object;
-- (id)initWithText:(NSString *) text;
+- (id)initWithText:(NSString *) text andReceiver:(PFUser *)receiver;
 - (PFObject *)toPFObject;
 
 @end
