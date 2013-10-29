@@ -264,7 +264,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="User Name" id="JYj-7t-UIu"/>
+                    <navigationItem key="navigationItem" title="User Name" id="JYj-7t-UIu">
+                        <barButtonItem key="rightBarButtonItem" title="Options" id="plC-a6-lK4">
+                            <connections>
+                                <segue destination="HsQ-Ig-HZj" kind="modal" identifier="userOptionSegue" modalTransitionStyle="coverVertical" id="Drs-hB-CQf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ageLabel" destination="XPn-qT-bcF" id="VRC-a9-ZD8"/>
@@ -277,6 +283,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="65" y="11"/>
+        </scene>
+        <!--User Options View Controller-->
+        <scene sceneID="1vz-gD-e6X">
+            <objects>
+                <viewController id="HsQ-Ig-HZj" customClass="UserOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2hn-7t-LKU"/>
+                        <viewControllerLayoutGuide type="bottom" id="f09-Ar-DFZ"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.24999999999999967" contentMode="scaleToFill" id="hCE-zP-Hd3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKk-kF-JH4">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="HsQ-Ig-HZj" eventType="touchUpInside" id="ZaC-uq-fAw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SKk-kF-JH4" secondAttribute="trailing" constant="20" id="D02-JA-LKp"/>
+                            <constraint firstItem="f09-Ar-DFZ" firstAttribute="top" secondItem="SKk-kF-JH4" secondAttribute="bottom" constant="20" id="Jz9-ys-M4w"/>
+                            <constraint firstItem="SKk-kF-JH4" firstAttribute="leading" secondItem="hCE-zP-Hd3" secondAttribute="leading" constant="20" id="yti-Yi-RAX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="SKk-kF-JH4" id="NYX-pE-PhQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rbw-Ig-A2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="11"/>
         </scene>
     </scenes>
     <resources>

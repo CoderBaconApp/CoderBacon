@@ -24,4 +24,9 @@
     self.bioLabel.text = self.user.bio;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //This makes the modal display as transparent.
+    self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+}
+
 @end
