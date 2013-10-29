@@ -57,7 +57,8 @@
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSString *username = [[_messages allKeys] objectAtIndex:indexPath.row];
-    Message *firstMessage = [[_messages objectForKey:username] objectAtIndex:0];
+    NSArray *userMessages = [_messages objectForKey:username];
+    Message *firstMessage = [userMessages objectAtIndex:userMessages.count - 1];
     
     cell.lastMessageLabel.text = firstMessage.text;
     cell.nameLabel.text = ((PFObject *) _users[username]).objectId;

@@ -55,7 +55,7 @@
     //[senderQuery includeKey:RECEIVER]; // include user data about the receiver
     
     PFQuery *orQuery = [PFQuery orQueryWithSubqueries:@[receiverQuery, senderQuery]];
-    [orQuery orderByDescending:CREATED_AT];
+    [orQuery orderByAscending:CREATED_AT];
     
     [orQuery findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error) {
         NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
