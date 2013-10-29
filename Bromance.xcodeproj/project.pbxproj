@@ -29,7 +29,6 @@
 		C90B3A09181300F3003CE519 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A08181300F3003CE519 /* MobileCoreServices.framework */; };
 		C90B3A0B181300F9003CE519 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0A181300F9003CE519 /* QuartzCore.framework */; };
 		C90B3A0D181300FF003CE519 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0C181300FF003CE519 /* Security.framework */; };
-		C90B3A0F18130106003CE519 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0E18130106003CE519 /* StoreKit.framework */; };
 		C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A101813010E003CE519 /* SystemConfiguration.framework */; };
 		C9430D5D18133340008F6F1B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9430D5B18133340008F6F1B /* MessageViewController.m */; };
 		C96BD8651813037500325052 /* business_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96BD8641813037500325052 /* business_cat.jpg */; };
@@ -84,7 +83,6 @@
 		C90B3A08181300F3003CE519 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C90B3A0A181300F9003CE519 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C90B3A0C181300FF003CE519 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		C90B3A0E18130106003CE519 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C90B3A101813010E003CE519 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C9430D5A18133340008F6F1B /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		C9430D5B18133340008F6F1B /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
@@ -117,10 +115,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C90B39FF18130056003CE519 /* Parse.framework in Frameworks */,
 				C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */,
 				9BAE371F180CE9020058A7A8 /* Foundation.framework in Frameworks */,
-				C90B39FF18130056003CE519 /* Parse.framework in Frameworks */,
-				C90B3A0F18130106003CE519 /* StoreKit.framework in Frameworks */,
 				C90B3A0D181300FF003CE519 /* Security.framework in Frameworks */,
 				C90B3A0B181300F9003CE519 /* QuartzCore.framework in Frameworks */,
 				C90B3A09181300F3003CE519 /* MobileCoreServices.framework in Frameworks */,
@@ -171,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				C90B3A101813010E003CE519 /* SystemConfiguration.framework */,
-				C90B3A0E18130106003CE519 /* StoreKit.framework */,
 				C90B3A0C181300FF003CE519 /* Security.framework */,
 				C90B3A0A181300F9003CE519 /* QuartzCore.framework */,
 				C90B3A08181300F3003CE519 /* MobileCoreServices.framework */,
@@ -350,6 +346,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Pamela Ocampo";
 				TargetAttributes = {
+					9BAE371A180CE9020058A7A8 = {
+						DevelopmentTeam = YFWXADMX4E;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
 					9BAE373B180CE9030058A7A8 = {
 						TestTargetID = 9BAE371A180CE9020058A7A8;
 					};
@@ -576,10 +580,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/tcirwin/prj/Bromance,
 					/Users/Justin/Projects/Bromance,
+					/Users/pocampo/dev/iOS/Bromance,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bromance/Bromance-Prefix.pch";
@@ -597,6 +604,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -607,10 +615,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/tcirwin/prj/Bromance,
 					/Users/Justin/Projects/Bromance,
+					/Users/pocampo/dev/iOS/Bromance,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bromance/Bromance-Prefix.pch";
@@ -628,6 +639,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
