@@ -34,6 +34,9 @@
 	
     UINib *sentCell = [UINib nibWithNibName:MESSAGE_SENT_CELL bundle:nil];
     [self.collectionView registerNib:sentCell forCellWithReuseIdentifier:MESSAGE_SENT_CELL];
+    
+    UINib *receiverCell = [UINib nibWithNibName:MESSAGE_RECEIVED_CELL bundle:nil];
+    [self.collectionView registerNib:receiverCell forCellWithReuseIdentifier:MESSAGE_RECEIVED_CELL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +57,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Message *msg = _messages[indexPath.row];
-    NSString *type = ((msg.receiver.objectId == [PFUser currentUser].objectId) ? MESSAGE_RECEIVED_CELL : MESSAGE_SENT_CELL);
+    NSString *type = ([msg.receiver.objectId isEqualToString:[PFUser currentUser].objectId] ? MESSAGE_RECEIVED_CELL : MESSAGE_SENT_CELL);
     MessageSentCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:type forIndexPath:indexPath];
     
     cell.messageLabel.text = msg.text;

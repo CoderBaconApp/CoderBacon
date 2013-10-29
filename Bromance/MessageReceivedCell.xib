@@ -4,20 +4,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageReceivedCell">
-            <connections>
-                <outlet property="messageLabel" destination="6sn-Jq-1pG" id="tuo-a4-eC5"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MessageReceivedCell" id="tM1-9d-aTd" customClass="MessageSentCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MessageReceivedCell" id="tM1-9d-aTd" customClass="MessageReceivedCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H7G-Hq-72F">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7G-Hq-72F">
                         <rect key="frame" x="5" y="0.0" width="200" height="35"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -30,10 +26,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6sn-Jq-1pG" firstAttribute="leading" secondItem="H7G-Hq-72F" secondAttribute="leading" constant="14" id="9zN-ME-SFd"/>
-                            <constraint firstItem="6sn-Jq-1pG" firstAttribute="centerY" secondItem="H7G-Hq-72F" secondAttribute="centerY" id="O9O-BV-Brz"/>
+                            <constraint firstItem="6sn-Jq-1pG" firstAttribute="leading" secondItem="H7G-Hq-72F" secondAttribute="leading" constant="15" id="9zN-ME-SFd"/>
+                            <constraint firstItem="6sn-Jq-1pG" firstAttribute="centerY" secondItem="H7G-Hq-72F" secondAttribute="centerY" constant="-7" id="O9O-BV-Brz"/>
                             <constraint firstAttribute="width" constant="200" id="Wfn-rg-P3z"/>
-                            <constraint firstAttribute="trailing" secondItem="6sn-Jq-1pG" secondAttribute="trailing" constant="15" id="pe4-fB-aAl"/>
+                            <constraint firstAttribute="trailing" secondItem="6sn-Jq-1pG" secondAttribute="trailing" constant="14" id="pe4-fB-aAl"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -43,10 +39,13 @@
                 <constraint firstItem="H7G-Hq-72F" firstAttribute="top" secondItem="tM1-9d-aTd" secondAttribute="top" id="0YL-aR-B9M"/>
                 <constraint firstAttribute="bottom" secondItem="H7G-Hq-72F" secondAttribute="bottom" id="FWz-5c-ydM"/>
                 <constraint firstAttribute="bottom" secondItem="H7G-Hq-72F" secondAttribute="bottom" id="FXN-SF-H8F"/>
-                <constraint firstAttribute="trailing" secondItem="H7G-Hq-72F" secondAttribute="trailing" constant="5" id="P27-cl-qHj"/>
+                <constraint firstAttribute="trailing" secondItem="H7G-Hq-72F" secondAttribute="trailing" constant="115" id="P27-cl-qHj"/>
                 <constraint firstItem="H7G-Hq-72F" firstAttribute="top" secondItem="tM1-9d-aTd" secondAttribute="top" id="V0E-iG-Lsf"/>
             </constraints>
             <size key="customSize" width="320" height="35"/>
+            <connections>
+                <outlet property="messageLabel" destination="6sn-Jq-1pG" id="4PP-ya-Ouw"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>
