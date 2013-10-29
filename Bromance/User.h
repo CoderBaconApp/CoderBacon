@@ -13,6 +13,9 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) NSString *objectId;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
+
 
 -(PFObject *) toPFObject;
 

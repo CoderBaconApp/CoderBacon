@@ -13,6 +13,7 @@
 #define OBJECTID @"objectId"
 #define NAME @"name"
 #define LOCATION @"location"
+#define DEVICELOCATION @"device_location"
 
 @interface User ()
 
@@ -25,6 +26,7 @@
     object[NAME] = self.name;
     object[LOCATION] = self.location;
     object[OBJECTID] = self.objectId;
+    object[DEVICELOCATION] =[PFGeoPoint geoPointWithLatitude:self.latitude longitude:self.longitude];
     return object;
 }
 
@@ -52,6 +54,13 @@
     user.name = object[NAME];
     user.location = object[LOCATION];
     user.objectId = object.objectId;
+    
+    PFGeoPoint *geoPoint = (PFGeoPoint *)object[DEVICELOCATION];
+    if (geoPoint) {
+        user.latitude = geoPoint.latitude;
+        user.longitude = geoPoint.longitude;
+    }
+    
     return user;
 }
 

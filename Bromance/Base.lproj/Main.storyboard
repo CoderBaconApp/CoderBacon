@@ -280,7 +280,6 @@
     </scenes>
     <resources>
         <image name="business_cat.jpg" width="275" height="276"/>
-        <image name="business_cat.jpg" width="275" height="276"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
