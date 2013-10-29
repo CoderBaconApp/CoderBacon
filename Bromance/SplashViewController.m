@@ -31,9 +31,29 @@
 {
     [super viewDidLoad];
     
+    
     if ([self isLoggedIn]) {
         [self closeSplashScreen];
+        
+        
+        // Create the location manager if this object does not
+        // already have one.
+        
+        if (nil == self.locationManager)
+            self.locationManager = [[CLLocationManager alloc] init];
+        
+        self.locationManager.delegate = self;
+        
+        self.locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+        [self.locationManager startMonitoringSignificantLocationChanges];
+        
+        NSLog(@"%@", [self deviceLocation]);
+        
+
     }
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -104,5 +124,8 @@
     
     // Present Log In View Controller
     [self presentViewController:logInViewController animated:YES completion:NULL];
+}
+- (NSString *)deviceLocation {
+    return [NSString stringWithFormat:@"latitude: %f longitude: %f", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude];
 }
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SplashViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
-
+@interface SplashViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, CLLocationManagerDelegate>
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @end
