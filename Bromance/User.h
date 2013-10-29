@@ -15,6 +15,8 @@
 @property (strong, nonatomic) NSString *objectId;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
+@property (nonatomic) NSInteger age;
+@property (strong, nonatomic) NSString *bio;
 
 
 -(PFObject *) toPFObject;

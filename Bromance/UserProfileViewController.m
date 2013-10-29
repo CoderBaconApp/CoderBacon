@@ -14,27 +14,14 @@
 
 @implementation UserProfileViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.navigationItem.title = self.user.name;
     self.locationLabel.text = self.user.location;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.ageLabel.text = self.user.age > 0 ? [NSString stringWithFormat:@"%i", self.user.age] : @"";
+    self.bioLabel.text = self.user.bio;
 }
 
 @end

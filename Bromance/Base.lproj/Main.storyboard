@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="-426" y="11"/>
         </scene>
-        <!--User Profile View Controller-->
+        <!--User Profile View Controller - User Name-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="UserProfileViewController" sceneMemberID="viewController">
@@ -264,7 +264,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="JYj-7t-UIu"/>
+                    <navigationItem key="navigationItem" title="User Name" id="JYj-7t-UIu"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ageLabel" destination="XPn-qT-bcF" id="VRC-a9-ZD8"/>
