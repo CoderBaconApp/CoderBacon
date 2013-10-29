@@ -38,12 +38,15 @@
 		C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A6236E18130FE400CFA25E /* Broadcast.m */; };
 		C9C80B201817BCB00043B658 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C80B1F1817BCB00043B658 /* MessageCell.m */; };
 		C9C80B221817BCCA0043B658 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C80B211817BCCA0043B658 /* MessageCell.xib */; };
+		D042EF30181F5FF50097A117 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF2F181F5FF50097A117 /* User.m */; };
+		D042EF33181F60D60097A117 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF32181F60D60097A117 /* UserListViewController.m */; };
 		D0552F6C181C952000309969 /* MessageReceivedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0552F6B181C952000309969 /* MessageReceivedCell.xib */; };
 		D09EC706181C731A00C0249C /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09EC705181C731A00C0249C /* MessageDetailViewController.m */; };
 		D09EC70A181C73A700C0249C /* THSpringyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D09EC709181C73A700C0249C /* THSpringyFlowLayout.m */; };
 		D09EC70D181C73E600C0249C /* MessageSentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09EC70C181C73E600C0249C /* MessageSentCell.m */; };
 		D09EC710181C73F800C0249C /* MessageReceivedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09EC70F181C73F800C0249C /* MessageReceivedCell.m */; };
 		D09EC712181C740800C0249C /* MessageSentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09EC711181C740800C0249C /* MessageSentCell.xib */; };
+		D0BA7EA218202BA200D7DFD7 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BA7EA118202BA200D7DFD7 /* UserCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,10 @@
 		C9C80B1E1817BCB00043B658 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		C9C80B1F1817BCB00043B658 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		C9C80B211817BCCA0043B658 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		D042EF2E181F5FF50097A117 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D042EF2F181F5FF50097A117 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D042EF31181F60D60097A117 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
+		D042EF32181F60D60097A117 /* UserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListViewController.m; sourceTree = "<group>"; };
 		D0552F6B181C952000309969 /* MessageReceivedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageReceivedCell.xib; sourceTree = "<group>"; };
 		D09EC704181C731A00C0249C /* MessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailViewController.h; sourceTree = "<group>"; };
 		D09EC705181C731A00C0249C /* MessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailViewController.m; sourceTree = "<group>"; };
@@ -107,6 +114,8 @@
 		D09EC70E181C73F800C0249C /* MessageReceivedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageReceivedCell.h; sourceTree = "<group>"; };
 		D09EC70F181C73F800C0249C /* MessageReceivedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageReceivedCell.m; sourceTree = "<group>"; };
 		D09EC711181C740800C0249C /* MessageSentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageSentCell.xib; sourceTree = "<group>"; };
+		D0BA7EA018202BA200D7DFD7 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		D0BA7EA118202BA200D7DFD7 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
 		D8C6A0BBD99942BF8E25E3B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +258,8 @@
 				C9430D5B18133340008F6F1B /* MessageViewController.m */,
 				D09EC704181C731A00C0249C /* MessageDetailViewController.h */,
 				D09EC705181C731A00C0249C /* MessageDetailViewController.m */,
+				D042EF31181F60D60097A117 /* UserListViewController.h */,
+				D042EF32181F60D60097A117 /* UserListViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -268,6 +279,8 @@
 				C9A6236B18130F2D00CFA25E /* Message.m */,
 				C9A6236D18130FE400CFA25E /* Broadcast.h */,
 				C9A6236E18130FE400CFA25E /* Broadcast.m */,
+				D042EF2E181F5FF50097A117 /* User.h */,
+				D042EF2F181F5FF50097A117 /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -284,6 +297,8 @@
 				D09EC70E181C73F800C0249C /* MessageReceivedCell.h */,
 				D09EC70F181C73F800C0249C /* MessageReceivedCell.m */,
 				D09EC711181C740800C0249C /* MessageSentCell.xib */,
+				D0BA7EA018202BA200D7DFD7 /* UserCell.h */,
+				D0BA7EA118202BA200D7DFD7 /* UserCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -444,14 +459,17 @@
 			files = (
 				C9430D5D18133340008F6F1B /* MessageViewController.m in Sources */,
 				9BAE372F180CE9030058A7A8 /* AppDelegate.m in Sources */,
+				D042EF33181F60D60097A117 /* UserListViewController.m in Sources */,
 				D09EC706181C731A00C0249C /* MessageDetailViewController.m in Sources */,
 				C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */,
 				D09EC70A181C73A700C0249C /* THSpringyFlowLayout.m in Sources */,
 				C9A6236C18130F2D00CFA25E /* Message.m in Sources */,
 				9BAE372B180CE9020058A7A8 /* main.m in Sources */,
 				D09EC70D181C73E600C0249C /* MessageSentCell.m in Sources */,
+				D042EF30181F5FF50097A117 /* User.m in Sources */,
 				D09EC710181C73F800C0249C /* MessageReceivedCell.m in Sources */,
 				C9C80B201817BCB00043B658 /* MessageCell.m in Sources */,
+				D0BA7EA218202BA200D7DFD7 /* UserCell.m in Sources */,
 				C96BD86A1813057F00325052 /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

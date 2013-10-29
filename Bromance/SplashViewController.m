@@ -31,9 +31,9 @@
 {
     [super viewDidLoad];
     
-    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Users" style:UIBarButtonSystemItemAction target:self action:@selector(userListPressed)];
     if ([self isLoggedIn]) {
-        [self closeSplashScreen];
+        //[self closeSplashScreen];
         
         
         // Create the location manager if this object does not
@@ -112,6 +112,10 @@
     else {
         [self closeSplashScreen];
     }
+}
+
+- (void)userListPressed {
+    [self performSegueWithIdentifier:@"userListSegue" sender:self];
 }
 
 - (void)logInUser {
