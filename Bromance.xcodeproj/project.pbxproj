@@ -40,6 +40,7 @@
 		C9C80B221817BCCA0043B658 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C80B211817BCCA0043B658 /* MessageCell.xib */; };
 		D042EF30181F5FF50097A117 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF2F181F5FF50097A117 /* User.m */; };
 		D042EF33181F60D60097A117 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF32181F60D60097A117 /* UserListViewController.m */; };
+		D044115F18204E8400FEA57A /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D044115E18204E8400FEA57A /* UserProfileViewController.m */; };
 		D0552F6C181C952000309969 /* MessageReceivedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0552F6B181C952000309969 /* MessageReceivedCell.xib */; };
 		D09EC706181C731A00C0249C /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09EC705181C731A00C0249C /* MessageDetailViewController.m */; };
 		D09EC70A181C73A700C0249C /* THSpringyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D09EC709181C73A700C0249C /* THSpringyFlowLayout.m */; };
@@ -104,6 +105,8 @@
 		D042EF2F181F5FF50097A117 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D042EF31181F60D60097A117 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
 		D042EF32181F60D60097A117 /* UserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListViewController.m; sourceTree = "<group>"; };
+		D044115D18204E8400FEA57A /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
+		D044115E18204E8400FEA57A /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 		D0552F6B181C952000309969 /* MessageReceivedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageReceivedCell.xib; sourceTree = "<group>"; };
 		D09EC704181C731A00C0249C /* MessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailViewController.h; sourceTree = "<group>"; };
 		D09EC705181C731A00C0249C /* MessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailViewController.m; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				D09EC705181C731A00C0249C /* MessageDetailViewController.m */,
 				D042EF31181F60D60097A117 /* UserListViewController.h */,
 				D042EF32181F60D60097A117 /* UserListViewController.m */,
+				D044115D18204E8400FEA57A /* UserProfileViewController.h */,
+				D044115E18204E8400FEA57A /* UserProfileViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D044115F18204E8400FEA57A /* UserProfileViewController.m in Sources */,
 				C9430D5D18133340008F6F1B /* MessageViewController.m in Sources */,
 				9BAE372F180CE9030058A7A8 /* AppDelegate.m in Sources */,
 				D042EF33181F60D60097A117 /* UserListViewController.m in Sources */,

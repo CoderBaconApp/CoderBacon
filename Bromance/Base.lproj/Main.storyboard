@@ -104,11 +104,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserListViewCell" rowHeight="50" id="g9k-4b-08k" customClass="UserCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserListViewCell" rowHeight="50" id="g9k-4b-08k" customClass="UserCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g9k-4b-08k" id="zDl-gO-sQV">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K20-nS-VXI">
@@ -119,20 +119,20 @@
                                                         <constraint firstAttribute="height" constant="48" id="bYZ-tc-e2m"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Fantastic Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="YFw-ro-4qe">
-                                                    <rect key="frame" x="68" y="10" width="192" height="15"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Fantastic Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="YFw-ro-4qe">
+                                                    <rect key="frame" x="68" y="10" width="159" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 / San Francisco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-YJ-2Cw">
-                                                    <rect key="frame" x="68" y="31" width="192" height="15"/>
+                                                    <rect key="frame" x="68" y="31" width="159" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="85 Ly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzS-2f-fM9">
-                                                    <rect key="frame" x="280" y="17" width="30" height="15"/>
+                                                    <rect key="frame" x="247" y="17" width="30" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
@@ -156,6 +156,7 @@
                                             <outlet property="locationLabel" destination="aTL-YJ-2Cw" id="5uy-5u-ATa"/>
                                             <outlet property="nameLabel" destination="YFw-ro-4qe" id="rWp-TE-JMy"/>
                                             <outlet property="profileImageView" destination="K20-nS-VXI" id="n91-zH-Vw2"/>
+                                            <segue destination="vXZ-lx-hvc" kind="push" id="hQ3-2C-4Y9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -172,17 +173,16 @@
                     <navigationItem key="navigationItem" id="2JX-4U-wy7"/>
                     <connections>
                         <outlet property="tableView" destination="4ql-ry-yGc" id="QbQ-9R-hfr"/>
-                        <segue destination="vXZ-lx-hvc" kind="push" id="aqg-ny-hPj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yg1-Xk-oxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-426" y="11"/>
         </scene>
-        <!--View Controller-->
+        <!--User Profile View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="FUAViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="UserProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1J8-s9-1sT"/>
                         <viewControllerLayoutGuide type="bottom" id="sHs-bc-2zY"/>
@@ -260,18 +260,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQM-Vb-8Fm">
-                                <rect key="frame" x="139" y="144" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="JYj-7t-UIu"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="XPn-qT-bcF" id="VRC-a9-ZD8"/>
+                        <outlet property="bioLabel" destination="ttG-Tl-GpM" id="7JY-xg-69j"/>
+                        <outlet property="locationLabel" destination="gr6-Bl-n9e" id="bfH-9i-Eg7"/>
+                        <outlet property="profileImageView" destination="q7u-Hy-KGy" id="qga-C9-tDE"/>
+                        <outlet property="tableView" destination="OId-CI-9TC" id="jPB-c4-6GG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,6 +280,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="business_cat.jpg" width="275" height="276"/>
         <image name="business_cat.jpg" width="275" height="276"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
