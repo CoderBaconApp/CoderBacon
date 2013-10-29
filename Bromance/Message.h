@@ -15,7 +15,7 @@
 @property (strong, nonatomic) PFUser* sender;
 @property (strong, nonatomic) PFUser* receiver;
 
-+ (void)allMessagesForLoggedInUserWithCompletion:(void (^)(NSMutableDictionary *messages, NSError *error))complete;
++ (void)allMessagesForLoggedInUserWithCompletion:(void (^)(NSMutableDictionary *messages, NSMutableDictionary *users, NSError *error))complete;
 + (Message *) fromPFObject:(PFObject *) object;
 - (id)initWithText:(NSString *) text andReceiver:(PFUser *)receiver;
 - (PFObject *)toPFObject;

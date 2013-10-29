@@ -43,18 +43,23 @@
     return message;
 }
 
-+ (void)allMessagesForLoggedInUserWithCompletion:(void (^)(NSMutableDictionary *messages, NSError *error))complete {
++ (void)allMessagesForLoggedInUserWithCompletion:(void (^)(NSMutableDictionary *messages, NSMutableDictionary *users, NSError *error))complete {
     PFQuery *receiverQuery = [PFQuery queryWithClassName:MESSAGE];
     [receiverQuery whereKey:RECEIVER equalTo:[PFUser currentUser]];
     
     PFQuery *senderQuery = [PFQuery queryWithClassName:MESSAGE];
     [senderQuery whereKey:SENDER equalTo:[PFUser currentUser]];
+    //[senderQuery whereKey:RECEIVER equalTo:[PFUser currentUser]];
+    
+    //[senderQuery includeKey:SENDER]; // include user data about the sender
+    //[senderQuery includeKey:RECEIVER]; // include user data about the receiver
     
     PFQuery *orQuery = [PFQuery orQueryWithSubqueries:@[receiverQuery, senderQuery]];
     [orQuery orderByDescending:CREATED_AT];
     
     [orQuery findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error) {
         NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+        NSMutableDictionary *userDict = [[NSMutableDictionary alloc] init];
         
         for (int i = 0; i < messages.count; i++) {
             Message *msg = [Message fromPFObject:messages[i]];
@@ -62,12 +67,13 @@
             
             if (!dict[other.objectId]) {
                 dict[other.objectId] = [[NSMutableArray alloc] init];
+                userDict[other.objectId] = other;
             }
             
             [dict[other.objectId] addObject:msg];
         }
         
-        complete(dict, nil);
+        complete(dict, userDict, nil);
     }];
 }
 

@@ -15,7 +15,8 @@
 
 @interface MessageViewController () {
     NSMutableDictionary *_messages;
-    NSString *_selectedUser;
+    PFUser *_selectedUser;
+    NSMutableDictionary *_users;
 }
 
 @end
@@ -59,7 +60,7 @@
     Message *firstMessage = [[_messages objectForKey:username] objectAtIndex:0];
     
     cell.lastMessageLabel.text = firstMessage.text;
-    cell.nameLabel.text = username;
+    cell.nameLabel.text = ((PFObject *) _users[username]).objectId;
     
     return cell;
 }
@@ -67,24 +68,25 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     MessageDetailViewController *mdvc = (MessageDetailViewController *)[segue destinationViewController];
     
-    mdvc.title = _selectedUser;
-    mdvc.messages = _messages[_selectedUser];
+    mdvc.title = [_selectedUser objectId];
+    mdvc.messages = _messages[_selectedUser.objectId];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    _selectedUser = [[_messages allKeys] objectAtIndex:indexPath.row];
+    _selectedUser = _users[[[_messages allKeys] objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:MESSAGE_DETAIL_SEGUE sender:self];
 }
 
 - (void)reload
 {
-    [Message allMessagesForLoggedInUserWithCompletion:^(NSMutableDictionary *msgs, NSError *error) {
+    [Message allMessagesForLoggedInUserWithCompletion:^(NSMutableDictionary *msgs, NSMutableDictionary *users, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
         }
         else if (msgs && msgs.count > 0) {
             _messages = msgs;
+            _users = users;
         }
         
         [self.tableView reloadData];
