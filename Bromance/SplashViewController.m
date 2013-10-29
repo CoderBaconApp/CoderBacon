@@ -7,6 +7,7 @@
 //
 
 #import <Parse/Parse.h>
+#import <CoreLocation/CoreLocation.h>
 #import "SplashViewController.h"
 #import "Message.h"
 
