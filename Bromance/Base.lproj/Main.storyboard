@@ -11,7 +11,7 @@
                     <navigationItem key="navigationItem" id="kDS-MQ-VVO"/>
                     <connections>
                         <segue destination="Zso-fN-rhf" kind="push" identifier="userListSegue" id="DEK-lP-gBm"/>
-                        <segue destination="gTR-0A-r1G" kind="modal" identifier="navSegue" animates="NO" id="9rF-sU-v85"/>
+                        <segue destination="f3u-ZB-c1n" kind="push" identifier="messageListSegue" id="za6-PT-fpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJh-RZ-6iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -59,7 +59,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVM-3V-EEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="-769"/>
+            <point key="canvasLocation" x="-426" y="-741"/>
         </scene>
         <!--Message Detail View Controller - User's Name-->
         <scene sceneID="eba-34-6vd">
@@ -85,23 +85,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zv5-xe-hld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="-769"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3CU-Ls-xmJ">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="gTR-0A-r1G" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="nX1-V5-8wt"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="acR-b4-c4i">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="f3u-ZB-c1n" kind="relationship" relationship="rootViewController" id="S4O-UL-x1R"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="upw-Vn-QBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-539" y="-769"/>
+            <point key="canvasLocation" x="65" y="-741"/>
         </scene>
         <!--User List View Controller-->
         <scene sceneID="w5g-Ub-fSb">
@@ -193,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yg1-Xk-oxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="-17"/>
+            <point key="canvasLocation" x="-426" y="11"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -291,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="-17"/>
+            <point key="canvasLocation" x="65" y="11"/>
         </scene>
     </scenes>
     <resources>

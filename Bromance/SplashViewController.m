@@ -31,7 +31,9 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Messages" style:UIBarButtonSystemItemAction target:self action:@selector(messageListPressed)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Users" style:UIBarButtonSystemItemAction target:self action:@selector(userListPressed)];
+    
     if ([self isLoggedIn]) {
         //[self closeSplashScreen];
         
@@ -116,6 +118,10 @@
 
 - (void)userListPressed {
     [self performSegueWithIdentifier:@"userListSegue" sender:self];
+}
+
+- (void)messageListPressed {
+    [self performSegueWithIdentifier:@"messageListSegue" sender:self];
 }
 
 - (void)logInUser {
