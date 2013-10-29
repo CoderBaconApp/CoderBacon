@@ -39,8 +39,10 @@
         // Create the location manager if this object does not
         // already have one.
         
-        if (nil == self.locationManager)
+        if (nil == self.locationManager){
+            NSLog(@"Create the location manager if this object does not already have one.");
             self.locationManager = [[CLLocationManager alloc] init];
+        }
         
         self.locationManager.delegate = self;
         
@@ -48,9 +50,6 @@
         self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
         [self.locationManager startMonitoringSignificantLocationChanges];
         
-        NSLog(@"%@", [self deviceLocation]);
-        
-
     }
     
     
@@ -125,7 +124,10 @@
     // Present Log In View Controller
     [self presentViewController:logInViewController animated:YES completion:NULL];
 }
-- (NSString *)deviceLocation {
-    return [NSString stringWithFormat:@"latitude: %f longitude: %f", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude];
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    [self deviceLocation:[locations lastObject]];
+}
+- (NSString *)deviceLocation:(CLLocation *)location {
+    return [NSString stringWithFormat:@"latitude: %f longitude: %f", location.coordinate.latitude, location.coordinate.longitude];
 }
 @end
