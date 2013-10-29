@@ -17,7 +17,17 @@
 @end
 
 @implementation SplashViewController
-
+- (CLLocationManager *)locationManager {
+    if (_locationManager != nil) {
+        return _locationManager;
+    }
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    [_locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+    [_locationManager setDelegate:self];
+    
+    return _locationManager;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,22 +45,8 @@
     if ([self isLoggedIn]) {
         [self closeSplashScreen];
         
-        
-        // Create the location manager if this object does not
-        // already have one.
-        
-        if (nil == self.locationManager)
-            self.locationManager = [[CLLocationManager alloc] init];
-        
-        self.locationManager.delegate = self;
-        
-        self.locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
         [self.locationManager startMonitoringSignificantLocationChanges];
         
-        NSLog(@"%@", [self deviceLocation]);
-        
-
     }
     
     
@@ -76,10 +72,17 @@
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         NSString *name = [result objectForKey:@"first_name"];
         NSString *location = [[result objectForKey:@"location"] objectForKey:@"name"];
+        CLLocation *deviceLocation = _locationManager.location;
+
+        CLLocationCoordinate2D coordinate = [deviceLocation coordinate];
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                      longitude:coordinate.longitude];
         
         [[PFUser currentUser] setObject:name forKey:@"name"];
         [[PFUser currentUser] setObject:location forKey:@"location"];
-        
+        PFObject *object = [PFObject objectWithClassName:@"Location"];
+        [object setObject:geoPoint forKey:@"device_location"];
+        NSLog(@"%@", [self deviceLocation:deviceLocation]);        
         [[PFUser currentUser] saveInBackground];
     }];
 }
@@ -125,7 +128,11 @@
     // Present Log In View Controller
     [self presentViewController:logInViewController animated:YES completion:NULL];
 }
-- (NSString *)deviceLocation {
-    return [NSString stringWithFormat:@"latitude: %f longitude: %f", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude];
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+
+    [self deviceLocation:[locations lastObject]];
+}
+- (NSString *)deviceLocation:(CLLocation *)location {
+    return [NSString stringWithFormat:@"(%f, %f)", location.coordinate.latitude, location.coordinate.longitude];
 }
 @end
