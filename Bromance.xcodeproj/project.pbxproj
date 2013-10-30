@@ -30,6 +30,7 @@
 		C90B3A0B181300F9003CE519 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0A181300F9003CE519 /* QuartzCore.framework */; };
 		C90B3A0D181300FF003CE519 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0C181300FF003CE519 /* Security.framework */; };
 		C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A101813010E003CE519 /* SystemConfiguration.framework */; };
+		C91D9147181F793200A6570A /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91D9146181F793200A6570A /* MessageDetailViewController.xib */; };
 		C9430D5D18133340008F6F1B /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9430D5B18133340008F6F1B /* MessageViewController.m */; };
 		C96BD8651813037500325052 /* business_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96BD8641813037500325052 /* business_cat.jpg */; };
 		C96BD86A1813057F00325052 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96BD8681813057F00325052 /* SplashViewController.m */; };
@@ -89,6 +90,7 @@
 		C90B3A0A181300F9003CE519 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C90B3A0C181300FF003CE519 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C90B3A101813010E003CE519 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C91D9146181F793200A6570A /* MessageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDetailViewController.xib; sourceTree = "<group>"; };
 		C9430D5A18133340008F6F1B /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		C9430D5B18133340008F6F1B /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		C96BD8641813037500325052 /* business_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = business_cat.jpg; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				D044115E18204E8400FEA57A /* UserProfileViewController.m */,
 				D04411601820651700FEA57A /* UserOptionsViewController.h */,
 				D04411611820651700FEA57A /* UserOptionsViewController.m */,
+				C91D9146181F793200A6570A /* MessageDetailViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			files = (
 				9BAE3737180CE9030058A7A8 /* Images.xcassets in Resources */,
 				C9C80B221817BCCA0043B658 /* MessageCell.xib in Resources */,
+				C91D9147181F793200A6570A /* MessageDetailViewController.xib in Resources */,
 				9BAE3729180CE9020058A7A8 /* InfoPlist.strings in Resources */,
 				C96BD8651813037500325052 /* business_cat.jpg in Resources */,
 				D0552F6C181C952000309969 /* MessageReceivedCell.xib in Resources */,
