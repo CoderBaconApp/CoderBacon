@@ -67,7 +67,7 @@
 - (void)closeSplashScreen
 {
     [self saveFacebookUserData];
-    [self performSegueWithIdentifier:@"navSegue" sender:self];
+    [self performSegueWithIdentifier:@"messageListSegue" sender:self];
 }
 
 - (void)saveFacebookUserData {
