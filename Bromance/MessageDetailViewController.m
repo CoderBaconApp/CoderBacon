@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *sendMessageButton;
 
 - (IBAction)collectionTapGesture:(id)sender;
+- (IBAction)sendMessageTouch:(id)sender;
 
 @end
 
@@ -113,5 +114,13 @@
 
 - (IBAction)collectionTapGesture:(id)sender {
     [_messageTextField resignFirstResponder];
+}
+
+- (IBAction)sendMessageTouch:(id)sender {
+    Message *messageNew = [[Message alloc] initWithText:_messageTextField.text andReceiver:_otherUser];
+    [[messageNew toPFObject] saveInBackground];
+    
+    [_messageTextField resignFirstResponder];
+    _messageTextField.text = @"";
 }
 @end

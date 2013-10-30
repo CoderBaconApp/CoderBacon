@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface MessageDetailViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate>
 
+@property (strong, nonatomic) PFUser *otherUser;
 @property (strong, nonatomic) NSArray *messages;
 @property (weak, nonatomic) IBOutlet UICollectionView *messageCollectionView;
 

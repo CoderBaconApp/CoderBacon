@@ -71,6 +71,7 @@
     
     mdvc.title = [_selectedUser objectId];
     mdvc.messages = _messages[_selectedUser.objectId];
+    mdvc.otherUser = _selectedUser;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
