@@ -116,9 +116,27 @@
     [_messageTextField resignFirstResponder];
 }
 
+- (void)updateMessages {
+    [Message allMessagesBetweenUser:_otherUser
+                     withCompletion:^(NSArray *messages, NSError *error) {
+        _messages = messages;
+        [self.messageCollectionView reloadData];
+    }];
+}
+
 - (IBAction)sendMessageTouch:(id)sender {
     Message *messageNew = [[Message alloc] initWithText:_messageTextField.text andReceiver:_otherUser];
-    [[messageNew toPFObject] saveInBackground];
+    
+    [[messageNew toPFObject] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error sending message" message:[NSString stringWithFormat:@"%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        
+            [alert show];
+        }
+        else {
+            [self updateMessages];
+        }
+    }];
     
     [_messageTextField resignFirstResponder];
     _messageTextField.text = @"";
