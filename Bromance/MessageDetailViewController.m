@@ -9,6 +9,7 @@
 #import "MessageSentCell.h"
 #import "MessageDetailViewController.h"
 #import "Message.h"
+#import "THSpringyFlowLayout.h"
 
 #define MESSAGE_SENT_CELL @"MessageSentCell"
 #define MESSAGE_RECEIVED_CELL @"MessageReceivedCell"
@@ -33,10 +34,10 @@
     [super viewDidLoad];
 	
     UINib *sentCell = [UINib nibWithNibName:MESSAGE_SENT_CELL bundle:nil];
-    [self.collectionView registerNib:sentCell forCellWithReuseIdentifier:MESSAGE_SENT_CELL];
+    [self.messageCollectionView registerNib:sentCell forCellWithReuseIdentifier:MESSAGE_SENT_CELL];
     
     UINib *receiverCell = [UINib nibWithNibName:MESSAGE_RECEIVED_CELL bundle:nil];
-    [self.collectionView registerNib:receiverCell forCellWithReuseIdentifier:MESSAGE_RECEIVED_CELL];
+    [self.messageCollectionView registerNib:receiverCell forCellWithReuseIdentifier:MESSAGE_RECEIVED_CELL];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageDetailViewController : UICollectionViewController
+@interface MessageDetailViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) NSArray *messages;
+@property (weak, nonatomic) IBOutlet UICollectionView *messageCollectionView;
 
 @end
