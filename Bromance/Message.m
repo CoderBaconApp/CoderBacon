@@ -77,4 +77,29 @@
     }];
 }
 
++ (void)allMessagesBetweenUser:(PFUser *)user withCompletion:(void (^)(NSArray *messages, NSError *error))complete {
+    
+    PFQuery *receiverQuery = [PFQuery queryWithClassName:MESSAGE];
+    [receiverQuery whereKey:RECEIVER equalTo:[PFUser currentUser]];
+    [receiverQuery whereKey:SENDER equalTo:user];
+    
+    PFQuery *senderQuery = [PFQuery queryWithClassName:MESSAGE];
+    [senderQuery whereKey:SENDER equalTo:[PFUser currentUser]];
+    [senderQuery whereKey:RECEIVER equalTo:user];
+    
+    PFQuery *orQuery = [PFQuery orQueryWithSubqueries:@[receiverQuery, senderQuery]];
+    [orQuery orderByAscending:CREATED_AT];
+    
+    [orQuery findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error) {
+        NSMutableArray *msgs = [[NSMutableArray alloc] init];
+        
+        for (int i = 0; i < messages.count; i++) {
+            Message *msg = [Message fromPFObject:messages[i]];
+            [msgs addObject:msg];
+        }
+        
+        complete(msgs, error);
+    }];
+}
+
 @end
