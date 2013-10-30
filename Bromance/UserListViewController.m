@@ -9,6 +9,7 @@
 #import "UserListViewController.h"
 #import "User.h"
 #import "UserCell.h"
+#import "UserProfileViewController.h"
 
 @interface UserListViewController ()
 @property (strong, nonatomic) NSArray *users;
@@ -38,6 +39,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    UserProfileViewController *profileVC = (UserProfileViewController *) segue.destinationViewController;
+    profileVC.user = self.users[indexPath.row];
 }
 
 #pragma mark UITableViewDataSource methods

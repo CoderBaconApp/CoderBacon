@@ -14,6 +14,7 @@
 #define NAME @"name"
 #define LOCATION @"location"
 #define DEVICELOCATION @"device_location"
+#define BIO @"bio"
 
 @interface User ()
 
@@ -27,6 +28,7 @@
     object[LOCATION] = self.location;
     object[OBJECTID] = self.objectId;
     object[DEVICELOCATION] =[PFGeoPoint geoPointWithLatitude:self.latitude longitude:self.longitude];
+    object[BIO] = self.bio;
     return object;
 }
 
@@ -54,6 +56,7 @@
     user.name = object[NAME];
     user.location = object[LOCATION];
     user.objectId = object.objectId;
+    user.bio = object[BIO];
     
     PFGeoPoint *geoPoint = (PFGeoPoint *)object[DEVICELOCATION];
     if (geoPoint) {
