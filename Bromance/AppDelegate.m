@@ -21,6 +21,15 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+//    PFUser *therinUser = [PFQuery getUserObjectWithId:@"EaUo2QjDYU"];
+//    
+//    PFObject *message = [[PFObject alloc] initWithClassName:@"Message"];
+//    message[@"receiver"] = [PFUser currentUser];
+//    message[@"sender"] = therinUser;
+//    message[@"text"] = @"OMG Yes I have been so thirsty";
+//    
+//    [message save];
+    
     return YES;
 }
 
