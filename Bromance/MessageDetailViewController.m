@@ -16,6 +16,12 @@
 
 @interface MessageDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *messageView;
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+@property (weak, nonatomic) IBOutlet UIButton *sendMessageButton;
+
+- (IBAction)collectionTapGesture:(id)sender;
+
 @end
 
 @implementation MessageDetailViewController
@@ -38,6 +44,17 @@
     
     UINib *receiverCell = [UINib nibWithNibName:MESSAGE_RECEIVED_CELL bundle:nil];
     [self.messageCollectionView registerNib:receiverCell forCellWithReuseIdentifier:MESSAGE_RECEIVED_CELL];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,4 +91,27 @@
     return CGSizeMake(self.view.bounds.size.width, 35);
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [_messageTextField resignFirstResponder];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)keyboardWillShow:(NSNotification *)notif {
+    CGSize keyboardSize = [[[notif userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGRect messageEditFrame = _messageView.frame;
+    
+    messageEditFrame.origin.y -= keyboardSize.height;
+    _messageView.frame = messageEditFrame;
+}
+
+- (void)keyboardWillHide:(NSNotification *)notif {
+    CGRect frame = self.messageView.frame;
+    frame.origin.y -= self.view.frame.size.height - frame.size.height;
+    self.messageView.frame = frame;
+}
+
+- (IBAction)collectionTapGesture:(id)sender {
+    [_messageTextField resignFirstResponder];
+}
 @end

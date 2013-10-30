@@ -7,6 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageDetailViewController">
             <connections>
                 <outlet property="messageCollectionView" destination="WHT-Bh-88N" id="GyW-Rc-rVv"/>
+                <outlet property="messageTextField" destination="ES2-j5-Sef" id="EgL-F8-WgF"/>
+                <outlet property="messageView" destination="CYc-Kh-hXQ" id="FhW-uW-YHY"/>
+                <outlet property="sendMessageButton" destination="JOA-Eb-Hut" id="zch-D7-2Iz"/>
                 <outlet property="view" destination="afc-fZ-Tuz" id="HCO-QQ-yh6"/>
             </connections>
         </placeholder>
@@ -19,6 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.96508114659999999" green="0.97381085999999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="odj-DM-ZOl" customClass="THSpringyFlowLayout">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -29,6 +33,7 @@
                     <connections>
                         <outlet property="dataSource" destination="-1" id="om0-G9-R5g"/>
                         <outlet property="delegate" destination="-1" id="mlb-bx-Qs8"/>
+                        <outletCollection property="gestureRecognizers" destination="pdl-dT-nY7" appends="YES" id="I85-GH-ZqI"/>
                     </connections>
                 </collectionView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-Kh-hXQ">
@@ -47,6 +52,9 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="wYF-1O-CVK"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,5 +63,10 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <tapGestureRecognizer id="pdl-dT-nY7">
+            <connections>
+                <action selector="collectionTapGesture:" destination="-1" id="wsa-oR-tzk"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
