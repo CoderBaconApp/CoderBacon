@@ -21,6 +21,8 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    [self registerForRemoteNotificationsWithApplication:application];
+    
 //    PFUser *therinUser = [PFQuery getUserObjectWithId:@"EaUo2QjDYU"];
 //    
 //    PFObject *message = [[PFObject alloc] initWithClassName:@"Message"];
@@ -31,6 +33,13 @@
 //    [message save];
     
     return YES;
+}
+
+-(void)registerForRemoteNotificationsWithApplication:(UIApplication *) application {
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -68,6 +77,18 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return [PFFacebookUtils handleOpenURL:url];
+}
+
+#pragma mark Push Notifications
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:newDeviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 @end
