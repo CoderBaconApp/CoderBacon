@@ -10,9 +10,12 @@
 #import "MessageDetailViewController.h"
 #import "Message.h"
 #import "THSpringyFlowLayout.h"
+#import "UIScrollView+ScrollPositions.h"
 
 #define MESSAGE_SENT_CELL @"MessageSentCell"
 #define MESSAGE_RECEIVED_CELL @"MessageReceivedCell"
+
+#define COLLECTION_VIEW_PADDING 10
 
 @interface MessageDetailViewController ()
 
@@ -45,16 +48,32 @@
     
     UINib *receiverCell = [UINib nibWithNibName:MESSAGE_RECEIVED_CELL bundle:nil];
     [self.messageCollectionView registerNib:receiverCell forCellWithReuseIdentifier:MESSAGE_RECEIVED_CELL];
+    
+    UIEdgeInsets contentInsets = self.messageCollectionView.contentInset;
+    
+    contentInsets.top += COLLECTION_VIEW_PADDING;
+    contentInsets.bottom = _messageView.frame.size.height + COLLECTION_VIEW_PADDING;
+    self.messageCollectionView.contentInset = contentInsets;
+    self.messageCollectionView.scrollIndicatorInsets = contentInsets;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [_messageCollectionView scrollToBottom];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -84,15 +103,11 @@
     return cell;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView heightForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return 10;
-}
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(self.view.bounds.size.width, 35);
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [_messageTextField resignFirstResponder];
 }
 
@@ -100,6 +115,8 @@
 
 - (void)keyboardWillShow:(NSNotification *)notif {
     CGSize keyboardSize = [[[notif userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGRect rect = self.view.frame;
     CGRect messageEditFrame = _messageView.frame;
     
     messageEditFrame.origin.y -= keyboardSize.height;
@@ -108,7 +125,7 @@
 
 - (void)keyboardWillHide:(NSNotification *)notif {
     CGRect frame = self.messageView.frame;
-    frame.origin.y -= self.view.frame.size.height - frame.size.height;
+    frame.origin.y = self.view.frame.size.height - frame.size.height;
     self.messageView.frame = frame;
 }
 
@@ -121,6 +138,7 @@
                      withCompletion:^(NSArray *messages, NSError *error) {
         _messages = messages;
         [self.messageCollectionView reloadData];
+        [self.messageCollectionView scrollToBottom];
     }];
 }
 

@@ -39,6 +39,7 @@
 		C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A6236E18130FE400CFA25E /* Broadcast.m */; };
 		C9C80B201817BCB00043B658 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C80B1F1817BCB00043B658 /* MessageCell.m */; };
 		C9C80B221817BCCA0043B658 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C80B211817BCCA0043B658 /* MessageCell.xib */; };
+		C9CC5C161820F42900A6F1BF /* UIScrollView+ScrollPositions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C151820F42900A6F1BF /* UIScrollView+ScrollPositions.m */; };
 		D042EF30181F5FF50097A117 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF2F181F5FF50097A117 /* User.m */; };
 		D042EF33181F60D60097A117 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF32181F60D60097A117 /* UserListViewController.m */; };
 		D044115F18204E8400FEA57A /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D044115E18204E8400FEA57A /* UserProfileViewController.m */; };
@@ -104,6 +105,8 @@
 		C9C80B1E1817BCB00043B658 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		C9C80B1F1817BCB00043B658 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		C9C80B211817BCCA0043B658 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		C9CC5C141820F42900A6F1BF /* UIScrollView+ScrollPositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ScrollPositions.h"; sourceTree = "<group>"; };
+		C9CC5C151820F42900A6F1BF /* UIScrollView+ScrollPositions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScrollPositions.m"; sourceTree = "<group>"; };
 		D042EF2E181F5FF50097A117 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D042EF2F181F5FF50097A117 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D042EF31181F60D60097A117 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
@@ -222,6 +225,7 @@
 		9BAE3725180CE9020058A7A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9CC5C131820F40900A6F1BF /* Categories */,
 				C96BD86C1813058E00325052 /* Images */,
 				9BAE3726180CE9020058A7A8 /* Bromance-Info.plist */,
 				9BAE3727180CE9020058A7A8 /* InfoPlist.strings */,
@@ -314,6 +318,15 @@
 				D0BA7EA118202BA200D7DFD7 /* UserCell.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C9CC5C131820F40900A6F1BF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C9CC5C141820F42900A6F1BF /* UIScrollView+ScrollPositions.h */,
+				C9CC5C151820F42900A6F1BF /* UIScrollView+ScrollPositions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		D09EC707181C739500C0249C /* Layouts */ = {
@@ -479,6 +492,7 @@
 				D09EC706181C731A00C0249C /* MessageDetailViewController.m in Sources */,
 				C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */,
 				D09EC70A181C73A700C0249C /* THSpringyFlowLayout.m in Sources */,
+				C9CC5C161820F42900A6F1BF /* UIScrollView+ScrollPositions.m in Sources */,
 				C9A6236C18130F2D00CFA25E /* Message.m in Sources */,
 				9BAE372B180CE9020058A7A8 /* main.m in Sources */,
 				D09EC70D181C73E600C0249C /* MessageSentCell.m in Sources */,
