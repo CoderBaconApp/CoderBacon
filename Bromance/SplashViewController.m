@@ -81,9 +81,8 @@
         
         [[PFUser currentUser] setObject:name forKey:@"name"];
         [[PFUser currentUser] setObject:location forKey:@"location"];
-        PFObject *object = [PFObject objectWithClassName:@"Location"];
-        [object setObject:geoPoint forKey:@"device_location"];
-        NSLog(@"%@", [self deviceLocation:deviceLocation]);        
+        [[PFUser currentUser] setObject:geoPoint forKey:@"device_location"];
+
         [[PFUser currentUser] saveInBackground];
     }];
 }
