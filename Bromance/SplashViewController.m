@@ -71,16 +71,18 @@
 
 - (void)saveFacebookUserData {
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        NSString *name = [result objectForKey:@"first_name"];
-        NSString *location = [[result objectForKey:@"location"] objectForKey:@"name"];
+//        NSString *location = [[result objectForKey:@"location"] objectForKey:@"name"];
         CLLocation *deviceLocation = _locationManager.location;
-
         CLLocationCoordinate2D coordinate = [deviceLocation coordinate];
         PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
                                                       longitude:coordinate.longitude];
         
+
+        NSString *name = [result objectForKey:@"first_name"];
+
+
         [[PFUser currentUser] setObject:name forKey:@"name"];
-        [[PFUser currentUser] setObject:location forKey:@"location"];
+//        [[PFUser currentUser] setObject:location forKey:@"location"];
         [[PFUser currentUser] setObject:geoPoint forKey:@"device_location"];
 
         [[PFUser currentUser] saveInBackground];
@@ -137,6 +139,29 @@
     [self presentViewController:logInViewController animated:YES completion:NULL];
 }
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    
+    CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
+    
+    [geoCoder reverseGeocodeLocation:[locations lastObject] completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        if(!error)
+        {
+            for (CLPlacemark * placemark in placemarks)
+            {
+                NSString *updatedLocation = [NSString stringWithFormat:@"%@, %@ %@ %@", placemark.locality, placemark.administrativeArea, placemark.postalCode, placemark.ISOcountryCode];
+                NSLog(@"%@", updatedLocation);
+                [[PFUser currentUser] setObject:updatedLocation forKey:@"location"];
+                [[PFUser currentUser] saveInBackground];
+
+            }
+            
+        }
+        else
+        {
+            NSLog(@"failed getting updated location: %@", [error description]);
+        }
+        
+    }];
 
     [self deviceLocation:[locations lastObject]];
 }
