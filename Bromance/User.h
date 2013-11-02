@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *location;
 @property (strong, nonatomic) NSString *objectId;
+@property (strong, nonatomic) NSString *facebookId;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
 @property (nonatomic) NSInteger age;

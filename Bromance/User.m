@@ -11,6 +11,7 @@
 
 #define USER @"User"
 #define OBJECTID @"objectId"
+#define FACEBOOK_ID @"facebookId"
 #define NAME @"name"
 #define LOCATION @"location"
 #define DEVICELOCATION @"device_location"
@@ -27,6 +28,7 @@
     object[NAME] = self.name;
     object[LOCATION] = self.location;
     object[OBJECTID] = self.objectId;
+    object[FACEBOOK_ID] = self.facebookId;
     object[DEVICELOCATION] =[PFGeoPoint geoPointWithLatitude:self.latitude longitude:self.longitude];
     object[BIO] = self.bio;
     return object;
@@ -56,6 +58,7 @@
     user.name = object[NAME];
     user.location = object[LOCATION];
     user.objectId = object.objectId;
+    user.facebookId = object[FACEBOOK_ID];
     user.bio = object[BIO];
     
     PFGeoPoint *geoPoint = (PFGeoPoint *)object[DEVICELOCATION];

@@ -71,22 +71,28 @@
 
 - (void)saveFacebookUserData {
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-//        NSString *location = [[result objectForKey:@"location"] objectForKey:@"name"];
-        CLLocation *deviceLocation = _locationManager.location;
-        CLLocationCoordinate2D coordinate = [deviceLocation coordinate];
-        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
-                                                      longitude:coordinate.longitude];
-        
+        if (!error) {
+            
+            NSDictionary<FBGraphUser> *currentFBGraphUser = (NSDictionary<FBGraphUser> *)result;
+            // Store the Facebook Id
+            [[PFUser currentUser] setObject:currentFBGraphUser.id forKey:@"facebookId"];
 
-        NSString *name = [result objectForKey:@"first_name"];
-
-
-        [[PFUser currentUser] setObject:name forKey:@"name"];
-//        [[PFUser currentUser] setObject:location forKey:@"location"];
-        [[PFUser currentUser] setObject:geoPoint forKey:@"device_location"];
-
-        [[PFUser currentUser] saveInBackground];
+            CLLocation *deviceLocation = _locationManager.location;
+            CLLocationCoordinate2D coordinate = [deviceLocation coordinate];
+            PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                          longitude:coordinate.longitude];
+            
+            
+            NSString *name = [result objectForKey:@"first_name"];
+            
+            
+            [[PFUser currentUser] setObject:name forKey:@"name"];
+            [[PFUser currentUser] setObject:geoPoint forKey:@"device_location"];
+            
+            [[PFUser currentUser] saveInBackground];
+        }
     }];
+    
 }
 
 - (BOOL)isLoggedIn {
@@ -152,7 +158,7 @@
                 NSLog(@"%@", updatedLocation);
                 [[PFUser currentUser] setObject:updatedLocation forKey:@"location"];
                 [[PFUser currentUser] saveInBackground];
-
+                
             }
             
         }
@@ -162,7 +168,7 @@
         }
         
     }];
-
+    
     [self deviceLocation:[locations lastObject]];
 }
 - (NSString *)deviceLocation:(CLLocation *)location {
