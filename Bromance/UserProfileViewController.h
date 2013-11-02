@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface UserProfileViewController : UIViewController
+@interface UserProfileViewController : UIViewController<NSURLConnectionDelegate>
 @property (strong, nonatomic) User *user;
+@property (strong, nonatomic) NSMutableData *fbGraphData;
 @property (strong, nonatomic) IBOutlet UILabel *ageLabel;
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
