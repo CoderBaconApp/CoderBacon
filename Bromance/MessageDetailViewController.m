@@ -104,7 +104,15 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.view.bounds.size.width, 35);
+    
+    Message *msg = _messages[indexPath.row];
+    CGSize size = [msg.text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:12] constrainedToSize:CGSizeMake(200, 300.f) lineBreakMode:NSLineBreakByWordWrapping];
+        
+    return CGSizeMake(self.view.bounds.size.width, 12 + size.height);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0,0,0,0);
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -116,17 +124,21 @@
 - (void)keyboardWillShow:(NSNotification *)notif {
     CGSize keyboardSize = [[[notif userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    CGRect rect = self.view.frame;
     CGRect messageEditFrame = _messageView.frame;
-    
     messageEditFrame.origin.y -= keyboardSize.height;
-    _messageView.frame = messageEditFrame;
+    
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        _messageView.frame = messageEditFrame;
+    } completion:nil];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notif {
     CGRect frame = self.messageView.frame;
     frame.origin.y = self.view.frame.size.height - frame.size.height;
-    self.messageView.frame = frame;
+    
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        _messageView.frame = frame;
+    } completion:nil];
 }
 
 - (IBAction)collectionTapGesture:(id)sender {
@@ -138,7 +150,6 @@
                      withCompletion:^(NSArray *messages, NSError *error) {
         _messages = messages;
         [self.messageCollectionView reloadData];
-        [self.messageCollectionView scrollToBottom];
     }];
 }
 

@@ -49,10 +49,6 @@
     
     PFQuery *senderQuery = [PFQuery queryWithClassName:MESSAGE];
     [senderQuery whereKey:SENDER equalTo:[PFUser currentUser]];
-    //[senderQuery whereKey:RECEIVER equalTo:[PFUser currentUser]];
-    
-    //[senderQuery includeKey:SENDER]; // include user data about the sender
-    //[senderQuery includeKey:RECEIVER]; // include user data about the receiver
     
     PFQuery *orQuery = [PFQuery orQueryWithSubqueries:@[receiverQuery, senderQuery]];
     [orQuery orderByAscending:CREATED_AT];
