@@ -18,10 +18,9 @@
 @property (nonatomic) double longitude;
 @property (nonatomic) NSInteger age;
 @property (strong, nonatomic) NSString *bio;
-
-
+@property (strong, nonatomic) NSMutableData *fbGraphData;
+@property (strong, nonatomic) UIImage *profilePhoto;
 -(PFObject *) toPFObject;
-
 #pragma mark Class Methods
 + (void)allUsersWithCompletion:(void (^)(NSArray *users, NSError *error))complete;
 + (User *)fromPFObject:(PFObject *)object;

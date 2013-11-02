@@ -22,27 +22,6 @@
     self.locationLabel.text = self.user.location;
     self.ageLabel.text = self.user.age > 0 ? [NSString stringWithFormat:@"%li", (long)self.user.age] : @"";
     self.bioLabel.text = self.user.bio;
-    [self getUserImage:self.user.facebookId];
+    self.profileImageView.image = self.user.profilePhoto;
 }
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //This makes the modal display as transparent.
-    self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
-}
--(void)getUserImage:(NSString *) facebookId{
-    NSURL *profilePictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", facebookId]];
-    NSURLRequest *profilePictureURLRequest = [NSURLRequest requestWithURL:profilePictureURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0f]; // Facebook profile picture cache policy: Expires in 2 weeks
-    [NSURLConnection connectionWithRequest:profilePictureURLRequest delegate:self];
-}
-#pragma mark - NSURLConnectionDataDelegate
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    _fbGraphData = [[NSMutableData alloc] init];
-}
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [_fbGraphData appendData:data];
-}
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    self.profileImageView.image = [UIImage imageWithData:_fbGraphData];
-}
-
 @end
