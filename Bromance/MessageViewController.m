@@ -36,6 +36,8 @@
 {
     [super viewDidLoad];
     
+    [self registerForRemoteNotificationsWithApplication:[UIApplication sharedApplication]];
+    
     UINib *messageNib = [UINib nibWithNibName:@"MessageCell" bundle:nil];
     [self.tableView registerNib:messageNib forCellReuseIdentifier:@"MessageCell"];
     
@@ -44,7 +46,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 48.0f;
+    return 48.f;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section      {
@@ -99,6 +101,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark Push Notifications
+-(void)registerForRemoteNotificationsWithApplication:(UIApplication *) application {
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
 }
 
 @end

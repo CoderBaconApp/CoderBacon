@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "Message.h"
+#define USER @"user"
 
 @implementation AppDelegate
 
@@ -21,25 +22,9 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    [self registerForRemoteNotificationsWithApplication:application];
-    
-//    PFUser *therinUser = [PFQuery getUserObjectWithId:@"EaUo2QjDYU"];
-//    
-//    PFObject *message = [[PFObject alloc] initWithClassName:@"Message"];
-//    message[@"receiver"] = [PFUser currentUser];
-//    message[@"sender"] = therinUser;
-//    message[@"text"] = @"OMG Yes I have been so thirsty";
-//    
-//    [message save];
+    [self updateCurrentInstallationWithCurrentUser];
     
     return YES;
-}
-
--(void)registerForRemoteNotificationsWithApplication:(UIApplication *) application {
-    [application registerForRemoteNotificationTypes:
-     UIRemoteNotificationTypeBadge |
-     UIRemoteNotificationTypeAlert |
-     UIRemoteNotificationTypeSound];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -80,10 +65,17 @@
 }
 
 #pragma mark Push Notifications
+-(void)updateCurrentInstallationWithCurrentUser {
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setObject:[PFUser currentUser] forKey:USER];
+    [currentInstallation saveInBackground];
+}
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:newDeviceToken];
+    [currentInstallation setObject:[PFUser currentUser] forKey:USER];
     [currentInstallation saveInBackground];
 }
 
