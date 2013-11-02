@@ -69,7 +69,17 @@
             [dict[other.objectId] addObject:msg];
         }
         
-        complete(dict, userDict, nil);
+        PFQuery *userQuery = [PFUser query];
+        [userQuery whereKey:@"objectId" containedIn:[userDict allKeys]];
+        
+        [userQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
+            for (int i = 0; i < users.count; i++) {
+                PFUser *user = users[i];
+                [userDict setObject:user forKey:user.objectId];
+            }
+            
+            complete(dict, userDict, nil);
+        }];
     }];
 }
 

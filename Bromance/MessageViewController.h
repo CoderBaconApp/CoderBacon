@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MessageDetailViewController.h"
 
 @interface MessageViewController : UITableViewController
+
+@property (strong, nonatomic) NSMutableDictionary *detailViews;
 
 @end

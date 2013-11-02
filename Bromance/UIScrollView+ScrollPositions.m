@@ -16,7 +16,7 @@
 }
 
 - (void)scrollToBottom {
-    CGPoint bottomOffset = CGPointMake(0, self.contentSize.height - self.frame.size.height + self.contentInset.bottom);
+    CGPoint bottomOffset = CGPointMake(0, self.frame.size.height + self.contentInset.bottom);
     [self setContentOffset:bottomOffset]; 
 }
 

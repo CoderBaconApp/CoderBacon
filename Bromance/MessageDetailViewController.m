@@ -11,6 +11,7 @@
 #import "Message.h"
 #import "THSpringyFlowLayout.h"
 #import "UIScrollView+ScrollPositions.h"
+#import "MessageViewController.h"
 
 #define MESSAGE_SENT_CELL @"MessageSentCell"
 #define MESSAGE_RECEIVED_CELL @"MessageReceivedCell"
@@ -53,6 +54,7 @@
     
     contentInsets.top += COLLECTION_VIEW_PADDING;
     contentInsets.bottom = _messageView.frame.size.height + COLLECTION_VIEW_PADDING;
+    
     self.messageCollectionView.contentInset = contentInsets;
     self.messageCollectionView.scrollIndicatorInsets = contentInsets;
 }
@@ -127,14 +129,29 @@
     CGRect messageEditFrame = _messageView.frame;
     messageEditFrame.origin.y -= keyboardSize.height;
     
+    UIEdgeInsets contentInsets = self.messageCollectionView.contentInset;
+    
+    contentInsets.bottom += keyboardSize.height;
+    
+    self.messageCollectionView.contentInset = contentInsets;
+    self.messageCollectionView.scrollIndicatorInsets = contentInsets;
+    
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         _messageView.frame = messageEditFrame;
     } completion:nil];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notif {
+    CGSize keyboardSize = [[[notif userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     CGRect frame = self.messageView.frame;
     frame.origin.y = self.view.frame.size.height - frame.size.height;
+    
+    UIEdgeInsets contentInsets = self.messageCollectionView.contentInset;
+    
+    contentInsets.bottom -= keyboardSize.height;
+    
+    self.messageCollectionView.contentInset = contentInsets;
+    self.messageCollectionView.scrollIndicatorInsets = contentInsets;
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         _messageView.frame = frame;
@@ -150,6 +167,7 @@
                      withCompletion:^(NSArray *messages, NSError *error) {
         _messages = messages;
         [self.messageCollectionView reloadData];
+        [self.messageCollectionView scrollToTop];
     }];
 }
 

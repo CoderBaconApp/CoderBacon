@@ -9,15 +9,14 @@
 #import "MessageViewController.h"
 #import "Message.h"
 #import "MessageCell.h"
-#import "MessageDetailViewController.h"
 
 #define MESSAGE_DETAIL_SEGUE @"MessageDetailSegue"
 
-@interface MessageViewController () {
-    NSMutableDictionary *_messages;
-    PFUser *_selectedUser;
-    NSMutableDictionary *_users;
-}
+@interface MessageViewController ()
+
+@property (strong, nonatomic) NSMutableDictionary *messages;
+@property (strong, nonatomic) PFUser *selectedUser;
+@property (strong, nonatomic) NSMutableDictionary *users;
 
 @end
 
@@ -63,7 +62,7 @@
     Message *firstMessage = [userMessages objectAtIndex:userMessages.count - 1];
     
     cell.lastMessageLabel.text = firstMessage.text;
-    cell.nameLabel.text = ((PFObject *) _users[username]).objectId;
+    cell.nameLabel.text = [((PFObject *) _users[username]) objectForKey:@"name"];
     
     return cell;
 }
@@ -71,7 +70,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     MessageDetailViewController *mdvc = (MessageDetailViewController *)[segue destinationViewController];
     
-    mdvc.title = [_selectedUser objectId];
+    mdvc.title = [_selectedUser objectForKey:@"name"];
     mdvc.messages = _messages[_selectedUser.objectId];
     mdvc.otherUser = _selectedUser;
 }
