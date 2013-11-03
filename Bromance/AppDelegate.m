@@ -80,7 +80,11 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
+    NSString *senderName = userInfo[@"senderName"];
+    NSString *senderId = userInfo[@"senderId"];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Message" message:[NSString stringWithFormat:@"New message from %@", senderName] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alertView show];
 }
 
 @end
