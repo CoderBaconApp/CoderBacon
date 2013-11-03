@@ -185,7 +185,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Users" id="suY-JU-rWB"/>
-                    <navigationItem key="navigationItem" title="Users" id="sFT-qN-wvZ"/>
+                    <navigationItem key="navigationItem" title="Users" id="sFT-qN-wvZ">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="o72-Q5-U6N">
+                            <connections>
+                                <action selector="logOutClicked:" destination="Zso-fN-rhf" id="P3c-MQ-rdg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="4ql-ry-yGc" id="QbQ-9R-hfr"/>
                     </connections>
@@ -298,6 +304,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="business_cat.jpg" width="275" height="276"/>
         <image name="business_cat.jpg" width="275" height="276"/>
         <image name="group" width="32" height="21"/>
         <image name="notepad" width="22" height="28"/>

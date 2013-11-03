@@ -29,12 +29,7 @@
     [super viewDidLoad];
     [[AsyncServices instance] initLocationManager];
     
-    if (![BromanceTabBarController isLoggedIn]) {
-        [self performSegueWithIdentifier:@"SplashSegue" sender:self];
-    }
-    else {
-        [[AsyncServices instance] saveInitialUserData];
-    }
+    [self showSplashScreen];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +40,15 @@
 
 + (BOOL)isLoggedIn {
     return [PFUser currentUser] && [[FBSession activeSession] isOpen];
+}
+
+- (void)showSplashScreen {
+    if (![BromanceTabBarController isLoggedIn]) {
+        [self performSegueWithIdentifier:@"SplashSegue" sender:self];
+    }
+    else {
+        [[AsyncServices instance] saveInitialUserData];
+    }
 }
 
 @end

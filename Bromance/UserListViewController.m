@@ -11,10 +11,15 @@
 #import "UserCell.h"
 #import "UserProfileViewController.h"
 #import <UIImageView+AFNetworking.h>
+#import "BromanceTabBarController.h"
 
 @interface UserListViewController ()
+
 @property (strong, nonatomic) NSArray *users;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)logOutClicked:(id)sender;
+
 @end
 
 @implementation UserListViewController
@@ -88,6 +93,11 @@
         
         [self.tableView reloadData];
     }];
+}
+
+- (IBAction)logOutClicked:(id)sender {
+    [PFUser logOut];
+    [((BromanceTabBarController *) self.tabBarController) showSplashScreen];
 }
 
 @end
