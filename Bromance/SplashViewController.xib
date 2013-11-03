@@ -18,19 +18,21 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDD-dg-7IC">
-                            <rect key="frame" x="0.0" y="318" width="320" height="250"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDD-dg-7IC">
+                            <rect key="frame" x="0.0" y="174" width="320" height="394"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCw-tv-Geh">
-                                    <rect key="frame" x="60" y="110" width="200" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCw-tv-Geh">
+                                    <rect key="frame" x="53" y="296" width="215" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="TTl-tF-E9E"/>
                                         <constraint firstAttribute="height" constant="30" id="plf-b0-Uk1"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <state key="normal" title="LOGIN WITH FACEBOOK">
+                                    <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="17"/>
+                                    <state key="normal" title="Login With Facebook">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -39,39 +41,20 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="jCw-tv-Geh" firstAttribute="centerX" secondItem="QDD-dg-7IC" secondAttribute="centerX" id="ilE-lC-bCx"/>
-                                <constraint firstItem="jCw-tv-Geh" firstAttribute="centerY" secondItem="QDD-dg-7IC" secondAttribute="centerY" id="ueo-FR-58Z"/>
-                            </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Beq-3H-k8h">
-                            <rect key="frame" x="0.0" y="20" width="320" height="284"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bromance." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-Kj-639">
+                            <rect key="frame" x="0.0" y="20" width="320" height="146"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w42-xT-Y5y">
-                                    <rect key="frame" x="80" y="62" width="160" height="160"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.90790446170000005" green="0.9294882015" blue="0.21787423789999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstItem="w42-xT-Y5y" firstAttribute="centerY" secondItem="Beq-3H-k8h" secondAttribute="centerY" id="21m-EJ-NRE"/>
-                                <constraint firstItem="w42-xT-Y5y" firstAttribute="top" secondItem="Beq-3H-k8h" secondAttribute="top" constant="62" id="IeG-4x-cpF"/>
-                                <constraint firstItem="w42-xT-Y5y" firstAttribute="centerX" secondItem="Beq-3H-k8h" secondAttribute="centerX" id="PNu-w2-DeU"/>
-                                <constraint firstItem="w42-xT-Y5y" firstAttribute="leading" secondItem="Beq-3H-k8h" secondAttribute="leading" constant="80" id="i2q-LF-bmE"/>
-                            </constraints>
-                        </view>
+                            <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="40"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Beq-3H-k8h" firstAttribute="trailing" secondItem="QDD-dg-7IC" secondAttribute="trailing" id="59a-3Z-Kr2"/>
-                        <constraint firstAttribute="trailing" secondItem="Beq-3H-k8h" secondAttribute="trailing" id="HDf-N8-mZM"/>
-                        <constraint firstItem="QDD-dg-7IC" firstAttribute="top" secondItem="Beq-3H-k8h" secondAttribute="bottom" constant="14" id="Ohp-PK-MiN"/>
-                        <constraint firstItem="QDD-dg-7IC" firstAttribute="leading" secondItem="Beq-3H-k8h" secondAttribute="leading" id="Pst-Hl-4uM"/>
                         <constraint firstItem="QDD-dg-7IC" firstAttribute="leading" secondItem="kxm-5T-BEb" secondAttribute="leading" id="TMI-BS-M2j"/>
                         <constraint firstAttribute="bottom" secondItem="QDD-dg-7IC" secondAttribute="bottom" id="WRg-q7-SiC"/>
                         <constraint firstItem="QDD-dg-7IC" firstAttribute="top" secondItem="kxm-5T-BEb" secondAttribute="top" constant="318" id="aAN-wt-OVs"/>
-                        <constraint firstItem="Beq-3H-k8h" firstAttribute="top" secondItem="kxm-5T-BEb" secondAttribute="top" constant="20" symbolic="YES" id="dEU-Sg-nyx"/>
                     </constraints>
                 </view>
             </subviews>

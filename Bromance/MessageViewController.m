@@ -75,14 +75,12 @@
     mdvc.otherUser = _selectedUser;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     _selectedUser = _users[[[_messages allKeys] objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:MESSAGE_DETAIL_SEGUE sender:self];
 }
 
-- (void)reload
-{
+- (void)reload {
     [Message allMessagesForLoggedInUserWithCompletion:^(NSMutableDictionary *msgs, NSMutableDictionary *users, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
