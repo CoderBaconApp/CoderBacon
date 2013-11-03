@@ -85,6 +85,8 @@
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Message" message:[NSString stringWithFormat:@"New message from %@", senderName] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     [alertView show];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"message" object:self userInfo:userInfo];
 }
 
 @end

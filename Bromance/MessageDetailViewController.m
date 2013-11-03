@@ -51,6 +51,11 @@
 
 - (void)setup {
     self.hidesBottomBarWhenPushed = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(messageNotificationReceived:)
+                                                 name:@"message"
+                                               object:nil];
 }
 
 - (void)viewDidLoad
@@ -199,5 +204,14 @@
     
     [_messageTextField resignFirstResponder];
     _messageTextField.text = @"";
+}
+
+- (void) messageNotificationReceived:(NSNotification *) notification
+{
+    NSString *senderId = notification.userInfo[@"senderId"];
+    if ([senderId isEqualToString:self.otherUser.objectId]) {
+        [self updateMessages];
+    }
+    
 }
 @end
