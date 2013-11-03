@@ -10,6 +10,8 @@
 #import "AsyncServices.h"
 #import "BromanceTabBarController.h"
 
+#define USER @"user"
+
 @interface AsyncServices()
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -91,6 +93,12 @@
 
 // Call this every time the user logs in to refresh data in Parse
 - (void)saveInitialUserData {
+    // Save user's device ID to Parse
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setObject:[PFUser currentUser] forKey:USER];
+    [currentInstallation saveInBackground];
+    
+    // Save FB data to Parse
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             NSDictionary<FBGraphUser> *currentFBGraphUser = (NSDictionary<FBGraphUser> *)result;

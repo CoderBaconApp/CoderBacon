@@ -22,8 +22,6 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    [self updateCurrentInstallationWithCurrentUser];
-    
     return YES;
 }
 
@@ -65,12 +63,6 @@
 }
 
 #pragma mark Push Notifications
--(void)updateCurrentInstallationWithCurrentUser {
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [currentInstallation setObject:[PFUser currentUser] forKey:USER];
-    [currentInstallation saveInBackground];
-}
-
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
@@ -81,7 +73,6 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     NSString *senderName = userInfo[@"senderName"];
-    NSString *senderId = userInfo[@"senderId"];
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Message" message:[NSString stringWithFormat:@"New message from %@", senderName] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     [alertView show];
