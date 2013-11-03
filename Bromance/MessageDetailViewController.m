@@ -88,7 +88,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [_messageCollectionView scrollToBottom];
+    [self.messageCollectionView scrollToBottom];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -184,7 +184,8 @@
     [Message allMessagesBetweenUser:_otherUser
                      withCompletion:^(NSArray *messages, NSError *error) {
                          _messages = messages;
-        [self.messageCollectionView reloadData];
+                         [self.messageCollectionView reloadData];
+                         [self.messageCollectionView scrollToBottom];
     }];
 }
 
