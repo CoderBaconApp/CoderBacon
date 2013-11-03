@@ -40,6 +40,8 @@
 		C9C80B201817BCB00043B658 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C80B1F1817BCB00043B658 /* MessageCell.m */; };
 		C9C80B221817BCCA0043B658 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C80B211817BCCA0043B658 /* MessageCell.xib */; };
 		C9CC5C161820F42900A6F1BF /* UIScrollView+ScrollPositions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C151820F42900A6F1BF /* UIScrollView+ScrollPositions.m */; };
+		C9CC5C191826EFFC00A6F1BF /* BromanceTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C181826EFFC00A6F1BF /* BromanceTabBarController.m */; };
+		C9CC5C1C1826F2FE00A6F1BF /* AsyncServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C1B1826F2FE00A6F1BF /* AsyncServices.m */; };
 		D042EF30181F5FF50097A117 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF2F181F5FF50097A117 /* User.m */; };
 		D042EF33181F60D60097A117 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF32181F60D60097A117 /* UserListViewController.m */; };
 		D044115F18204E8400FEA57A /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D044115E18204E8400FEA57A /* UserProfileViewController.m */; };
@@ -107,6 +109,10 @@
 		C9C80B211817BCCA0043B658 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		C9CC5C141820F42900A6F1BF /* UIScrollView+ScrollPositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ScrollPositions.h"; sourceTree = "<group>"; };
 		C9CC5C151820F42900A6F1BF /* UIScrollView+ScrollPositions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScrollPositions.m"; sourceTree = "<group>"; };
+		C9CC5C171826EFFC00A6F1BF /* BromanceTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BromanceTabBarController.h; sourceTree = "<group>"; };
+		C9CC5C181826EFFC00A6F1BF /* BromanceTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BromanceTabBarController.m; sourceTree = "<group>"; };
+		C9CC5C1A1826F2FE00A6F1BF /* AsyncServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncServices.h; sourceTree = "<group>"; };
+		C9CC5C1B1826F2FE00A6F1BF /* AsyncServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncServices.m; sourceTree = "<group>"; };
 		D042EF2E181F5FF50097A117 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D042EF2F181F5FF50097A117 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D042EF31181F60D60097A117 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 		C90A51EF181D114700B04BEC /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				C9CC5C1A1826F2FE00A6F1BF /* AsyncServices.h */,
+				C9CC5C1B1826F2FE00A6F1BF /* AsyncServices.m */,
 			);
 			name = Clients;
 			sourceTree = "<group>";
@@ -277,6 +285,8 @@
 				D04411601820651700FEA57A /* UserOptionsViewController.h */,
 				D04411611820651700FEA57A /* UserOptionsViewController.m */,
 				C91D9146181F793200A6570A /* MessageDetailViewController.xib */,
+				C9CC5C171826EFFC00A6F1BF /* BromanceTabBarController.h */,
+				C9CC5C181826EFFC00A6F1BF /* BromanceTabBarController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -488,6 +498,7 @@
 				D044115F18204E8400FEA57A /* UserProfileViewController.m in Sources */,
 				C9430D5D18133340008F6F1B /* MessageViewController.m in Sources */,
 				9BAE372F180CE9030058A7A8 /* AppDelegate.m in Sources */,
+				C9CC5C191826EFFC00A6F1BF /* BromanceTabBarController.m in Sources */,
 				D042EF33181F60D60097A117 /* UserListViewController.m in Sources */,
 				D09EC706181C731A00C0249C /* MessageDetailViewController.m in Sources */,
 				C9A6236F18130FE400CFA25E /* Broadcast.m in Sources */,
@@ -497,6 +508,7 @@
 				9BAE372B180CE9020058A7A8 /* main.m in Sources */,
 				D09EC70D181C73E600C0249C /* MessageSentCell.m in Sources */,
 				D042EF30181F5FF50097A117 /* User.m in Sources */,
+				C9CC5C1C1826F2FE00A6F1BF /* AsyncServices.m in Sources */,
 				D09EC710181C73F800C0249C /* MessageReceivedCell.m in Sources */,
 				C9C80B201817BCB00043B658 /* MessageCell.m in Sources */,
 				D0BA7EA218202BA200D7DFD7 /* UserCell.m in Sources */,
