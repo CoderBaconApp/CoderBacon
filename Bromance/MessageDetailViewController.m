@@ -31,13 +31,26 @@
 
 @implementation MessageDetailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self setup];
     }
+    
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (void)setup {
+    self.hidesBottomBarWhenPushed = YES;
 }
 
 - (void)viewDidLoad
@@ -165,9 +178,8 @@
 - (void)updateMessages {
     [Message allMessagesBetweenUser:_otherUser
                      withCompletion:^(NSArray *messages, NSError *error) {
-        _messages = messages;
+                         _messages = messages;
         [self.messageCollectionView reloadData];
-        [self.messageCollectionView scrollToTop];
     }];
 }
 

@@ -11,8 +11,7 @@
 @implementation UIScrollView (ScrollPositions)
 
 - (void)scrollToTop {
-    CGPoint topOffset = CGPointMake(0, 0);
-    [self setContentOffset:topOffset];
+    [self setContentOffset:CGPointZero];
 }
 
 - (void)scrollToBottom {
