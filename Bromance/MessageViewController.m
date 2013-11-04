@@ -8,8 +8,11 @@
 
 #import "MessageViewController.h"
 #import "Message.h"
+#import "User.h"
 #import "MessageCell.h"
 #import "MessageDetailViewController.h"
+#import <UIImageView+AFNetworking.h>
+
 
 #define MESSAGE_DETAIL_SEGUE @"MessageDetailSegue"
 
@@ -64,6 +67,17 @@
     
     cell.lastMessageLabel.text = firstMessage.text;
     cell.nameLabel.text = ((PFObject *) _users[username]).objectId;
+    
+    
+    User *userAtRow = [User fromPFObject:_selectedUser];
+    NSURL *profilePictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", userAtRow.facebookId]];
+    NSURLRequest *profilePictureURLRequest = [NSURLRequest requestWithURL:profilePictureURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0f]; // Facebook profile picture cache policy: Expires in 2 weeks
+    
+    [cell.imageView setImageWithURLRequest:profilePictureURLRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        cell.imageView.image = image;
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        NSLog(@"%@", error);
+    }];
     
     return cell;
 }

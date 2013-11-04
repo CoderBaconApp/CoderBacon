@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastMessageLabel;
+@property (weak, nonatomic) UIImageView *profilePhoto;
 
 @end

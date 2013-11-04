@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="qwz-bJ-lfk" customClass="MessageCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="80" id="qwz-bJ-lfk" customClass="MessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qwz-bJ-lfk" id="xIz-jl-Bh4">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxj-Ob-mva">
-                        <rect key="frame" x="61" y="2" width="127" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxj-Ob-mva">
+                        <rect key="frame" x="79" y="10" width="127" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="127" id="ani-IE-2dY"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H81-V5-w1e">
-                        <rect key="frame" x="61" y="22" width="239" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H81-V5-w1e">
+                        <rect key="frame" x="79" y="29" width="239" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="239" id="d1g-it-x9z"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-44-Iay">
+                        <rect key="frame" x="9" y="10" width="62" height="60"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="H81-V5-w1e" firstAttribute="top" secondItem="xIz-jl-Bh4" secondAttribute="top" constant="29" id="1B4-hC-K0E"/>
+                    <constraint firstItem="fxj-Ob-mva" firstAttribute="leading" secondItem="ye0-44-Iay" secondAttribute="trailing" constant="8" symbolic="YES" id="3sq-Dh-bSy"/>
+                    <constraint firstItem="H81-V5-w1e" firstAttribute="centerY" secondItem="xIz-jl-Bh4" secondAttribute="centerY" id="9r5-MQ-kVx"/>
+                    <constraint firstItem="H81-V5-w1e" firstAttribute="leading" secondItem="ye0-44-Iay" secondAttribute="trailing" constant="8" symbolic="YES" id="C3F-dd-Xs9"/>
+                    <constraint firstAttribute="bottom" secondItem="ye0-44-Iay" secondAttribute="bottom" constant="9" id="Jc5-x3-iea"/>
+                    <constraint firstItem="ye0-44-Iay" firstAttribute="top" secondItem="fxj-Ob-mva" secondAttribute="top" id="S5S-8X-L30"/>
+                    <constraint firstAttribute="trailing" secondItem="H81-V5-w1e" secondAttribute="trailing" constant="2" id="Sfa-xZ-tNb"/>
+                    <constraint firstItem="ye0-44-Iay" firstAttribute="top" secondItem="xIz-jl-Bh4" secondAttribute="top" constant="10" id="b6a-WJ-odp"/>
+                    <constraint firstItem="ye0-44-Iay" firstAttribute="leading" secondItem="xIz-jl-Bh4" secondAttribute="leading" constant="9" id="g2U-oO-eA0"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="lastMessageLabel" destination="H81-V5-w1e" id="Shd-4W-fb2"/>
