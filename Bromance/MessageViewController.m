@@ -13,14 +13,13 @@
 #import "MessageDetailViewController.h"
 #import <UIImageView+AFNetworking.h>
 
-
 #define MESSAGE_DETAIL_SEGUE @"MessageDetailSegue"
 
-@interface MessageViewController () {
-    NSMutableDictionary *_messages;
-    PFUser *_selectedUser;
-    NSMutableDictionary *_users;
-}
+@interface MessageViewController ()
+
+@property (strong, nonatomic) NSMutableDictionary *messages;
+@property (strong, nonatomic) PFUser *selectedUser;
+@property (strong, nonatomic) NSMutableDictionary *users;
 
 @end
 
@@ -66,7 +65,7 @@
     Message *firstMessage = [userMessages objectAtIndex:userMessages.count - 1];
     
     cell.lastMessageLabel.text = firstMessage.text;
-    cell.nameLabel.text = ((PFObject *) _users[username]).objectId;
+    cell.nameLabel.text = [((PFObject *) _users[username]) objectForKey:@"name"];
     
     
     User *userAtRow = [User fromPFObject:_selectedUser];
@@ -85,19 +84,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     MessageDetailViewController *mdvc = (MessageDetailViewController *)[segue destinationViewController];
     
-    mdvc.title = [_selectedUser objectId];
+    mdvc.title = [_selectedUser objectForKey:@"name"];
     mdvc.messages = _messages[_selectedUser.objectId];
     mdvc.otherUser = _selectedUser;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     _selectedUser = _users[[[_messages allKeys] objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:MESSAGE_DETAIL_SEGUE sender:self];
 }
 
-- (void)reload
-{
+- (void)reload {
     [Message allMessagesForLoggedInUserWithCompletion:^(NSMutableDictionary *msgs, NSMutableDictionary *users, NSError *error) {
         if (error) {
             NSLog(@"%@", error);

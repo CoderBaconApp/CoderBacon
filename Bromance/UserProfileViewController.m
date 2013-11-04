@@ -14,8 +14,29 @@
 
 @implementation UserProfileViewController
 
-- (void)viewDidLoad
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (void)setup {
+    self.hidesBottomBarWhenPushed = YES;
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.title = self.user.name;

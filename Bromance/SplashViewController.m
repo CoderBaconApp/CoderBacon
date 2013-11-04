@@ -9,24 +9,17 @@
 #import <Parse/Parse.h>
 #import "SplashViewController.h"
 #import "Message.h"
+#import "AsyncServices.h"
+#import "BromanceTabBarController.h"
 
 @interface SplashViewController ()
+
 - (IBAction)loginPressed:(id)sender;
 
 @end
 
 @implementation SplashViewController
-- (CLLocationManager *)locationManager {
-    if (_locationManager != nil) {
-        return _locationManager;
-    }
-    
-    _locationManager = [[CLLocationManager alloc] init];
-    [_locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
-    [_locationManager setDelegate:self];
-    
-    return _locationManager;
-}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,17 +33,13 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Messages" style:UIBarButtonSystemItemAction target:self action:@selector(messageListPressed)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Users" style:UIBarButtonSystemItemAction target:self action:@selector(userListPressed)];
-    
-    if ([self isLoggedIn]) {
-        //[self closeSplashScreen];
-        
-        [self.locationManager startMonitoringSignificantLocationChanges];
-        
+    if ([BromanceTabBarController isLoggedIn]) {
+        [[AsyncServices instance] saveInitialUserData];
+        [self closeSplashScreen];
     }
-    
-    
+    else if ([PFUser currentUser]) {
+        [self logInUser];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -65,44 +54,15 @@
 
 - (void)closeSplashScreen
 {
-    [self saveFacebookUserData];
-    [self performSegueWithIdentifier:@"messageListSegue" sender:self];
-}
-
-- (void)saveFacebookUserData {
-    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if (!error) {
-            
-            NSDictionary<FBGraphUser> *currentFBGraphUser = (NSDictionary<FBGraphUser> *)result;
-            // Store the Facebook Id
-            [[PFUser currentUser] setObject:currentFBGraphUser.id forKey:@"facebookId"];
-
-            CLLocation *deviceLocation = _locationManager.location;
-            CLLocationCoordinate2D coordinate = [deviceLocation coordinate];
-            PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
-                                                          longitude:coordinate.longitude];
-            
-            
-            NSString *name = [result objectForKey:@"first_name"];
-            
-            
-            [[PFUser currentUser] setObject:name forKey:@"name"];
-            [[PFUser currentUser] setObject:geoPoint forKey:@"device_location"];
-            
-            [[PFUser currentUser] saveInBackground];
-        }
-    }];
-    
-}
-
-- (BOOL)isLoggedIn {
-    return [PFUser currentUser] && [[FBSession activeSession] isOpen];
+    [[AsyncServices instance] saveInitialUserData];
+    [self performSegueWithIdentifier:@"tabBarControllerSegue" sender:self];
 }
 
 #pragma mark PFLogInViewControllerDelegate
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [[AsyncServices instance] saveInitialUserData];
     [self closeSplashScreen];
 }
 
@@ -117,20 +77,9 @@
 }
 
 - (IBAction)loginPressed:(id)sender {
-    if (![self isLoggedIn]) {
+    if (![BromanceTabBarController isLoggedIn]) {
         [self logInUser];
     }
-    else {
-        [self closeSplashScreen];
-    }
-}
-
-- (void)userListPressed {
-    [self performSegueWithIdentifier:@"userListSegue" sender:self];
-}
-
-- (void)messageListPressed {
-    [self performSegueWithIdentifier:@"messageListSegue" sender:self];
 }
 
 - (void)logInUser {
@@ -144,34 +93,5 @@
     // Present Log In View Controller
     [self presentViewController:logInViewController animated:YES completion:NULL];
 }
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-    
-    CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
-    
-    [geoCoder reverseGeocodeLocation:[locations lastObject] completionHandler:^(NSArray *placemarks, NSError *error) {
-        
-        if(!error)
-        {
-            for (CLPlacemark * placemark in placemarks)
-            {
-                NSString *updatedLocation = [NSString stringWithFormat:@"%@, %@ %@ %@", placemark.locality, placemark.administrativeArea, placemark.postalCode, placemark.ISOcountryCode];
-                NSLog(@"%@", updatedLocation);
-                [[PFUser currentUser] setObject:updatedLocation forKey:@"location"];
-                [[PFUser currentUser] saveInBackground];
-                
-            }
-            
-        }
-        else
-        {
-            NSLog(@"failed getting updated location: %@", [error description]);
-        }
-        
-    }];
-    
-    [self deviceLocation:[locations lastObject]];
-}
-- (NSString *)deviceLocation:(CLLocation *)location {
-    return [NSString stringWithFormat:@"(%f, %f)", location.coordinate.latitude, location.coordinate.longitude];
-}
+
 @end

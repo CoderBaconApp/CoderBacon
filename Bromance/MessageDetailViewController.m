@@ -11,6 +11,7 @@
 #import "Message.h"
 #import "THSpringyFlowLayout.h"
 #import "UIScrollView+ScrollPositions.h"
+#import "MessageViewController.h"
 
 #define MESSAGE_SENT_CELL @"MessageSentCell"
 #define MESSAGE_RECEIVED_CELL @"MessageReceivedCell"
@@ -30,13 +31,31 @@
 
 @implementation MessageDetailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self setup];
     }
+    
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (void)setup {
+    self.hidesBottomBarWhenPushed = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(messageNotificationReceived:)
+                                                 name:@"message"
+                                               object:nil];
 }
 
 - (void)viewDidLoad
@@ -53,6 +72,7 @@
     
     contentInsets.top += COLLECTION_VIEW_PADDING;
     contentInsets.bottom = _messageView.frame.size.height + COLLECTION_VIEW_PADDING;
+    
     self.messageCollectionView.contentInset = contentInsets;
     self.messageCollectionView.scrollIndicatorInsets = contentInsets;
 }
@@ -68,7 +88,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [_messageCollectionView scrollToBottom];
+    [self.messageCollectionView scrollToBottom];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -127,14 +147,29 @@
     CGRect messageEditFrame = _messageView.frame;
     messageEditFrame.origin.y -= keyboardSize.height;
     
+    UIEdgeInsets contentInsets = self.messageCollectionView.contentInset;
+    
+    contentInsets.bottom += keyboardSize.height;
+    
+    self.messageCollectionView.contentInset = contentInsets;
+    self.messageCollectionView.scrollIndicatorInsets = contentInsets;
+    
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         _messageView.frame = messageEditFrame;
     } completion:nil];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notif {
+    CGSize keyboardSize = [[[notif userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     CGRect frame = self.messageView.frame;
     frame.origin.y = self.view.frame.size.height - frame.size.height;
+    
+    UIEdgeInsets contentInsets = self.messageCollectionView.contentInset;
+    
+    contentInsets.bottom -= keyboardSize.height;
+    
+    self.messageCollectionView.contentInset = contentInsets;
+    self.messageCollectionView.scrollIndicatorInsets = contentInsets;
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         _messageView.frame = frame;
@@ -148,8 +183,9 @@
 - (void)updateMessages {
     [Message allMessagesBetweenUser:_otherUser
                      withCompletion:^(NSArray *messages, NSError *error) {
-        _messages = messages;
-        [self.messageCollectionView reloadData];
+                         _messages = messages;
+                         [self.messageCollectionView reloadData];
+                         [self.messageCollectionView scrollToBottom];
     }];
 }
 
@@ -169,5 +205,14 @@
     
     [_messageTextField resignFirstResponder];
     _messageTextField.text = @"";
+}
+
+- (void) messageNotificationReceived:(NSNotification *) notification
+{
+    NSString *senderId = notification.userInfo[@"senderId"];
+    if ([senderId isEqualToString:self.otherUser.objectId]) {
+        [self updateMessages];
+    }
+    
 }
 @end
