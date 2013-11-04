@@ -12,6 +12,7 @@
 #import "UserProfileViewController.h"
 #import <UIImageView+AFNetworking.h>
 #import "BromanceTabBarController.h"
+#import "Common.h"
 
 @interface UserListViewController ()
 
@@ -28,7 +29,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -38,7 +38,18 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-	[self reload];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearData)
+                                                 name:LOG_OUT_NOTIFICATION object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self reload];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,9 +106,14 @@
     }];
 }
 
+- (void)clearData {
+    _users = @[];
+    [self.tableView reloadData];
+}
+
 - (IBAction)logOutClicked:(id)sender {
     [PFUser logOut];
-    [((BromanceTabBarController *) self.tabBarController) showSplashScreen];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LOG_OUT_NOTIFICATION object:self];
 }
 
 @end

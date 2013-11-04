@@ -11,6 +11,6 @@
 @interface BromanceTabBarController : UITabBarController
 
 + (BOOL)isLoggedIn;
-- (void)showSplashScreen;
+- (void)loadTabs;
 
 @end

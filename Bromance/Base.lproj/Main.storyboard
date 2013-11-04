@@ -7,7 +7,7 @@
         <!--Splash View Controller-->
         <scene sceneID="uki-0F-8bp">
             <objects>
-                <viewController id="cQL-AD-24I" customClass="SplashViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cQL-AD-24I" customClass="SplashViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kDS-MQ-VVO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJh-RZ-6iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,14 +82,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ZJ7-5e-3RN" kind="relationship" relationship="viewControllers" id="AAM-cx-bE2"/>
-                        <segue destination="gWA-R9-Pv7" kind="relationship" relationship="viewControllers" id="Nzj-BT-ZGv"/>
-                        <segue destination="cQL-AD-24I" kind="modal" identifier="SplashSegue" id="txU-If-QcW"/>
+                        <segue destination="ZJ7-5e-3RN" kind="relationship" relationship="viewControllers" id="RLW-Cx-LHJ"/>
+                        <segue destination="gWA-R9-Pv7" kind="relationship" relationship="viewControllers" id="49h-Wq-6OE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1V-7v-zDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1048" y="-401"/>
+            <point key="canvasLocation" x="-972" y="-733"/>
         </scene>
         <!--Navigation Controller - Users-->
         <scene sceneID="LGS-qC-6To">
@@ -304,7 +303,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="business_cat.jpg" width="275" height="276"/>
         <image name="business_cat.jpg" width="275" height="276"/>
         <image name="group" width="32" height="21"/>
         <image name="notepad" width="22" height="28"/>
