@@ -9,8 +9,12 @@
 #import <Parse/Parse.h>
 #import "AsyncServices.h"
 #import "BromanceTabBarController.h"
+#import "SplashViewController.h"
+#import "Common.h"
 
 @interface BromanceTabBarController ()
+
+@property (strong, nonatomic) NSArray *contentVCs;
 
 @end
 
@@ -27,14 +31,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _contentVCs = self.viewControllers;
     [[AsyncServices instance] initLocationManager];
     
-    if (![BromanceTabBarController isLoggedIn]) {
-        [self performSegueWithIdentifier:@"SplashSegue" sender:self];
-    }
-    else {
-        [[AsyncServices instance] saveInitialUserData];
-    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadTabs)
+                                                 name:LOG_OUT_NOTIFICATION object:nil];
+    
+    [self loadTabs];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +53,20 @@
 
 + (BOOL)isLoggedIn {
     return [PFUser currentUser] && [[FBSession activeSession] isOpen];
+}
+
+- (void)loadTabs {
+    if (![BromanceTabBarController isLoggedIn]) {
+        SplashViewController *splash = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SplashVC"];
+        
+        [self setViewControllers:@[splash] animated:NO];
+        self.tabBar.hidden = YES;
+    }
+    else {
+        [[AsyncServices instance] saveInitialUserData];
+        [self setViewControllers:_contentVCs];
+        self.tabBar.hidden = NO;
+    }
 }
 
 @end

@@ -11,10 +11,16 @@
 #import "UserCell.h"
 #import "UserProfileViewController.h"
 #import <UIImageView+AFNetworking.h>
+#import "BromanceTabBarController.h"
+#import "Common.h"
 
 @interface UserListViewController ()
+
 @property (strong, nonatomic) NSArray *users;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)logOutClicked:(id)sender;
+
 @end
 
 @implementation UserListViewController
@@ -23,7 +29,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -33,7 +38,18 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-	[self reload];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearData)
+                                                 name:LOG_OUT_NOTIFICATION object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self reload];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,6 +104,16 @@
         
         [self.tableView reloadData];
     }];
+}
+
+- (void)clearData {
+    _users = @[];
+    [self.tableView reloadData];
+}
+
+- (IBAction)logOutClicked:(id)sender {
+    [PFUser logOut];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LOG_OUT_NOTIFICATION object:self];
 }
 
 @end

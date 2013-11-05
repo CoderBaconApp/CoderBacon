@@ -12,6 +12,7 @@
 #import "MessageCell.h"
 #import "MessageDetailViewController.h"
 #import <UIImageView+AFNetworking.h>
+#import "Common.h"
 
 #define MESSAGE_DETAIL_SEGUE @"MessageDetailSegue"
 
@@ -29,13 +30,11 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self reload];
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     [self registerForRemoteNotificationsWithApplication:[UIApplication sharedApplication]];
@@ -43,11 +42,20 @@
     UINib *messageNib = [UINib nibWithNibName:@"MessageCell" bundle:nil];
     [self.tableView registerNib:messageNib forCellReuseIdentifier:@"MessageCell"];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearData)
+                                                 name:LOG_OUT_NOTIFICATION object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self reload];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 48.f;
 }
 
@@ -106,6 +114,12 @@
         
         [self.tableView reloadData];
     }];
+}
+
+- (void)clearData {
+    _messages = [[NSMutableDictionary alloc] init];
+    _users = [[NSMutableDictionary alloc] init];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

@@ -24,7 +24,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.hidesBottomBarWhenPushed = YES;
     }
     return self;
 }
@@ -55,7 +55,7 @@
 - (void)closeSplashScreen
 {
     [[AsyncServices instance] saveInitialUserData];
-    [self performSegueWithIdentifier:@"tabBarControllerSegue" sender:self];
+    [((BromanceTabBarController *) self.tabBarController) loadTabs];
 }
 
 #pragma mark PFLogInViewControllerDelegate

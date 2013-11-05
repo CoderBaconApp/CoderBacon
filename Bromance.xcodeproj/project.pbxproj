@@ -42,6 +42,7 @@
 		C9CC5C161820F42900A6F1BF /* UIScrollView+ScrollPositions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C151820F42900A6F1BF /* UIScrollView+ScrollPositions.m */; };
 		C9CC5C191826EFFC00A6F1BF /* BromanceTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C181826EFFC00A6F1BF /* BromanceTabBarController.m */; };
 		C9CC5C1C1826F2FE00A6F1BF /* AsyncServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C1B1826F2FE00A6F1BF /* AsyncServices.m */; };
+		C9CC5C20182733B600A6F1BF /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC5C1F182733B600A6F1BF /* Common.m */; };
 		D042EF30181F5FF50097A117 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF2F181F5FF50097A117 /* User.m */; };
 		D042EF33181F60D60097A117 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042EF32181F60D60097A117 /* UserListViewController.m */; };
 		D044115F18204E8400FEA57A /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D044115E18204E8400FEA57A /* UserProfileViewController.m */; };
@@ -113,6 +114,8 @@
 		C9CC5C181826EFFC00A6F1BF /* BromanceTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BromanceTabBarController.m; sourceTree = "<group>"; };
 		C9CC5C1A1826F2FE00A6F1BF /* AsyncServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncServices.h; sourceTree = "<group>"; };
 		C9CC5C1B1826F2FE00A6F1BF /* AsyncServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncServices.m; sourceTree = "<group>"; };
+		C9CC5C1E182733B600A6F1BF /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C9CC5C1F182733B600A6F1BF /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		D042EF2E181F5FF50097A117 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D042EF2F181F5FF50097A117 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D042EF31181F60D60097A117 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 		9BAE3724180CE9020058A7A8 /* Bromance */ = {
 			isa = PBXGroup;
 			children = (
+				C9CC5C1D182733A800A6F1BF /* Helpers */,
 				C90A51EF181D114700B04BEC /* Clients */,
 				D09EC707181C739500C0249C /* Layouts */,
 				C9C80B1D1817BC7A0043B658 /* Views */,
@@ -337,6 +341,15 @@
 				C9CC5C151820F42900A6F1BF /* UIScrollView+ScrollPositions.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		C9CC5C1D182733A800A6F1BF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C9CC5C1E182733B600A6F1BF /* Common.h */,
+				C9CC5C1F182733B600A6F1BF /* Common.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		D09EC707181C739500C0249C /* Layouts */ = {
@@ -506,6 +519,7 @@
 				C9CC5C161820F42900A6F1BF /* UIScrollView+ScrollPositions.m in Sources */,
 				C9A6236C18130F2D00CFA25E /* Message.m in Sources */,
 				9BAE372B180CE9020058A7A8 /* main.m in Sources */,
+				C9CC5C20182733B600A6F1BF /* Common.m in Sources */,
 				D09EC70D181C73E600C0249C /* MessageSentCell.m in Sources */,
 				D042EF30181F5FF50097A117 /* User.m in Sources */,
 				C9CC5C1C1826F2FE00A6F1BF /* AsyncServices.m in Sources */,
