@@ -20,6 +20,8 @@
 @property (strong, nonatomic) NSString *bio;
 @property (strong, nonatomic) NSMutableData *fbGraphData;
 @property (strong, nonatomic) UIImage *profilePhoto;
+@property (nonatomic) double distance;
+@property (readonly) NSString *distanceFormat;
 -(PFObject *) toPFObject;
 #pragma mark Class Methods
 + (void)allUsersWithCompletion:(void (^)(NSArray *users, NSError *error))complete;

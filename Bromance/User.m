@@ -23,6 +23,11 @@
 
 @implementation User
 
+- (NSString *)distanceFormat {
+    int distance = ceil(self.distance);
+    return [NSString stringWithFormat:@"%d mi.", distance];
+}
+
 - (PFObject *) toPFObject {
     PFObject *object = [[PFObject alloc] initWithClassName:USER];
     object[NAME] = self.name;
@@ -37,6 +42,8 @@
 #pragma mark Class Methods
 + (void)allUsersWithCompletion:(void (^)(NSArray *users, NSError *error))complete {
     PFQuery *usersQuery = [PFUser query];
+    PFGeoPoint *currentGeoPoint = [PFUser currentUser][DEVICELOCATION];
+    [usersQuery whereKey:DEVICELOCATION nearGeoPoint:currentGeoPoint];
     
     [usersQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
         NSMutableArray *usersArray = [[NSMutableArray alloc] init];
@@ -45,6 +52,8 @@
             User *usr = [User fromPFObject:users[i]];
             
             if (![[[PFUser currentUser] objectId] isEqualToString:usr.objectId]) {
+                PFGeoPoint *userGeoPoint = users[i][DEVICELOCATION];
+                usr.distance = [ currentGeoPoint distanceInMilesTo: userGeoPoint];
                 [usersArray addObject:usr];
             }
         }
