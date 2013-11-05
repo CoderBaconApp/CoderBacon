@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController">
@@ -22,6 +22,10 @@
                             <rect key="frame" x="0.0" y="174" width="320" height="394"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashLaunch.png" translatesAutoresizingMaskIntoConstraints="NO" id="a3b-Z8-ljh">
+                                    <rect key="frame" x="0.0" y="-174" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCw-tv-Geh">
                                     <rect key="frame" x="53" y="296" width="215" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,16 +44,17 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="jCw-tv-Geh" secondAttribute="bottom" constant="66" id="NbP-MH-Hu5"/>
                                 <constraint firstAttribute="width" constant="320" id="Utu-Qg-wj1"/>
                                 <constraint firstAttribute="centerX" secondItem="jCw-tv-Geh" secondAttribute="centerX" id="o8z-0Y-eVI"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bromance." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-Kj-639">
+                        <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bromance." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-Kj-639">
                             <rect key="frame" x="0.0" y="20" width="320" height="146"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="40"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
@@ -65,13 +70,16 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="kxm-5T-BEb" secondAttribute="trailing" id="01T-6m-iUh"/>
-                <constraint firstItem="kxm-5T-BEb" firstAttribute="top" secondItem="1" secondAttribute="top" id="Ng9-Ac-NQE"/>
-                <constraint firstAttribute="bottom" secondItem="kxm-5T-BEb" secondAttribute="bottom" id="hKo-98-7h3"/>
-                <constraint firstItem="kxm-5T-BEb" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="kG8-fL-4yI"/>
+                <constraint firstItem="kxm-5T-BEb" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="KEy-Pp-t4p"/>
+                <constraint firstAttribute="bottom" secondItem="kxm-5T-BEb" secondAttribute="bottom" id="aVt-pF-t8H"/>
+                <constraint firstItem="kxm-5T-BEb" firstAttribute="top" secondItem="1" secondAttribute="top" id="qjw-NT-ZM7"/>
+                <constraint firstAttribute="trailing" secondItem="kxm-5T-BEb" secondAttribute="trailing" id="zgK-W4-Vfi"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="SplashLaunch.png" width="640" height="941"/>
+    </resources>
 </document>
