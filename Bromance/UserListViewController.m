@@ -82,7 +82,7 @@
     cell.imageView.image = user.profilePhoto;
     cell.nameLabel.text = user.name;
     cell.locationLabel.text = user.location;
-    cell.distanceLabel.text = @"69";
+    cell.distanceLabel.text = user.distanceFormat;
 
     return cell;
 }
