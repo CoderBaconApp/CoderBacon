@@ -33,6 +33,12 @@
     object[TEXT] = self.text;
     object[SENDER] = self.sender;
     object[RECEIVER] = self.receiver;
+    
+    PFACL *acl = [PFACL ACL];
+    [acl setReadAccess:YES forUser:self.sender];
+    [acl setReadAccess:YES forUser:self.receiver];
+    object.ACL = acl;
+    
     return object;
 }
 
