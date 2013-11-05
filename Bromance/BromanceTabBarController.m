@@ -33,7 +33,6 @@
     [super viewDidLoad];
     
     _contentVCs = self.viewControllers;
-    [[AsyncServices instance] initLocationManager];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadTabs)
                                                  name:LOG_OUT_NOTIFICATION object:nil];
@@ -63,6 +62,7 @@
         self.tabBar.hidden = YES;
     }
     else {
+        [[AsyncServices instance] initLocationManager];
         [[AsyncServices instance] saveInitialUserData];
         [self setViewControllers:_contentVCs];
         self.tabBar.hidden = NO;
