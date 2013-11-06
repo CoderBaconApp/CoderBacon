@@ -97,7 +97,7 @@
     [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"user_likes", @"user_location", @"user_about_me", @"user_photos", nil]];
     
     [logInViewController setFields:  PFLogInFieldsFacebook | PFLogInFieldsDismissButton];
-    [[logInViewController logInView] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"SplashLaunch.png"]]];
+    [[logInViewController logInView] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"SplashBG.png"]]];
     [[logInViewController logInView] setLogo:NULL];
 
     

@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashLaunch.png" translatesAutoresizingMaskIntoConstraints="NO" id="a3b-Z8-ljh">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="a3b-Z8-ljh">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -60,7 +60,7 @@
         </view>
     </objects>
     <resources>
-        <image name="SplashLaunch.png" width="640" height="941"/>
+        <image name="SplashBG.png" width="340" height="480"/>
         <image name="SplashLogo.png" width="300" height="51"/>
         <image name="signinwithfb.png" width="559" height="80"/>
     </resources>
