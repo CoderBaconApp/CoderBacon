@@ -23,6 +23,8 @@
 		9BAE3740180CE9030058A7A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE3722180CE9020058A7A8 /* UIKit.framework */; };
 		9BAE3748180CE9030058A7A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BAE3746180CE9030058A7A8 /* InfoPlist.strings */; };
 		9BAE374A180CE9030058A7A8 /* BromanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE3749180CE9030058A7A8 /* BromanceTests.m */; };
+		9BD7CFA9182A030A004E8BA4 /* signinwithfb.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD7CFA8182A030A004E8BA4 /* signinwithfb.png */; };
+		9BD7CFAD182A0B13004E8BA4 /* SplashLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD7CFAC182A0B13004E8BA4 /* SplashLogo.png */; };
 		C90B39FF18130056003CE519 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B39FE18130056003CE519 /* Parse.framework */; };
 		C90B3A01181300C8003CE519 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A00181300C8003CE519 /* AudioToolbox.framework */; };
 		C90B3A03181300CF003CE519 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A02181300CF003CE519 /* CFNetwork.framework */; };
@@ -89,6 +91,8 @@
 		9BAE3745180CE9030058A7A8 /* BromanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BromanceTests-Info.plist"; sourceTree = "<group>"; };
 		9BAE3747180CE9030058A7A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9BAE3749180CE9030058A7A8 /* BromanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BromanceTests.m; sourceTree = "<group>"; };
+		9BD7CFA8182A030A004E8BA4 /* signinwithfb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signinwithfb.png; sourceTree = "<group>"; };
+		9BD7CFAC182A0B13004E8BA4 /* SplashLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashLogo.png; sourceTree = "<group>"; };
 		C90B39FE18130056003CE519 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C90B3A00181300C8003CE519 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C90B3A02181300CF003CE519 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -302,6 +306,8 @@
 		C96BD86C1813058E00325052 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9BD7CFAC182A0B13004E8BA4 /* SplashLogo.png */,
+				9BD7CFA8182A030A004E8BA4 /* signinwithfb.png */,
 				9B3473291828D68100BE4800 /* SplashLaunch.png */,
 				9B34732A1828D68100BE4800 /* SplashLaunch@2x.png */,
 				C96BD8641813037500325052 /* business_cat.jpg */,
@@ -455,6 +461,7 @@
 			files = (
 				9BAE3737180CE9030058A7A8 /* Images.xcassets in Resources */,
 				9B34732B1828D68100BE4800 /* SplashLaunch.png in Resources */,
+				9BD7CFAD182A0B13004E8BA4 /* SplashLogo.png in Resources */,
 				C9C80B221817BCCA0043B658 /* MessageCell.xib in Resources */,
 				C91D9147181F793200A6570A /* MessageDetailViewController.xib in Resources */,
 				9BAE3729180CE9020058A7A8 /* InfoPlist.strings in Resources */,
@@ -464,6 +471,7 @@
 				C96BD86B1813057F00325052 /* SplashViewController.xib in Resources */,
 				9BAE3732180CE9030058A7A8 /* Main.storyboard in Resources */,
 				9B34732C1828D68100BE4800 /* SplashLaunch@2x.png in Resources */,
+				9BD7CFA9182A030A004E8BA4 /* signinwithfb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
