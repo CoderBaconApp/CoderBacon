@@ -166,6 +166,7 @@
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         _messageView.frame = messageEditFrame;
+        [_messageCollectionView scrollToBottom];
     } completion:nil];
 }
 
