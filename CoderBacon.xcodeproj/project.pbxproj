@@ -21,7 +21,6 @@
 		9B0B521018429C6A002E68D1 /* Broadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B520F18429C6A002E68D1 /* Broadcast.m */; };
 		9B0B521318429C79002E68D1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521218429C79002E68D1 /* User.m */; };
 		9B0B522218429CB9002E68D1 /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521518429CB9002E68D1 /* MessageDetailViewController.m */; };
-		9B0B522318429CB9002E68D1 /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B521618429CB9002E68D1 /* MessageDetailViewController.xib */; };
 		9B0B522418429CB9002E68D1 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521818429CB9002E68D1 /* MessageViewController.m */; };
 		9B0B522518429CB9002E68D1 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521A18429CB9002E68D1 /* SplashViewController.m */; };
 		9B0B522618429CB9002E68D1 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B521B18429CB9002E68D1 /* SplashViewController.xib */; };
@@ -29,20 +28,16 @@
 		9B0B522818429CB9002E68D1 /* UserOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521F18429CB9002E68D1 /* UserOptionsViewController.m */; };
 		9B0B522918429CB9002E68D1 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B522118429CB9002E68D1 /* UserProfileViewController.m */; };
 		9B0B522C18429D0C002E68D1 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B522B18429D0C002E68D1 /* TabBarController.m */; };
-		9B0B522E18429D92002E68D1 /* CoderBaconTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B522D18429D92002E68D1 /* CoderBaconTests-Info.plist */; };
 		9B0B523218429DAA002E68D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B523018429DAA002E68D1 /* InfoPlist.strings */; };
 		9BAE371F180CE9020058A7A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE371E180CE9020058A7A8 /* Foundation.framework */; };
 		9BAE3721180CE9020058A7A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE3720180CE9020058A7A8 /* CoreGraphics.framework */; };
 		9BAE3723180CE9020058A7A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE3722180CE9020058A7A8 /* UIKit.framework */; };
-		9BAE3729180CE9020058A7A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BAE3727180CE9020058A7A8 /* InfoPlist.strings */; };
 		9BAE373E180CE9030058A7A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE373D180CE9030058A7A8 /* XCTest.framework */; };
 		9BAE373F180CE9030058A7A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE371E180CE9020058A7A8 /* Foundation.framework */; };
 		9BAE3740180CE9030058A7A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE3722180CE9020058A7A8 /* UIKit.framework */; };
 		9BF4D85C184299F600398327 /* CoderBaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF4D85B184299F600398327 /* CoderBaconTests.m */; };
 		9BF4D86018429A3600398327 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF4D85E18429A3600398327 /* AppDelegate.m */; };
 		9BF4D86118429A3600398327 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D85F18429A3600398327 /* Images.xcassets */; };
-		9BF4D86518429A8900398327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86318429A8900398327 /* Main.storyboard */; };
-		9BF4D86718429ABF00398327 /* CoderBacon-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86618429ABF00398327 /* CoderBacon-Info.plist */; };
 		9BF4D86B18429AFD00398327 /* UIScrollView+ScrollPositions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF4D86A18429AFD00398327 /* UIScrollView+ScrollPositions.m */; };
 		9BF4D86D18429B1000398327 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF4D86C18429B1000398327 /* main.m */; };
 		C90B3A01181300C8003CE519 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A00181300C8003CE519 /* AudioToolbox.framework */; };
@@ -55,7 +50,9 @@
 		C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A101813010E003CE519 /* SystemConfiguration.framework */; };
 		C94429E51842AFA10043B974 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94429E41842AFA10043B974 /* Parse.framework */; };
 		C96BD8651813037500325052 /* business_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96BD8641813037500325052 /* business_cat.jpg */; };
-		C99816AC1842A8EE002851C5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99816AB1842A8EE002851C5 /* Parse.framework */; };
+		C9C513431842BA0B008EE437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86318429A8900398327 /* Main.storyboard */; };
+		C9C513441842BA1D008EE437 /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B521618429CB9002E68D1 /* MessageDetailViewController.xib */; };
+		C9C513451842BBA1008EE437 /* CoderBacon-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86618429ABF00398327 /* CoderBacon-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,7 +133,6 @@
 		C90B3A101813010E003CE519 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C94429E41842AFA10043B974 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C96BD8641813037500325052 /* business_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = business_cat.jpg; sourceTree = "<group>"; };
-		C99816AB1842A8EE002851C5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D8C6A0BBD99942BF8E25E3B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -438,17 +434,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C513451842BBA1008EE437 /* CoderBacon-Info.plist in Resources */,
+				C9C513441842BA1D008EE437 /* MessageDetailViewController.xib in Resources */,
+				C9C513431842BA0B008EE437 /* Main.storyboard in Resources */,
 				9BF4D86118429A3600398327 /* Images.xcassets in Resources */,
-				9BF4D86518429A8900398327 /* Main.storyboard in Resources */,
-				9B0B522E18429D92002E68D1 /* CoderBaconTests-Info.plist in Resources */,
 				9B0B520218429C25002E68D1 /* MessageSentCell.xib in Resources */,
 				9B0B520718429C3F002E68D1 /* MessageCell.xib in Resources */,
-				9BAE3729180CE9020058A7A8 /* InfoPlist.strings in Resources */,
 				C96BD8651813037500325052 /* business_cat.jpg in Resources */,
 				9B0B522618429CB9002E68D1 /* SplashViewController.xib in Resources */,
-				9BF4D86718429ABF00398327 /* CoderBacon-Info.plist in Resources */,
 				9B0B520018429C25002E68D1 /* MessageReceivedCell.xib in Resources */,
-				9B0B522318429CB9002E68D1 /* MessageDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
