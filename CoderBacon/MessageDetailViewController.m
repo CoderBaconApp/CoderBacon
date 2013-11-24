@@ -128,7 +128,8 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     Message *msg = _messages[indexPath.row];
-    CGSize size = [msg.text sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:12] constrainedToSize:CGSizeMake(200, 300.f) lineBreakMode:NSLineBreakByWordWrapping];
+
+    CGSize size = [msg.text sizeWithAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:12.0f]}];
         
     return CGSizeMake(self.view.bounds.size.width, 12 + size.height);
 }
