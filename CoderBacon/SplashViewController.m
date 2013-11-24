@@ -1,6 +1,6 @@
 //  SplashViewController.m
 //
-//  Copyright (C) 2013 BromanceApp
+//  Copyright (C) 2013 CoderBaconApp
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
 #import "SplashViewController.h"
 #import "Message.h"
 #import "AsyncServices.h"
-#import "BromanceTabBarController.h"
+#import "TabBarController.h"
 
 @interface SplashViewController ()
 
@@ -39,7 +39,7 @@
 {
     [super viewDidLoad];
     
-    if ([BromanceTabBarController isLoggedIn]) {
+    if ([TabBarController isLoggedIn]) {
         [[AsyncServices instance] saveInitialUserData];
         [self closeSplashScreen];
     }
@@ -61,7 +61,7 @@
 - (void)closeSplashScreen
 {
     [[AsyncServices instance] saveInitialUserData];
-    [((BromanceTabBarController *) self.tabBarController) loadTabs];
+    [((TabBarController *) self.tabBarController) loadTabs];
 }
 
 #pragma mark PFLogInViewControllerDelegate
@@ -83,7 +83,7 @@
 }
 
 - (IBAction)loginPressed:(id)sender {
-    if (![BromanceTabBarController isLoggedIn]) {
+    if (![TabBarController isLoggedIn]) {
         [self logInUser];
     }
 }

@@ -1,6 +1,6 @@
 //  AsyncServices.m
 //
-//  Copyright (C) 2013 BromanceApp
+//  Copyright (C) 2013 CoderBaconApp
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
 
 #import <Parse/Parse.h>
 #import "AsyncServices.h"
-#import "BromanceTabBarController.h"
+#import "TabBarController.h"
 
 #define USER @"user"
 
@@ -74,7 +74,7 @@
 
 // These two methods should be called on every significant location change
 - (void)updateGeoLocation {
-    if ([BromanceTabBarController isLoggedIn]) {
+    if ([TabBarController isLoggedIn]) {
         [[PFUser currentUser] setObject:[self geoLocation] forKey:@"location"];
     
         [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -84,7 +84,7 @@
 }
 
 - (void)updateLastLocation {
-    if ([BromanceTabBarController isLoggedIn]) {
+    if ([TabBarController isLoggedIn]) {
         CLLocationCoordinate2D coordinate = [self lastLocation].coordinate;
         PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
                                                       longitude:coordinate.longitude];

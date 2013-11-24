@@ -1,6 +1,6 @@
-//  BromanceTabBarController.h
+//  TabBarController.h
 //
-//  Copyright (C) 2013 BromanceApp
+//  Copyright (C) 2013 CoderBacon
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BromanceTabBarController : UITabBarController
+@interface TabBarController : UITabBarController
 
 + (BOOL)isLoggedIn;
 - (void)loadTabs;
