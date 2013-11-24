@@ -18,13 +18,10 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)awakeFromNib
 {
-    // Drawing code
+    [super awakeFromNib];
+    [_messageBubbleView.layer setCornerRadius:12];
 }
-*/
 
 @end

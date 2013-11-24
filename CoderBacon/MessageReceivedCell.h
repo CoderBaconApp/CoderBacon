@@ -10,5 +10,6 @@
 @interface MessageReceivedCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@property (weak, nonatomic) IBOutlet UIView *messageBubbleView;
 
 @end

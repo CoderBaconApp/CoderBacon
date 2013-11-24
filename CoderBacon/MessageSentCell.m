@@ -27,4 +27,10 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [_messageBubbleView.layer setCornerRadius:12];
+}
+
 @end

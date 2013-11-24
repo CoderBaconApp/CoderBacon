@@ -17,8 +17,8 @@
                         <rect key="frame" x="91" y="0.0" width="219" height="96"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="872" verticalHuggingPriority="849" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="199" translatesAutoresizingMaskIntoConstraints="NO" id="Mzb-aH-pXj">
-                                <rect key="frame" x="10" y="6" width="199" height="84"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="872" verticalHuggingPriority="849" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="Mzb-aH-pXj">
+                                <rect key="frame" x="9" y="6" width="200" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="500" constant="15" id="U6a-Yq-zok"/>
@@ -32,12 +32,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Mzb-aH-pXj" secondAttribute="bottom" constant="6" id="MT5-2b-D2D"/>
-                            <constraint firstItem="Mzb-aH-pXj" firstAttribute="top" secondItem="T28-PL-ecL" secondAttribute="top" constant="6" id="NMs-dK-BcE"/>
+                            <constraint firstItem="Mzb-aH-pXj" firstAttribute="leading" secondItem="T28-PL-ecL" secondAttribute="leading" constant="9" id="7di-F5-Gm5"/>
+                            <constraint firstItem="Mzb-aH-pXj" firstAttribute="centerX" secondItem="T28-PL-ecL" secondAttribute="centerX" id="7v9-oe-xB7"/>
+                            <constraint firstItem="Mzb-aH-pXj" firstAttribute="centerY" secondItem="T28-PL-ecL" secondAttribute="centerY" id="Ird-ZU-hBG"/>
+                            <constraint firstAttribute="bottom" secondItem="Mzb-aH-pXj" secondAttribute="bottom" constant="6" id="SyG-6E-WJO"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" priority="900" constant="220" id="UBV-d4-6yU"/>
-                            <constraint firstAttribute="trailing" secondItem="Mzb-aH-pXj" secondAttribute="trailing" constant="10" id="WmT-p2-WTf"/>
-                            <constraint firstItem="Mzb-aH-pXj" firstAttribute="leading" secondItem="T28-PL-ecL" secondAttribute="leading" constant="10" id="l3B-9Z-zxt"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="900" constant="27" id="pY7-Py-unw"/>
+                            <constraint firstItem="Mzb-aH-pXj" firstAttribute="top" secondItem="T28-PL-ecL" secondAttribute="top" constant="6" id="q4P-Xr-cd1"/>
+                            <constraint firstAttribute="trailing" secondItem="Mzb-aH-pXj" secondAttribute="trailing" constant="10" id="uq5-HK-Stz"/>
                         </constraints>
                     </view>
                 </subviews>
