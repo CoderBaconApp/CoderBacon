@@ -1,6 +1,16 @@
 //  AppDelegate.m
 //
 //  Copyright (C) 2013 BromanceApp
+
+#import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "Message.h"
+#define USER @"user"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     [Parse setApplicationId:@"0fZteiWeXkv49jX4FkUrBUsWTnuGIhR4qFXNLwAt"
                clientKey:@"TdxysibqfcIxq85ojnw3uB0UhX9mJ98gMkNy2yuu"];
     
