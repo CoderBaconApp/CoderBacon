@@ -1,4 +1,4 @@
-Bromance
+CoderBaconApp/CoderBacon
 ========
 
-Trello Board: https://trello.com/b/Yw4o8EjD/bromance
+Trello Board: https://trello.com/b/Yw4o8EjD/coderbaconapp

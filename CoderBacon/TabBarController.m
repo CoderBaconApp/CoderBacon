@@ -1,20 +1,20 @@
-//  BromanceTabBarController.m
+//  TabBarController.m
 //
-//  Copyright (C) 2013 BromanceApp
+//  Copyright (C) 2013 CoderBaconApp
 
 #import <Parse/Parse.h>
 #import "AsyncServices.h"
-#import "BromanceTabBarController.h"
+#import "TabBarController.h"
 #import "SplashViewController.h"
 #import "Common.h"
 
-@interface BromanceTabBarController ()
+@interface TabBarController ()
 
 @property (strong, nonatomic) NSArray *contentVCs;
 
 @end
 
-@implementation BromanceTabBarController
+@implementation TabBarController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,7 +51,7 @@
 }
 
 - (void)loadTabs {
-    if (![BromanceTabBarController isLoggedIn]) {
+    if (![TabBarController isLoggedIn]) {
         SplashViewController *splash = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SplashVC"];
 
         [self setViewControllers:@[splash] animated:NO];

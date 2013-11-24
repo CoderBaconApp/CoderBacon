@@ -1,13 +1,14 @@
 //  UserListViewController.m
 //
-//  Copyright (C) 2013 BromanceApp
+//  Copyright (C) 2013 CoderBacon
+//
 
 #import "UserListViewController.h"
 #import "User.h"
 #import "UserCell.h"
 #import "UserProfileViewController.h"
 #import <UIImageView+AFNetworking.h>
-#import "BromanceTabBarController.h"
+#import "TabBarController.h"
 #import "Common.h"
 
 @interface UserListViewController ()

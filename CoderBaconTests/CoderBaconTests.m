@@ -1,6 +1,6 @@
 //
-//  BromanceTests.m
-//  BromanceTests
+//  CoderBaconTests.m
+//  CoderBaconTests
 //
 //  Created by Pamela Ocampo on 10/14/13.
 //  Copyright (c) 2013 Pamela Ocampo. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface BromanceTests : XCTestCase
+@interface CoderBaconTests : XCTestCase
 
 @end
 
-@implementation BromanceTests
+@implementation CoderBaconTests
 
 - (void)setUp
 {

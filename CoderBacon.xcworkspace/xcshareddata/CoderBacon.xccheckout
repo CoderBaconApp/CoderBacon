@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>IDESourceControlProjectFavoriteDictionaryKey</key>
+    <false/>
+    <key>IDESourceControlProjectIdentifier</key>
+    <string>DA54A351-8DD4-471E-B77E-AE0A7BBA986B</string>
+    <key>IDESourceControlProjectName</key>
+    <string>CoderBacon</string>
+    <key>IDESourceControlProjectOriginsDictionary</key>
+    <dict>
+      <key>348CA7D0-2603-4433-BA77-CBB0C78A168D</key>
+      <string>ssh://github.com/CoderBaconApp/CoderBacon.git</string>
+    </dict>
+    <key>IDESourceControlProjectPath</key>
+    <string>CoderBacon.xcworkspace</string>
+    <key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+    <dict>
+      <key>348CA7D0-2603-4433-BA77-CBB0C78A168D</key>
+      <string>..</string>
+    </dict>
+    <key>IDESourceControlProjectURL</key>
+    <string>ssh://github.com/CoderBaconApp/CoderBacon.git</string>
+    <key>IDESourceControlProjectVersion</key>
+    <integer>110</integer>
+    <key>IDESourceControlProjectWCCIdentifier</key>
+    <string>348CA7D0-2603-4433-BA77-CBB0C78A168D</string>
+    <key>IDESourceControlProjectWCConfigurations</key>
+    <array>
+      <dict>
+        <key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+        <string>public.vcs.git</string>
+        <key>IDESourceControlWCCIdentifierKey</key>
+        <string>348CA7D0-2603-4433-BA77-CBB0C78A168D</string>
+        <key>IDESourceControlWCCName</key>
+        <string>CoderBacon</string>
+      </dict>
+    </array>
+  </dict>
+</plist>
