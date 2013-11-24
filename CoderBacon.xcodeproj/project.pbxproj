@@ -10,7 +10,6 @@
 		5CA6AD2B517D4EAA89D1B38B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FACBF7B0CBF41AABD9E6C84 /* libPods.a */; };
 		9B0B51F218429BE3002E68D1 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51F118429BE3002E68D1 /* Common.m */; };
 		9B0B51F518429BF1002E68D1 /* AsyncServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51F418429BF1002E68D1 /* AsyncServices.m */; };
-		9B0B51F818429C01002E68D1 /* THSpringyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51F718429C01002E68D1 /* THSpringyFlowLayout.m */; };
 		9B0B51FF18429C25002E68D1 /* MessageReceivedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51FA18429C25002E68D1 /* MessageReceivedCell.m */; };
 		9B0B520018429C25002E68D1 /* MessageReceivedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B51FB18429C25002E68D1 /* MessageReceivedCell.xib */; };
 		9B0B520118429C25002E68D1 /* MessageSentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51FD18429C25002E68D1 /* MessageSentCell.m */; };
@@ -56,6 +55,7 @@
 		C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A101813010E003CE519 /* SystemConfiguration.framework */; };
 		C94429E51842AFA10043B974 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94429E41842AFA10043B974 /* Parse.framework */; };
 		C96BD8651813037500325052 /* business_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96BD8641813037500325052 /* business_cat.jpg */; };
+		C99816AC1842A8EE002851C5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99816AB1842A8EE002851C5 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +74,6 @@
 		9B0B51F118429BE3002E68D1 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = CoderBacon/Common.m; sourceTree = SOURCE_ROOT; };
 		9B0B51F318429BF1002E68D1 /* AsyncServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncServices.h; path = CoderBacon/AsyncServices.h; sourceTree = SOURCE_ROOT; };
 		9B0B51F418429BF1002E68D1 /* AsyncServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncServices.m; path = CoderBacon/AsyncServices.m; sourceTree = SOURCE_ROOT; };
-		9B0B51F618429C01002E68D1 /* THSpringyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THSpringyFlowLayout.h; path = CoderBacon/THSpringyFlowLayout.h; sourceTree = SOURCE_ROOT; };
-		9B0B51F718429C01002E68D1 /* THSpringyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THSpringyFlowLayout.m; path = CoderBacon/THSpringyFlowLayout.m; sourceTree = SOURCE_ROOT; };
 		9B0B51F918429C25002E68D1 /* MessageReceivedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageReceivedCell.h; path = CoderBacon/MessageReceivedCell.h; sourceTree = SOURCE_ROOT; };
 		9B0B51FA18429C25002E68D1 /* MessageReceivedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageReceivedCell.m; path = CoderBacon/MessageReceivedCell.m; sourceTree = SOURCE_ROOT; };
 		9B0B51FB18429C25002E68D1 /* MessageReceivedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageReceivedCell.xib; path = CoderBacon/MessageReceivedCell.xib; sourceTree = SOURCE_ROOT; };
@@ -138,6 +136,7 @@
 		C90B3A101813010E003CE519 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C94429E41842AFA10043B974 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C96BD8641813037500325052 /* business_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = business_cat.jpg; sourceTree = "<group>"; };
+		C99816AB1842A8EE002851C5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D8C6A0BBD99942BF8E25E3B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,7 +224,6 @@
 				9BF4D85F18429A3600398327 /* Images.xcassets */,
 				C9CC5C1D182733A800A6F1BF /* Helpers */,
 				C90A51EF181D114700B04BEC /* Clients */,
-				D09EC707181C739500C0249C /* Layouts */,
 				C9C80B1D1817BC7A0043B658 /* Views */,
 				C9A6236918130F0E00CFA25E /* Models */,
 				C96BD8661813045500325052 /* View Controllers */,
@@ -352,15 +350,6 @@
 				9B0B51F118429BE3002E68D1 /* Common.m */,
 			);
 			name = Helpers;
-			sourceTree = "<group>";
-		};
-		D09EC707181C739500C0249C /* Layouts */ = {
-			isa = PBXGroup;
-			children = (
-				9B0B51F618429C01002E68D1 /* THSpringyFlowLayout.h */,
-				9B0B51F718429C01002E68D1 /* THSpringyFlowLayout.m */,
-			);
-			name = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,7 +501,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B0B51FF18429C25002E68D1 /* MessageReceivedCell.m in Sources */,
-				9B0B51F818429C01002E68D1 /* THSpringyFlowLayout.m in Sources */,
 				9B0B522518429CB9002E68D1 /* SplashViewController.m in Sources */,
 				9B0B522218429CB9002E68D1 /* MessageDetailViewController.m in Sources */,
 				9B0B522718429CB9002E68D1 /* UserListViewController.m in Sources */,
