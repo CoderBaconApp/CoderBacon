@@ -18,7 +18,7 @@
         <scene sceneID="i2j-ut-Z2C">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ZJ7-5e-3RN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" image="notepad" id="O1T-yN-uQK"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="Envelope" id="O1T-yN-uQK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZIG-yQ-wle">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -49,7 +49,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Messages" id="hfl-LR-jf4"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="Envelope" id="hfl-LR-jf4"/>
                     <navigationItem key="navigationItem" title="Messages" id="tTz-Mq-PDJ"/>
                     <connections>
                         <segue destination="ao6-fD-Tn4" kind="push" identifier="MessageDetailSegue" id="Dm2-Uy-HxU"/>
@@ -94,7 +94,7 @@
         <scene sceneID="LGS-qC-6To">
             <objects>
                 <navigationController definesPresentationContext="YES" id="gWA-R9-Pv7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Users" image="group" id="a2p-WA-YAc"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="Group" id="a2p-WA-YAc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sOa-fN-91p">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -183,7 +183,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Users" id="suY-JU-rWB"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="Group" id="suY-JU-rWB"/>
                     <navigationItem key="navigationItem" title="Users" id="sFT-qN-wvZ">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="o72-Q5-U6N">
                             <connections>
@@ -303,9 +303,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Envelope" width="27" height="21"/>
+        <image name="Group" width="29" height="29"/>
         <image name="business_cat.jpg" width="275" height="276"/>
-        <image name="group" width="32" height="21"/>
-        <image name="notepad" width="22" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>AAAF9426-EF6C-4CD9-B496-8066708256EA</string>
+	<string>D0CBD8EE-62E0-46A7-9C93-58407CE24D98</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CoderBacon</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F2B27F4E-3BA1-4644-A0D9-6DC86CD96847</key>
-		<string>https://github.com/JustinDSN/Bromance.git</string>
+		<key>F78E880C-B3AD-4C38-BD39-D5C720EA49E5</key>
+		<string>https://github.com/CoderBaconApp/CoderBacon.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CoderBacon.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F2B27F4E-3BA1-4644-A0D9-6DC86CD96847</key>
+		<key>F78E880C-B3AD-4C38-BD39-D5C720EA49E5</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/JustinDSN/Bromance.git</string>
+	<string>https://github.com/CoderBaconApp/CoderBacon.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F2B27F4E-3BA1-4644-A0D9-6DC86CD96847</string>
+	<string>F78E880C-B3AD-4C38-BD39-D5C720EA49E5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F2B27F4E-3BA1-4644-A0D9-6DC86CD96847</string>
+			<string>F78E880C-B3AD-4C38-BD39-D5C720EA49E5</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Bromance</string>
+			<string>CoderBacon</string>
 		</dict>
 	</array>
 </dict>
