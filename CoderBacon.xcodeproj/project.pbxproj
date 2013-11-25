@@ -37,7 +37,6 @@
 		9BAE3740180CE9030058A7A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE3722180CE9020058A7A8 /* UIKit.framework */; };
 		9BF4D85C184299F600398327 /* CoderBaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF4D85B184299F600398327 /* CoderBaconTests.m */; };
 		9BF4D86018429A3600398327 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF4D85E18429A3600398327 /* AppDelegate.m */; };
-		9BF4D86118429A3600398327 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D85F18429A3600398327 /* Images.xcassets */; };
 		9BF4D86B18429AFD00398327 /* UIScrollView+ScrollPositions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF4D86A18429AFD00398327 /* UIScrollView+ScrollPositions.m */; };
 		9BF4D86D18429B1000398327 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF4D86C18429B1000398327 /* main.m */; };
 		C90B3A01181300C8003CE519 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A00181300C8003CE519 /* AudioToolbox.framework */; };
@@ -53,6 +52,7 @@
 		C9C513431842BA0B008EE437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86318429A8900398327 /* Main.storyboard */; };
 		C9C513441842BA1D008EE437 /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B521618429CB9002E68D1 /* MessageDetailViewController.xib */; };
 		C9C513451842BBA1008EE437 /* CoderBacon-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86618429ABF00398327 /* CoderBacon-Info.plist */; };
+		D06C89AC1842D718000E5F8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06C89AB1842D718000E5F8B /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +116,6 @@
 		9BF4D85B184299F600398327 /* CoderBaconTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoderBaconTests.m; path = CoderBaconTests/CoderBaconTests.m; sourceTree = SOURCE_ROOT; };
 		9BF4D85D18429A3600398327 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CoderBacon/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		9BF4D85E18429A3600398327 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CoderBacon/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		9BF4D85F18429A3600398327 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CoderBacon/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		9BF4D86418429A8900398327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CoderBacon/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		9BF4D86618429ABF00398327 /* CoderBacon-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CoderBacon-Info.plist"; path = "CoderBacon/CoderBacon-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9BF4D86818429ACE00398327 /* CoderBacon-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CoderBacon-Prefix.pch"; path = "CoderBacon/CoderBacon-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -133,6 +132,7 @@
 		C90B3A101813010E003CE519 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C94429E41842AFA10043B974 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C96BD8641813037500325052 /* business_cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = business_cat.jpg; sourceTree = "<group>"; };
+		D06C89AB1842D718000E5F8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D8C6A0BBD99942BF8E25E3B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,7 +217,7 @@
 				9BF4D86318429A8900398327 /* Main.storyboard */,
 				9BF4D85D18429A3600398327 /* AppDelegate.h */,
 				9BF4D85E18429A3600398327 /* AppDelegate.m */,
-				9BF4D85F18429A3600398327 /* Images.xcassets */,
+				D06C89AB1842D718000E5F8B /* Images.xcassets */,
 				C9CC5C1D182733A800A6F1BF /* Helpers */,
 				C90A51EF181D114700B04BEC /* Clients */,
 				C9C80B1D1817BC7A0043B658 /* Views */,
@@ -434,10 +434,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06C89AC1842D718000E5F8B /* Images.xcassets in Resources */,
 				C9C513451842BBA1008EE437 /* CoderBacon-Info.plist in Resources */,
 				C9C513441842BA1D008EE437 /* MessageDetailViewController.xib in Resources */,
 				C9C513431842BA0B008EE437 /* Main.storyboard in Resources */,
-				9BF4D86118429A3600398327 /* Images.xcassets in Resources */,
 				9B0B520218429C25002E68D1 /* MessageSentCell.xib in Resources */,
 				9B0B520718429C3F002E68D1 /* MessageCell.xib in Resources */,
 				C96BD8651813037500325052 /* business_cat.jpg in Resources */,
@@ -642,7 +642,6 @@
 			baseConfigurationReference = D8C6A0BBD99942BF8E25E3B1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -675,7 +674,6 @@
 			baseConfigurationReference = D8C6A0BBD99942BF8E25E3B1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
