@@ -304,7 +304,10 @@
     </scenes>
     <resources>
         <image name="Envelope" width="27" height="21"/>
+        <image name="Envelope" width="27" height="21"/>
         <image name="Group" width="29" height="29"/>
+        <image name="Group" width="29" height="29"/>
+        <image name="business_cat.jpg" width="275" height="276"/>
         <image name="business_cat.jpg" width="275" height="276"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
