@@ -268,14 +268,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPn-qT-bcF">
-                                <rect key="frame" x="139" y="91" width="31" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr6-Bl-n9e">
-                                <rect key="frame" x="139" y="120" width="129" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="161" translatesAutoresizingMaskIntoConstraints="NO" id="gr6-Bl-n9e">
+                                <rect key="frame" x="139" y="91" width="161" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -290,7 +284,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ageLabel" destination="XPn-qT-bcF" id="VRC-a9-ZD8"/>
                         <outlet property="bioLabel" destination="ttG-Tl-GpM" id="7JY-xg-69j"/>
                         <outlet property="locationLabel" destination="gr6-Bl-n9e" id="bfH-9i-Eg7"/>
                         <outlet property="profileImageView" destination="q7u-Hy-KGy" id="qga-C9-tDE"/>
@@ -304,7 +297,10 @@
     </scenes>
     <resources>
         <image name="Envelope" width="27" height="21"/>
+        <image name="Envelope" width="27" height="21"/>
         <image name="Group" width="29" height="29"/>
+        <image name="Group" width="29" height="29"/>
+        <image name="business_cat.jpg" width="275" height="276"/>
         <image name="business_cat.jpg" width="275" height="276"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
