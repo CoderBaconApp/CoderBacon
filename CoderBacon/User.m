@@ -49,6 +49,7 @@
         
         for (int i = 0; i < users.count; i++) {
             User *usr = [User fromPFObject:users[i]];
+            usr.pfUser = users[i];
             
             if (![[[PFUser currentUser] objectId] isEqualToString:usr.objectId]) {
                 PFGeoPoint *userGeoPoint = users[i][DEVICELOCATION];

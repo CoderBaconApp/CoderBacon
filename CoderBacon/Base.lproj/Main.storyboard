@@ -234,33 +234,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OId-CI-9TC">
-                                <rect key="frame" x="0.0" y="284" width="320" height="284"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kvd-jk-nI9">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kvd-jk-nI9" id="8Fl-0f-qJG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1V-Xu-KnF">
-                                                    <rect key="frame" x="51" y="11" width="269" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="business_cat.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-0s-IZE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ttG-Tl-GpM">
                                 <rect key="frame" x="20" y="199" width="280" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -286,7 +259,11 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="6Lx-zF-KzI"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="User Name" id="JYj-7t-UIu">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="plC-a6-lK4"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="plC-a6-lK4">
+                            <connections>
+                                <segue destination="ao6-fD-Tn4" kind="push" id="iGc-SX-f6L"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -294,7 +271,6 @@
                         <outlet property="bioLabel" destination="ttG-Tl-GpM" id="7JY-xg-69j"/>
                         <outlet property="locationLabel" destination="gr6-Bl-n9e" id="bfH-9i-Eg7"/>
                         <outlet property="profileImageView" destination="q7u-Hy-KGy" id="qga-C9-tDE"/>
-                        <outlet property="tableView" destination="OId-CI-9TC" id="jPB-c4-6GG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -312,4 +288,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dm2-Uy-HxU"/>
+    </inferredMetricsTieBreakers>
 </document>
