@@ -48,6 +48,7 @@
             </constraints>
             <size key="customSize" width="320" height="96"/>
             <connections>
+                <outlet property="messageBubbleView" destination="H7G-Hq-72F" id="pDI-KF-Yvs"/>
                 <outlet property="messageLabel" destination="6sn-Jq-1pG" id="4PP-ya-Ouw"/>
             </connections>
         </collectionViewCell>
