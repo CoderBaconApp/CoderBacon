@@ -6,6 +6,7 @@
 //  http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
 
 #import "UserProfileViewController.h"
+#import "MessageDetailViewController.h"
 
 @interface UserProfileViewController ()
 
@@ -32,7 +33,7 @@
 }
 
 - (void)setup {
-    self.hidesBottomBarWhenPushed = YES;
+    //self.hidesBottomBarWhenPushed = YES;
 }
 
 - (void)viewDidLoad {
@@ -43,5 +44,13 @@
     self.ageLabel.text = self.user.age > 0 ? [NSString stringWithFormat:@"%li", (long)self.user.age] : @"";
     self.bioLabel.text = self.user.bio;
     self.profileImageView.image = self.user.profilePhoto;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    MessageDetailViewController *mdvc = (MessageDetailViewController *)[segue destinationViewController];
+    
+    mdvc.title = self.user.name;
+    mdvc.messages = [[NSArray alloc] init];
+    mdvc.otherUser = self.user.pfUser;
 }
 @end

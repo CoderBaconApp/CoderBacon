@@ -21,6 +21,7 @@
 @property (strong, nonatomic) UIImage *profilePhoto;
 @property (nonatomic) double distance;
 @property (readonly) NSString *distanceFormat;
+@property (strong, nonatomic) PFUser *pfUser;
 -(PFObject *) toPFObject;
 #pragma mark Class Methods
 + (void)allUsersWithCompletion:(void (^)(NSArray *users, NSError *error))complete;
