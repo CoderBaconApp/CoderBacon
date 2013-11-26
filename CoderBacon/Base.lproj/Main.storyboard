@@ -50,7 +50,15 @@
                         </prototypes>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Messages" image="Envelope" id="hfl-LR-jf4"/>
-                    <navigationItem key="navigationItem" title="Messages" id="tTz-Mq-PDJ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Messages" id="tTz-Mq-PDJ">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="w83-bB-OF9">
+                            <connections>
+                                <action selector="logoutButtonClicked:" destination="f3u-ZB-c1n" id="fhv-81-5PM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="ao6-fD-Tn4" kind="push" identifier="MessageDetailSegue" id="Dm2-Uy-HxU"/>
                     </connections>
@@ -276,7 +284,6 @@
         <image name="Envelope" width="27" height="21"/>
         <image name="Group" width="29" height="29"/>
         <image name="Group" width="29" height="29"/>
-        <image name="business_cat.jpg" width="275" height="276"/>
         <image name="business_cat.jpg" width="275" height="276"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
