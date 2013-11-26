@@ -55,7 +55,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 48.f;
+    return 50.f;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section      {
@@ -78,13 +78,9 @@
 
     NSURL *profilePictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square", userFacebookId]];
     NSURLRequest *profilePictureURLRequest = [NSURLRequest requestWithURL:profilePictureURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0f]; // Facebook profile picture cache policy: Expires in 2 weeks
-    __weak MessageCell *weakCell = cell;
-    
-    [cell.imageView setImageWithURLRequest:profilePictureURLRequest placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        if (weakCell) {
-            weakCell.imageView.image = image;
-        }
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+
+    [cell.userImageView setImageWithURLRequest:profilePictureURLRequest placeholderImage:nil success:nil
+                                       failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         NSLog(@"%@", error);
     }];
     
