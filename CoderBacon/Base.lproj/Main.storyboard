@@ -130,22 +130,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K20-nS-VXI">
-                                                    <rect key="frame" x="10" y="10" width="48" height="48"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K20-nS-VXI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="48" id="7KU-Bm-f3G"/>
-                                                        <constraint firstAttribute="height" constant="48" id="bYZ-tc-e2m"/>
+                                                        <constraint firstAttribute="width" constant="50" id="7KU-Bm-f3G"/>
+                                                        <constraint firstAttribute="height" constant="50" id="bYZ-tc-e2m"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Fantastic Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="YFw-ro-4qe">
-                                                    <rect key="frame" x="68" y="10" width="159" height="15"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Fantastic Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="182" translatesAutoresizingMaskIntoConstraints="NO" id="YFw-ro-4qe">
+                                                    <rect key="frame" x="57" y="4" width="182" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 / San Francisco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-YJ-2Cw">
-                                                    <rect key="frame" x="68" y="31" width="159" height="15"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 / San Francysco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-YJ-2Cw">
+                                                    <rect key="frame" x="57" y="30" width="182" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
@@ -160,14 +160,14 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="hzS-2f-fM9" secondAttribute="trailing" constant="10" id="84F-zc-9Lr"/>
                                                 <constraint firstAttribute="centerY" secondItem="hzS-2f-fM9" secondAttribute="centerY" id="DDe-8I-P7d"/>
-                                                <constraint firstItem="K20-nS-VXI" firstAttribute="leading" secondItem="zDl-gO-sQV" secondAttribute="leading" constant="10" id="EM1-qN-jku"/>
-                                                <constraint firstAttribute="trailing" secondItem="aTL-YJ-2Cw" secondAttribute="trailing" constant="60" id="Eto-0e-7M4"/>
-                                                <constraint firstItem="aTL-YJ-2Cw" firstAttribute="top" secondItem="YFw-ro-4qe" secondAttribute="bottom" constant="6" id="Kxi-sO-EVB"/>
-                                                <constraint firstItem="K20-nS-VXI" firstAttribute="top" secondItem="YFw-ro-4qe" secondAttribute="top" id="MUU-Ew-jU6"/>
-                                                <constraint firstItem="YFw-ro-4qe" firstAttribute="leading" secondItem="K20-nS-VXI" secondAttribute="trailing" constant="10" id="U9Q-8C-gIk"/>
-                                                <constraint firstAttribute="trailing" secondItem="YFw-ro-4qe" secondAttribute="trailing" constant="60" id="UrY-yc-JUy"/>
-                                                <constraint firstItem="YFw-ro-4qe" firstAttribute="top" secondItem="zDl-gO-sQV" secondAttribute="top" constant="10" id="eoi-hp-5C7"/>
-                                                <constraint firstItem="aTL-YJ-2Cw" firstAttribute="leading" secondItem="K20-nS-VXI" secondAttribute="trailing" constant="10" id="oaC-7u-Ehu"/>
+                                                <constraint firstItem="K20-nS-VXI" firstAttribute="leading" secondItem="zDl-gO-sQV" secondAttribute="leading" id="EM1-qN-jku"/>
+                                                <constraint firstAttribute="trailing" secondItem="aTL-YJ-2Cw" secondAttribute="trailing" constant="48" id="Eto-0e-7M4"/>
+                                                <constraint firstItem="aTL-YJ-2Cw" firstAttribute="top" secondItem="YFw-ro-4qe" secondAttribute="bottom" constant="4" id="Kxi-sO-EVB"/>
+                                                <constraint firstItem="K20-nS-VXI" firstAttribute="top" secondItem="YFw-ro-4qe" secondAttribute="top" constant="-4" id="MUU-Ew-jU6"/>
+                                                <constraint firstItem="YFw-ro-4qe" firstAttribute="leading" secondItem="K20-nS-VXI" secondAttribute="trailing" constant="7" id="U9Q-8C-gIk"/>
+                                                <constraint firstAttribute="trailing" secondItem="YFw-ro-4qe" secondAttribute="trailing" constant="48" id="UrY-yc-JUy"/>
+                                                <constraint firstItem="YFw-ro-4qe" firstAttribute="top" secondItem="zDl-gO-sQV" secondAttribute="top" constant="4" id="eoi-hp-5C7"/>
+                                                <constraint firstItem="aTL-YJ-2Cw" firstAttribute="leading" secondItem="K20-nS-VXI" secondAttribute="trailing" constant="7" id="oaC-7u-Ehu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -268,14 +268,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPn-qT-bcF">
-                                <rect key="frame" x="139" y="91" width="31" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr6-Bl-n9e">
-                                <rect key="frame" x="139" y="120" width="129" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="161" translatesAutoresizingMaskIntoConstraints="NO" id="gr6-Bl-n9e">
+                                <rect key="frame" x="139" y="91" width="161" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -290,7 +284,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ageLabel" destination="XPn-qT-bcF" id="VRC-a9-ZD8"/>
                         <outlet property="bioLabel" destination="ttG-Tl-GpM" id="7JY-xg-69j"/>
                         <outlet property="locationLabel" destination="gr6-Bl-n9e" id="bfH-9i-Eg7"/>
                         <outlet property="profileImageView" destination="q7u-Hy-KGy" id="qga-C9-tDE"/>
@@ -304,7 +297,10 @@
     </scenes>
     <resources>
         <image name="Envelope" width="27" height="21"/>
+        <image name="Envelope" width="27" height="21"/>
         <image name="Group" width="29" height="29"/>
+        <image name="Group" width="29" height="29"/>
+        <image name="business_cat.jpg" width="275" height="276"/>
         <image name="business_cat.jpg" width="275" height="276"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

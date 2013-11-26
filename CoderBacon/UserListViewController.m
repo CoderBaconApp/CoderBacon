@@ -79,7 +79,7 @@
         NSLog(@"%@", error);
     }];
     
-    cell.imageView.image = user.profilePhoto;
+    cell.profileImageView.image = user.profilePhoto;
     cell.nameLabel.text = user.name;
     cell.locationLabel.text = user.location;
     cell.distanceLabel.text = user.distanceFormat;
@@ -89,6 +89,10 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.users.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
 }
 
 #pragma mark Private Methods
