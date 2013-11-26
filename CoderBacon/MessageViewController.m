@@ -113,6 +113,10 @@
         [self.tableView reloadData];
     }];
 }
+- (IBAction)logoutButtonClicked:(UIBarButtonItem *)sender {
+    [PFUser logOut];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LOG_OUT_NOTIFICATION object:self];
+}
 
 - (void)clearData {
     _messages = [[NSMutableDictionary alloc] init];
