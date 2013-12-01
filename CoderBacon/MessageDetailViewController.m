@@ -16,7 +16,9 @@
 
 #define COLLECTION_VIEW_PADDING 10
 
-@interface MessageDetailViewController ()
+@interface MessageDetailViewController () {
+    MessageSentCell *mss;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *messageView;
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
@@ -33,6 +35,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self setup];
+        mss = [[MessageSentCell alloc] init];
     }
     
     return self;
@@ -129,8 +132,8 @@
     
     Message *msg = _messages[indexPath.row];
 
-    CGSize size = [msg.text sizeWithAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:12.0f]}];
-        
+    CGSize size = [msg.text boundingRectWithSize:CGSizeMake(200, 1000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"HelveticaNeue" size:12.0f],NSFontAttributeName, nil] context:nil].size;
+    
     return CGSizeMake(self.view.bounds.size.width, 12 + size.height);
 }
 

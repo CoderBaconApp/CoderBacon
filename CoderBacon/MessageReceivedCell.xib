@@ -20,10 +20,6 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="872" verticalHuggingPriority="849" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="199" translatesAutoresizingMaskIntoConstraints="NO" id="6sn-Jq-1pG">
                                 <rect key="frame" x="10" y="6" width="199" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="500" constant="15" id="9zK-bg-eX5"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="900" constant="200" id="AAl-Wx-v4g"/>
-                                </constraints>
                                 <string key="text">Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message </string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <nil key="highlightedColor"/>
