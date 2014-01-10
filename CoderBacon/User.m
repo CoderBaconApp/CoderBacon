@@ -15,6 +15,7 @@
 #define LOCATION @"location"
 #define DEVICELOCATION @"device_location"
 #define BIO @"bio"
+#define BLOCKEDUSER @"BlockedUser"
 
 @interface User ()
 
@@ -31,25 +32,28 @@
     PFObject *object = [[PFObject alloc] initWithClassName:USER];
     object[NAME] = self.name;
     object[LOCATION] = self.location;
-    object[OBJECTID] = self.objectId;
+    object.objectId = self.objectId;
     object[FACEBOOK_ID] = self.facebookId;
     object[DEVICELOCATION] =[PFGeoPoint geoPointWithLatitude:self.latitude longitude:self.longitude];
-    object[BIO] = self.bio;
+    object[BIO] = self.bio ? self.bio : [NSNull null];
     return object;
 }
 
 #pragma mark Class Methods
 + (void)allUsersWithCompletion:(void (^)(NSArray *users, NSError *error))complete {
+    PFQuery *blockedUsersQuery = [PFQuery queryWithClassName:BLOCKEDUSER];
+    [blockedUsersQuery whereKey:@"user" equalTo:[PFUser currentUser]];
+    
     PFQuery *usersQuery = [PFUser query];
     PFGeoPoint *currentGeoPoint = [PFUser currentUser][DEVICELOCATION];
     [usersQuery whereKey:DEVICELOCATION nearGeoPoint:currentGeoPoint];
+    [usersQuery whereKey:@"objectId" doesNotMatchKey:@"blockedUserString" inQuery:blockedUsersQuery];
     
     [usersQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
         NSMutableArray *usersArray = [[NSMutableArray alloc] init];
         
         for (int i = 0; i < users.count; i++) {
             User *usr = [User fromPFObject:users[i]];
-            usr.pfUser = users[i];
             
             if (![[[PFUser currentUser] objectId] isEqualToString:usr.objectId]) {
                 PFGeoPoint *userGeoPoint = users[i][DEVICELOCATION];
@@ -69,6 +73,7 @@
     user.objectId = object.objectId;
     user.facebookId = object[FACEBOOK_ID];
     user.bio = object[BIO];
+    user.pfUser = (PFUser*)object;
     
     PFGeoPoint *geoPoint = (PFGeoPoint *)object[DEVICELOCATION];
     if (geoPoint) {

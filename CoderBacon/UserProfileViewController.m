@@ -53,4 +53,28 @@
     mdvc.messages = [[NSArray alloc] init];
     mdvc.otherUser = self.user.pfUser;
 }
+
+- (IBAction)blockUser:(id)sender {
+    //TODO: Add confirmation message
+    
+    PFObject *blocker = [[PFObject alloc] initWithClassName:@"BlockedUser"];
+    PFObject *blockee = [[PFObject alloc] initWithClassName:@"BlockedUser"];
+    
+    blocker[@"user"] = [PFUser currentUser];
+    blocker[@"blockedUserString"] = self.user.objectId;
+    
+    blockee[@"user"] = self.user.pfUser;
+    blockee[@"blockedUserString"] = [PFUser currentUser].objectId;
+    
+    [blocker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"Blocker Succeeded: %d %@", succeeded, error);
+    }];
+    
+    [blockee saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"Blockee Succeeded: %d %@", succeeded, error);
+    }];
+    
+    //TODO: Pop back to user list.
+}
+
 @end

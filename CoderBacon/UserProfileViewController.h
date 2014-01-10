@@ -9,6 +9,9 @@
 #import "User.h"
 
 @interface UserProfileViewController : UIViewController
+
+- (IBAction)blockUser:(id)sender;
+
 @property (strong, nonatomic) User *user;
 @property (strong, nonatomic) IBOutlet UILabel *ageLabel;
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
