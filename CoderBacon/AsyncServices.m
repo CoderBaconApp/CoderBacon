@@ -48,7 +48,7 @@
         
         if(!error) {
             for (CLPlacemark * placemark in placemarks) {
-                NSString *updatedLocation = [NSString stringWithFormat:@"%@, %@ %@ %@", placemark.locality, placemark.administrativeArea, placemark.postalCode, placemark.ISOcountryCode];
+                NSString *updatedLocation = [NSString stringWithFormat:@"%@, %@", placemark.locality, placemark.administrativeArea];
                 
                 NSLog(@"%@", updatedLocation);
                 _geoLocation = updatedLocation;
