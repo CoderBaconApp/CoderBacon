@@ -138,7 +138,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K20-nS-VXI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="K20-nS-VXI">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <constraints>
@@ -294,6 +294,7 @@
         <image name="Envelope" width="27" height="21"/>
         <image name="Group" width="29" height="29"/>
         <image name="Group" width="29" height="29"/>
+        <image name="User" width="21" height="22"/>
         <image name="business_cat.jpg" width="275" height="276"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
