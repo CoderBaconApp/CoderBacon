@@ -8,6 +8,8 @@
 #import "UserProfileViewController.h"
 #import "MessageDetailViewController.h"
 
+#define BLOCKEDUSERTITLE @"Block User"
+
 @interface UserProfileViewController ()
 
 @end
@@ -53,10 +55,11 @@
     mdvc.messages = [[NSArray alloc] init];
     mdvc.otherUser = self.user.pfUser;
 }
+- (IBAction)blockUserPressed {
+    [self showActionSheet];
+}
 
-- (IBAction)blockUser:(id)sender {
-    //TODO: Add confirmation message
-    
+- (void)blockUser {
     PFObject *blocker = [[PFObject alloc] initWithClassName:@"BlockedUser"];
     PFObject *blockee = [[PFObject alloc] initWithClassName:@"BlockedUser"];
     
@@ -73,8 +76,23 @@
     [blockee saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         NSLog(@"Blockee Succeeded: %d %@", succeeded, error);
     }];
-    
-    //TODO: Pop back to user list.
+}
+
+#pragma mark ActionSheet
+- (void)showActionSheet {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:BLOCKEDUSERTITLE
+                                            otherButtonTitles:nil, nil];
+    [actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:BLOCKEDUSERTITLE]) {
+        [self blockUser];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end
