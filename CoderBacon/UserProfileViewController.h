@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface UserProfileViewController : UIViewController
+@interface UserProfileViewController : UIViewController <UIActionSheetDelegate>
 
 - (IBAction)blockUser:(id)sender;
 
