@@ -262,7 +262,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="blockUser:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b24-JP-cbT"/>
+                                    <action selector="blockUserPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tfk-xm-vfm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -291,6 +291,8 @@
     </scenes>
     <resources>
         <image name="Envelope" width="27" height="21"/>
+        <image name="Envelope" width="27" height="21"/>
+        <image name="Group" width="29" height="29"/>
         <image name="Group" width="29" height="29"/>
         <image name="business_cat.jpg" width="275" height="276"/>
     </resources>

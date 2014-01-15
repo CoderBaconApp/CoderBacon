@@ -55,8 +55,7 @@
     mdvc.messages = [[NSArray alloc] init];
     mdvc.otherUser = self.user.pfUser;
 }
-
-- (IBAction)blockUser:(id)sender {
+- (IBAction)blockUserPressed {
     [self showActionSheet];
 }
 
@@ -85,7 +84,7 @@
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:BLOCKEDUSERTITLE
-                                                    otherButtonTitles:nil, nil];
+                                            otherButtonTitles:nil, nil];
     [actionSheet showInView:self.view];
 }
 
