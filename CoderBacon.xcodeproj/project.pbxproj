@@ -8,26 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		5CA6AD2B517D4EAA89D1B38B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FACBF7B0CBF41AABD9E6C84 /* libPods.a */; };
-		9B0B51F218429BE3002E68D1 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51F118429BE3002E68D1 /* Common.m */; };
-		9B0B51F518429BF1002E68D1 /* AsyncServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51F418429BF1002E68D1 /* AsyncServices.m */; };
-		9B0B51FF18429C25002E68D1 /* MessageReceivedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51FA18429C25002E68D1 /* MessageReceivedCell.m */; };
-		9B0B520018429C25002E68D1 /* MessageReceivedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B51FB18429C25002E68D1 /* MessageReceivedCell.xib */; };
-		9B0B520118429C25002E68D1 /* MessageSentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51FD18429C25002E68D1 /* MessageSentCell.m */; };
-		9B0B520218429C25002E68D1 /* MessageSentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B51FE18429C25002E68D1 /* MessageSentCell.xib */; };
-		9B0B520618429C3F002E68D1 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B520418429C3F002E68D1 /* MessageCell.m */; };
-		9B0B520718429C3F002E68D1 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B520518429C3F002E68D1 /* MessageCell.xib */; };
-		9B0B520A18429C4D002E68D1 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B520918429C4D002E68D1 /* UserCell.m */; };
-		9B0B520D18429C5E002E68D1 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B520C18429C5E002E68D1 /* Message.m */; };
-		9B0B521018429C6A002E68D1 /* Broadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B520F18429C6A002E68D1 /* Broadcast.m */; };
-		9B0B521318429C79002E68D1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521218429C79002E68D1 /* User.m */; };
-		9B0B522218429CB9002E68D1 /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521518429CB9002E68D1 /* MessageDetailViewController.m */; };
-		9B0B522418429CB9002E68D1 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521818429CB9002E68D1 /* MessageViewController.m */; };
-		9B0B522518429CB9002E68D1 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521A18429CB9002E68D1 /* SplashViewController.m */; };
-		9B0B522618429CB9002E68D1 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B521B18429CB9002E68D1 /* SplashViewController.xib */; };
-		9B0B522718429CB9002E68D1 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521D18429CB9002E68D1 /* UserListViewController.m */; };
-		9B0B522818429CB9002E68D1 /* UserOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521F18429CB9002E68D1 /* UserOptionsViewController.m */; };
-		9B0B522918429CB9002E68D1 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B522118429CB9002E68D1 /* UserProfileViewController.m */; };
-		9B0B522C18429D0C002E68D1 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B522B18429D0C002E68D1 /* TabBarController.m */; };
+		9B0B51F218429BE3002E68D1 /* CBACommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51F118429BE3002E68D1 /* CBACommon.m */; };
+		9B0B51F518429BF1002E68D1 /* CBAAsyncServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51F418429BF1002E68D1 /* CBAAsyncServices.m */; };
+		9B0B51FF18429C25002E68D1 /* CBAMessageReceivedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51FA18429C25002E68D1 /* CBAMessageReceivedCell.m */; };
+		9B0B520018429C25002E68D1 /* CBAMessageReceivedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B51FB18429C25002E68D1 /* CBAMessageReceivedCell.xib */; };
+		9B0B520118429C25002E68D1 /* CBAMessageSentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B51FD18429C25002E68D1 /* CBAMessageSentCell.m */; };
+		9B0B520218429C25002E68D1 /* CBAMessageSentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B51FE18429C25002E68D1 /* CBAMessageSentCell.xib */; };
+		9B0B520618429C3F002E68D1 /* CBAMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B520418429C3F002E68D1 /* CBAMessageCell.m */; };
+		9B0B520718429C3F002E68D1 /* CBAMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B520518429C3F002E68D1 /* CBAMessageCell.xib */; };
+		9B0B520A18429C4D002E68D1 /* CBAUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B520918429C4D002E68D1 /* CBAUserCell.m */; };
+		9B0B520D18429C5E002E68D1 /* CBAMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B520C18429C5E002E68D1 /* CBAMessage.m */; };
+		9B0B521318429C79002E68D1 /* CBAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521218429C79002E68D1 /* CBAUser.m */; };
+		9B0B522218429CB9002E68D1 /* CBAMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521518429CB9002E68D1 /* CBAMessageDetailViewController.m */; };
+		9B0B522418429CB9002E68D1 /* CBAMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521818429CB9002E68D1 /* CBAMessageViewController.m */; };
+		9B0B522518429CB9002E68D1 /* CBASplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521A18429CB9002E68D1 /* CBASplashViewController.m */; };
+		9B0B522618429CB9002E68D1 /* CBASplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B521B18429CB9002E68D1 /* CBASplashViewController.xib */; };
+		9B0B522718429CB9002E68D1 /* CBAUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521D18429CB9002E68D1 /* CBAUserListViewController.m */; };
+		9B0B522818429CB9002E68D1 /* CBAUserOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B521F18429CB9002E68D1 /* CBAUserOptionsViewController.m */; };
+		9B0B522918429CB9002E68D1 /* CBAUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B522118429CB9002E68D1 /* CBAUserProfileViewController.m */; };
+		9B0B522C18429D0C002E68D1 /* CBATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B522B18429D0C002E68D1 /* CBATabBarController.m */; };
 		9B0B523218429DAA002E68D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B523018429DAA002E68D1 /* InfoPlist.strings */; };
 		9BAE371F180CE9020058A7A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE371E180CE9020058A7A8 /* Foundation.framework */; };
 		9BAE3721180CE9020058A7A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAE3720180CE9020058A7A8 /* CoreGraphics.framework */; };
@@ -50,7 +49,7 @@
 		C94429E51842AFA10043B974 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94429E41842AFA10043B974 /* Parse.framework */; };
 		C96BD8651813037500325052 /* business_cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C96BD8641813037500325052 /* business_cat.jpg */; };
 		C9C513431842BA0B008EE437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86318429A8900398327 /* Main.storyboard */; };
-		C9C513441842BA1D008EE437 /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B521618429CB9002E68D1 /* MessageDetailViewController.xib */; };
+		C9C513441842BA1D008EE437 /* CBAMessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0B521618429CB9002E68D1 /* CBAMessageDetailViewController.xib */; };
 		C9C513451842BBA1008EE437 /* CoderBacon-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86618429ABF00398327 /* CoderBacon-Info.plist */; };
 		D06C89AC1842D718000E5F8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06C89AB1842D718000E5F8B /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -67,43 +66,41 @@
 
 /* Begin PBXFileReference section */
 		3FACBF7B0CBF41AABD9E6C84 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B0B51F018429BE3002E68D1 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = CoderBacon/Common.h; sourceTree = SOURCE_ROOT; };
-		9B0B51F118429BE3002E68D1 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = CoderBacon/Common.m; sourceTree = SOURCE_ROOT; };
-		9B0B51F318429BF1002E68D1 /* AsyncServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncServices.h; path = CoderBacon/AsyncServices.h; sourceTree = SOURCE_ROOT; };
-		9B0B51F418429BF1002E68D1 /* AsyncServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncServices.m; path = CoderBacon/AsyncServices.m; sourceTree = SOURCE_ROOT; };
-		9B0B51F918429C25002E68D1 /* MessageReceivedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageReceivedCell.h; path = CoderBacon/MessageReceivedCell.h; sourceTree = SOURCE_ROOT; };
-		9B0B51FA18429C25002E68D1 /* MessageReceivedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageReceivedCell.m; path = CoderBacon/MessageReceivedCell.m; sourceTree = SOURCE_ROOT; };
-		9B0B51FB18429C25002E68D1 /* MessageReceivedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageReceivedCell.xib; path = CoderBacon/MessageReceivedCell.xib; sourceTree = SOURCE_ROOT; };
-		9B0B51FC18429C25002E68D1 /* MessageSentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageSentCell.h; path = CoderBacon/MessageSentCell.h; sourceTree = SOURCE_ROOT; };
-		9B0B51FD18429C25002E68D1 /* MessageSentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageSentCell.m; path = CoderBacon/MessageSentCell.m; sourceTree = SOURCE_ROOT; };
-		9B0B51FE18429C25002E68D1 /* MessageSentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageSentCell.xib; path = CoderBacon/MessageSentCell.xib; sourceTree = SOURCE_ROOT; };
-		9B0B520318429C3F002E68D1 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageCell.h; path = CoderBacon/MessageCell.h; sourceTree = SOURCE_ROOT; };
-		9B0B520418429C3F002E68D1 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageCell.m; path = CoderBacon/MessageCell.m; sourceTree = SOURCE_ROOT; };
-		9B0B520518429C3F002E68D1 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageCell.xib; path = CoderBacon/MessageCell.xib; sourceTree = SOURCE_ROOT; };
-		9B0B520818429C4D002E68D1 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserCell.h; path = CoderBacon/UserCell.h; sourceTree = SOURCE_ROOT; };
-		9B0B520918429C4D002E68D1 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserCell.m; path = CoderBacon/UserCell.m; sourceTree = SOURCE_ROOT; };
-		9B0B520B18429C5E002E68D1 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = CoderBacon/Message.h; sourceTree = SOURCE_ROOT; };
-		9B0B520C18429C5E002E68D1 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = CoderBacon/Message.m; sourceTree = SOURCE_ROOT; };
-		9B0B520E18429C6A002E68D1 /* Broadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Broadcast.h; path = CoderBacon/Broadcast.h; sourceTree = SOURCE_ROOT; };
-		9B0B520F18429C6A002E68D1 /* Broadcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Broadcast.m; path = CoderBacon/Broadcast.m; sourceTree = SOURCE_ROOT; };
-		9B0B521118429C79002E68D1 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = CoderBacon/User.h; sourceTree = SOURCE_ROOT; };
-		9B0B521218429C79002E68D1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = CoderBacon/User.m; sourceTree = SOURCE_ROOT; };
-		9B0B521418429CB9002E68D1 /* MessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageDetailViewController.h; path = CoderBacon/MessageDetailViewController.h; sourceTree = SOURCE_ROOT; };
-		9B0B521518429CB9002E68D1 /* MessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageDetailViewController.m; path = CoderBacon/MessageDetailViewController.m; sourceTree = SOURCE_ROOT; };
-		9B0B521618429CB9002E68D1 /* MessageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageDetailViewController.xib; path = CoderBacon/MessageDetailViewController.xib; sourceTree = SOURCE_ROOT; };
-		9B0B521718429CB9002E68D1 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageViewController.h; path = CoderBacon/MessageViewController.h; sourceTree = SOURCE_ROOT; };
-		9B0B521818429CB9002E68D1 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageViewController.m; path = CoderBacon/MessageViewController.m; sourceTree = SOURCE_ROOT; };
-		9B0B521918429CB9002E68D1 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashViewController.h; path = CoderBacon/SplashViewController.h; sourceTree = SOURCE_ROOT; };
-		9B0B521A18429CB9002E68D1 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashViewController.m; path = CoderBacon/SplashViewController.m; sourceTree = SOURCE_ROOT; };
-		9B0B521B18429CB9002E68D1 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SplashViewController.xib; path = CoderBacon/SplashViewController.xib; sourceTree = SOURCE_ROOT; };
-		9B0B521C18429CB9002E68D1 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserListViewController.h; path = CoderBacon/UserListViewController.h; sourceTree = SOURCE_ROOT; };
-		9B0B521D18429CB9002E68D1 /* UserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserListViewController.m; path = CoderBacon/UserListViewController.m; sourceTree = SOURCE_ROOT; };
-		9B0B521E18429CB9002E68D1 /* UserOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserOptionsViewController.h; path = CoderBacon/UserOptionsViewController.h; sourceTree = SOURCE_ROOT; };
-		9B0B521F18429CB9002E68D1 /* UserOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserOptionsViewController.m; path = CoderBacon/UserOptionsViewController.m; sourceTree = SOURCE_ROOT; };
-		9B0B522018429CB9002E68D1 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileViewController.h; path = CoderBacon/UserProfileViewController.h; sourceTree = SOURCE_ROOT; };
-		9B0B522118429CB9002E68D1 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = CoderBacon/UserProfileViewController.m; sourceTree = SOURCE_ROOT; };
-		9B0B522A18429D0C002E68D1 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarController.h; path = CoderBacon/TabBarController.h; sourceTree = SOURCE_ROOT; };
-		9B0B522B18429D0C002E68D1 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarController.m; path = CoderBacon/TabBarController.m; sourceTree = SOURCE_ROOT; };
+		9B0B51F018429BE3002E68D1 /* CBACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBACommon.h; path = CoderBacon/CBACommon.h; sourceTree = SOURCE_ROOT; };
+		9B0B51F118429BE3002E68D1 /* CBACommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBACommon.m; path = CoderBacon/CBACommon.m; sourceTree = SOURCE_ROOT; };
+		9B0B51F318429BF1002E68D1 /* CBAAsyncServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAAsyncServices.h; path = CoderBacon/CBAAsyncServices.h; sourceTree = SOURCE_ROOT; };
+		9B0B51F418429BF1002E68D1 /* CBAAsyncServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAAsyncServices.m; path = CoderBacon/CBAAsyncServices.m; sourceTree = SOURCE_ROOT; };
+		9B0B51F918429C25002E68D1 /* CBAMessageReceivedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAMessageReceivedCell.h; path = CoderBacon/CBAMessageReceivedCell.h; sourceTree = SOURCE_ROOT; };
+		9B0B51FA18429C25002E68D1 /* CBAMessageReceivedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAMessageReceivedCell.m; path = CoderBacon/CBAMessageReceivedCell.m; sourceTree = SOURCE_ROOT; };
+		9B0B51FB18429C25002E68D1 /* CBAMessageReceivedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CBAMessageReceivedCell.xib; path = CoderBacon/CBAMessageReceivedCell.xib; sourceTree = SOURCE_ROOT; };
+		9B0B51FC18429C25002E68D1 /* CBAMessageSentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAMessageSentCell.h; path = CoderBacon/CBAMessageSentCell.h; sourceTree = SOURCE_ROOT; };
+		9B0B51FD18429C25002E68D1 /* CBAMessageSentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAMessageSentCell.m; path = CoderBacon/CBAMessageSentCell.m; sourceTree = SOURCE_ROOT; };
+		9B0B51FE18429C25002E68D1 /* CBAMessageSentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CBAMessageSentCell.xib; path = CoderBacon/CBAMessageSentCell.xib; sourceTree = SOURCE_ROOT; };
+		9B0B520318429C3F002E68D1 /* CBAMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAMessageCell.h; path = CoderBacon/CBAMessageCell.h; sourceTree = SOURCE_ROOT; };
+		9B0B520418429C3F002E68D1 /* CBAMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAMessageCell.m; path = CoderBacon/CBAMessageCell.m; sourceTree = SOURCE_ROOT; };
+		9B0B520518429C3F002E68D1 /* CBAMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CBAMessageCell.xib; path = CoderBacon/CBAMessageCell.xib; sourceTree = SOURCE_ROOT; };
+		9B0B520818429C4D002E68D1 /* CBAUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAUserCell.h; path = CoderBacon/CBAUserCell.h; sourceTree = SOURCE_ROOT; };
+		9B0B520918429C4D002E68D1 /* CBAUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAUserCell.m; path = CoderBacon/CBAUserCell.m; sourceTree = SOURCE_ROOT; };
+		9B0B520B18429C5E002E68D1 /* CBAMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAMessage.h; path = CoderBacon/CBAMessage.h; sourceTree = SOURCE_ROOT; };
+		9B0B520C18429C5E002E68D1 /* CBAMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAMessage.m; path = CoderBacon/CBAMessage.m; sourceTree = SOURCE_ROOT; };
+		9B0B521118429C79002E68D1 /* CBAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAUser.h; path = CoderBacon/CBAUser.h; sourceTree = SOURCE_ROOT; };
+		9B0B521218429C79002E68D1 /* CBAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAUser.m; path = CoderBacon/CBAUser.m; sourceTree = SOURCE_ROOT; };
+		9B0B521418429CB9002E68D1 /* CBAMessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAMessageDetailViewController.h; path = CoderBacon/CBAMessageDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		9B0B521518429CB9002E68D1 /* CBAMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAMessageDetailViewController.m; path = CoderBacon/CBAMessageDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		9B0B521618429CB9002E68D1 /* CBAMessageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CBAMessageDetailViewController.xib; path = CoderBacon/CBAMessageDetailViewController.xib; sourceTree = SOURCE_ROOT; };
+		9B0B521718429CB9002E68D1 /* CBAMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAMessageViewController.h; path = CoderBacon/CBAMessageViewController.h; sourceTree = SOURCE_ROOT; };
+		9B0B521818429CB9002E68D1 /* CBAMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAMessageViewController.m; path = CoderBacon/CBAMessageViewController.m; sourceTree = SOURCE_ROOT; };
+		9B0B521918429CB9002E68D1 /* CBASplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBASplashViewController.h; path = CoderBacon/CBASplashViewController.h; sourceTree = SOURCE_ROOT; };
+		9B0B521A18429CB9002E68D1 /* CBASplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBASplashViewController.m; path = CoderBacon/CBASplashViewController.m; sourceTree = SOURCE_ROOT; };
+		9B0B521B18429CB9002E68D1 /* CBASplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CBASplashViewController.xib; path = CoderBacon/CBASplashViewController.xib; sourceTree = SOURCE_ROOT; };
+		9B0B521C18429CB9002E68D1 /* CBAUserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAUserListViewController.h; path = CoderBacon/CBAUserListViewController.h; sourceTree = SOURCE_ROOT; };
+		9B0B521D18429CB9002E68D1 /* CBAUserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAUserListViewController.m; path = CoderBacon/CBAUserListViewController.m; sourceTree = SOURCE_ROOT; };
+		9B0B521E18429CB9002E68D1 /* CBAUserOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAUserOptionsViewController.h; path = CoderBacon/CBAUserOptionsViewController.h; sourceTree = SOURCE_ROOT; };
+		9B0B521F18429CB9002E68D1 /* CBAUserOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAUserOptionsViewController.m; path = CoderBacon/CBAUserOptionsViewController.m; sourceTree = SOURCE_ROOT; };
+		9B0B522018429CB9002E68D1 /* CBAUserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAUserProfileViewController.h; path = CoderBacon/CBAUserProfileViewController.h; sourceTree = SOURCE_ROOT; };
+		9B0B522118429CB9002E68D1 /* CBAUserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAUserProfileViewController.m; path = CoderBacon/CBAUserProfileViewController.m; sourceTree = SOURCE_ROOT; };
+		9B0B522A18429D0C002E68D1 /* CBATabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBATabBarController.h; path = CoderBacon/CBATabBarController.h; sourceTree = SOURCE_ROOT; };
+		9B0B522B18429D0C002E68D1 /* CBATabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBATabBarController.m; path = CoderBacon/CBATabBarController.m; sourceTree = SOURCE_ROOT; };
 		9B0B522D18429D92002E68D1 /* CoderBaconTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CoderBaconTests-Info.plist"; path = "CoderBaconTests/CoderBaconTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9B0B523118429DAA002E68D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9BAE371B180CE9020058A7A8 /* CoderBacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoderBacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,8 +259,8 @@
 		C90A51EF181D114700B04BEC /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				9B0B51F318429BF1002E68D1 /* AsyncServices.h */,
-				9B0B51F418429BF1002E68D1 /* AsyncServices.m */,
+				9B0B51F318429BF1002E68D1 /* CBAAsyncServices.h */,
+				9B0B51F418429BF1002E68D1 /* CBAAsyncServices.m */,
 			);
 			name = Clients;
 			sourceTree = "<group>";
@@ -271,22 +268,22 @@
 		C96BD8661813045500325052 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9B0B522A18429D0C002E68D1 /* TabBarController.h */,
-				9B0B522B18429D0C002E68D1 /* TabBarController.m */,
-				9B0B521418429CB9002E68D1 /* MessageDetailViewController.h */,
-				9B0B521518429CB9002E68D1 /* MessageDetailViewController.m */,
-				9B0B521618429CB9002E68D1 /* MessageDetailViewController.xib */,
-				9B0B521718429CB9002E68D1 /* MessageViewController.h */,
-				9B0B521818429CB9002E68D1 /* MessageViewController.m */,
-				9B0B521918429CB9002E68D1 /* SplashViewController.h */,
-				9B0B521A18429CB9002E68D1 /* SplashViewController.m */,
-				9B0B521B18429CB9002E68D1 /* SplashViewController.xib */,
-				9B0B521C18429CB9002E68D1 /* UserListViewController.h */,
-				9B0B521D18429CB9002E68D1 /* UserListViewController.m */,
-				9B0B521E18429CB9002E68D1 /* UserOptionsViewController.h */,
-				9B0B521F18429CB9002E68D1 /* UserOptionsViewController.m */,
-				9B0B522018429CB9002E68D1 /* UserProfileViewController.h */,
-				9B0B522118429CB9002E68D1 /* UserProfileViewController.m */,
+				9B0B522A18429D0C002E68D1 /* CBATabBarController.h */,
+				9B0B522B18429D0C002E68D1 /* CBATabBarController.m */,
+				9B0B521418429CB9002E68D1 /* CBAMessageDetailViewController.h */,
+				9B0B521518429CB9002E68D1 /* CBAMessageDetailViewController.m */,
+				9B0B521618429CB9002E68D1 /* CBAMessageDetailViewController.xib */,
+				9B0B521718429CB9002E68D1 /* CBAMessageViewController.h */,
+				9B0B521818429CB9002E68D1 /* CBAMessageViewController.m */,
+				9B0B521918429CB9002E68D1 /* CBASplashViewController.h */,
+				9B0B521A18429CB9002E68D1 /* CBASplashViewController.m */,
+				9B0B521B18429CB9002E68D1 /* CBASplashViewController.xib */,
+				9B0B521C18429CB9002E68D1 /* CBAUserListViewController.h */,
+				9B0B521D18429CB9002E68D1 /* CBAUserListViewController.m */,
+				9B0B521E18429CB9002E68D1 /* CBAUserOptionsViewController.h */,
+				9B0B521F18429CB9002E68D1 /* CBAUserOptionsViewController.m */,
+				9B0B522018429CB9002E68D1 /* CBAUserProfileViewController.h */,
+				9B0B522118429CB9002E68D1 /* CBAUserProfileViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -302,12 +299,10 @@
 		C9A6236918130F0E00CFA25E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9B0B520B18429C5E002E68D1 /* Message.h */,
-				9B0B520C18429C5E002E68D1 /* Message.m */,
-				9B0B520E18429C6A002E68D1 /* Broadcast.h */,
-				9B0B520F18429C6A002E68D1 /* Broadcast.m */,
-				9B0B521118429C79002E68D1 /* User.h */,
-				9B0B521218429C79002E68D1 /* User.m */,
+				9B0B520B18429C5E002E68D1 /* CBAMessage.h */,
+				9B0B520C18429C5E002E68D1 /* CBAMessage.m */,
+				9B0B521118429C79002E68D1 /* CBAUser.h */,
+				9B0B521218429C79002E68D1 /* CBAUser.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -315,17 +310,17 @@
 		C9C80B1D1817BC7A0043B658 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9B0B520818429C4D002E68D1 /* UserCell.h */,
-				9B0B520918429C4D002E68D1 /* UserCell.m */,
-				9B0B520318429C3F002E68D1 /* MessageCell.h */,
-				9B0B520418429C3F002E68D1 /* MessageCell.m */,
-				9B0B520518429C3F002E68D1 /* MessageCell.xib */,
-				9B0B51F918429C25002E68D1 /* MessageReceivedCell.h */,
-				9B0B51FA18429C25002E68D1 /* MessageReceivedCell.m */,
-				9B0B51FB18429C25002E68D1 /* MessageReceivedCell.xib */,
-				9B0B51FC18429C25002E68D1 /* MessageSentCell.h */,
-				9B0B51FD18429C25002E68D1 /* MessageSentCell.m */,
-				9B0B51FE18429C25002E68D1 /* MessageSentCell.xib */,
+				9B0B520818429C4D002E68D1 /* CBAUserCell.h */,
+				9B0B520918429C4D002E68D1 /* CBAUserCell.m */,
+				9B0B520318429C3F002E68D1 /* CBAMessageCell.h */,
+				9B0B520418429C3F002E68D1 /* CBAMessageCell.m */,
+				9B0B520518429C3F002E68D1 /* CBAMessageCell.xib */,
+				9B0B51F918429C25002E68D1 /* CBAMessageReceivedCell.h */,
+				9B0B51FA18429C25002E68D1 /* CBAMessageReceivedCell.m */,
+				9B0B51FB18429C25002E68D1 /* CBAMessageReceivedCell.xib */,
+				9B0B51FC18429C25002E68D1 /* CBAMessageSentCell.h */,
+				9B0B51FD18429C25002E68D1 /* CBAMessageSentCell.m */,
+				9B0B51FE18429C25002E68D1 /* CBAMessageSentCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -342,8 +337,8 @@
 		C9CC5C1D182733A800A6F1BF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9B0B51F018429BE3002E68D1 /* Common.h */,
-				9B0B51F118429BE3002E68D1 /* Common.m */,
+				9B0B51F018429BE3002E68D1 /* CBACommon.h */,
+				9B0B51F118429BE3002E68D1 /* CBACommon.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -436,13 +431,13 @@
 			files = (
 				D06C89AC1842D718000E5F8B /* Images.xcassets in Resources */,
 				C9C513451842BBA1008EE437 /* CoderBacon-Info.plist in Resources */,
-				C9C513441842BA1D008EE437 /* MessageDetailViewController.xib in Resources */,
+				C9C513441842BA1D008EE437 /* CBAMessageDetailViewController.xib in Resources */,
 				C9C513431842BA0B008EE437 /* Main.storyboard in Resources */,
-				9B0B520218429C25002E68D1 /* MessageSentCell.xib in Resources */,
-				9B0B520718429C3F002E68D1 /* MessageCell.xib in Resources */,
+				9B0B520218429C25002E68D1 /* CBAMessageSentCell.xib in Resources */,
+				9B0B520718429C3F002E68D1 /* CBAMessageCell.xib in Resources */,
 				C96BD8651813037500325052 /* business_cat.jpg in Resources */,
-				9B0B522618429CB9002E68D1 /* SplashViewController.xib in Resources */,
-				9B0B520018429C25002E68D1 /* MessageReceivedCell.xib in Resources */,
+				9B0B522618429CB9002E68D1 /* CBASplashViewController.xib in Resources */,
+				9B0B520018429C25002E68D1 /* CBAMessageReceivedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,24 +489,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0B51FF18429C25002E68D1 /* MessageReceivedCell.m in Sources */,
-				9B0B522518429CB9002E68D1 /* SplashViewController.m in Sources */,
-				9B0B522218429CB9002E68D1 /* MessageDetailViewController.m in Sources */,
-				9B0B522718429CB9002E68D1 /* UserListViewController.m in Sources */,
-				9B0B522818429CB9002E68D1 /* UserOptionsViewController.m in Sources */,
+				9B0B51FF18429C25002E68D1 /* CBAMessageReceivedCell.m in Sources */,
+				9B0B522518429CB9002E68D1 /* CBASplashViewController.m in Sources */,
+				9B0B522218429CB9002E68D1 /* CBAMessageDetailViewController.m in Sources */,
+				9B0B522718429CB9002E68D1 /* CBAUserListViewController.m in Sources */,
+				9B0B522818429CB9002E68D1 /* CBAUserOptionsViewController.m in Sources */,
 				9BF4D86B18429AFD00398327 /* UIScrollView+ScrollPositions.m in Sources */,
-				9B0B521318429C79002E68D1 /* User.m in Sources */,
-				9B0B51F218429BE3002E68D1 /* Common.m in Sources */,
-				9B0B522418429CB9002E68D1 /* MessageViewController.m in Sources */,
-				9B0B520D18429C5E002E68D1 /* Message.m in Sources */,
-				9B0B520118429C25002E68D1 /* MessageSentCell.m in Sources */,
-				9B0B522C18429D0C002E68D1 /* TabBarController.m in Sources */,
-				9B0B521018429C6A002E68D1 /* Broadcast.m in Sources */,
-				9B0B520618429C3F002E68D1 /* MessageCell.m in Sources */,
-				9B0B51F518429BF1002E68D1 /* AsyncServices.m in Sources */,
+				9B0B521318429C79002E68D1 /* CBAUser.m in Sources */,
+				9B0B51F218429BE3002E68D1 /* CBACommon.m in Sources */,
+				9B0B522418429CB9002E68D1 /* CBAMessageViewController.m in Sources */,
+				9B0B520D18429C5E002E68D1 /* CBAMessage.m in Sources */,
+				9B0B520118429C25002E68D1 /* CBAMessageSentCell.m in Sources */,
+				9B0B522C18429D0C002E68D1 /* CBATabBarController.m in Sources */,
+				9B0B520618429C3F002E68D1 /* CBAMessageCell.m in Sources */,
+				9B0B51F518429BF1002E68D1 /* CBAAsyncServices.m in Sources */,
 				9BF4D86D18429B1000398327 /* main.m in Sources */,
-				9B0B522918429CB9002E68D1 /* UserProfileViewController.m in Sources */,
-				9B0B520A18429C4D002E68D1 /* UserCell.m in Sources */,
+				9B0B522918429CB9002E68D1 /* CBAUserProfileViewController.m in Sources */,
+				9B0B520A18429C4D002E68D1 /* CBAUserCell.m in Sources */,
 				9BF4D86018429A3600398327 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

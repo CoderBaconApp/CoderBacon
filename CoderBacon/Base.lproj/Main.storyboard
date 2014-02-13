@@ -7,7 +7,7 @@
         <!--Splash View Controller-->
         <scene sceneID="uki-0F-8bp">
             <objects>
-                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cQL-AD-24I" customClass="SplashViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cQL-AD-24I" customClass="CBASplashViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kDS-MQ-VVO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJh-RZ-6iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -33,7 +33,7 @@
         <!--Message View Controller - Messages-->
         <scene sceneID="kql-xH-hLc">
             <objects>
-                <tableViewController title="Messages" id="f3u-ZB-c1n" customClass="MessageViewController" sceneMemberID="viewController">
+                <tableViewController title="Messages" id="f3u-ZB-c1n" customClass="CBAMessageViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iZ9-fE-Ngo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
         <!--Message Detail View Controller - User's Name-->
         <scene sceneID="eba-34-6vd">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="ao6-fD-Tn4" customClass="MessageDetailViewController" sceneMemberID="viewController">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="ao6-fD-Tn4" customClass="CBAMessageDetailViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="User's Name" id="r7w-GE-abb"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zv5-xe-hld" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,7 +80,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="jed-Vo-Aem">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="41H-Qg-xAa" customClass="TabBarController" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="41H-Qg-xAa" customClass="CBATabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="N28-Xv-vho"/>
                     <keyCommands/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -117,7 +117,7 @@
         <!--User List View Controller - Users-->
         <scene sceneID="w5g-Ub-fSb">
             <objects>
-                <viewController title="Users" id="Zso-fN-rhf" customClass="UserListViewController" sceneMemberID="viewController">
+                <viewController title="Users" id="Zso-fN-rhf" customClass="CBAUserListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8C5-pI-yc5"/>
                         <viewControllerLayoutGuide type="bottom" id="b1A-mM-bGt"/>
@@ -131,7 +131,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserListViewCell" rowHeight="50" id="g9k-4b-08k" customClass="UserCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CBAUserListViewCell" rowHeight="50" id="g9k-4b-08k" customClass="CBAUserCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g9k-4b-08k" id="zDl-gO-sQV">
@@ -210,7 +210,7 @@
         <!--User Profile View Controller - User Name-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="UserProfileViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="CBAUserProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1J8-s9-1sT"/>
                         <viewControllerLayoutGuide type="bottom" id="sHs-bc-2zY"/>
@@ -291,8 +291,6 @@
     </scenes>
     <resources>
         <image name="Envelope" width="27" height="21"/>
-        <image name="Envelope" width="27" height="21"/>
-        <image name="Group" width="29" height="29"/>
         <image name="Group" width="29" height="29"/>
         <image name="User" width="21" height="22"/>
         <image name="business_cat.jpg" width="275" height="276"/>
@@ -303,6 +301,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iGc-SX-f6L"/>
+        <segue reference="Dm2-Uy-HxU"/>
     </inferredMetricsTieBreakers>
 </document>

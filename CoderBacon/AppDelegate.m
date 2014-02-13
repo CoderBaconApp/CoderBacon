@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-#import "Message.h"
+#import "CBAMessage.h"
 #define USER @"user"
 
 @implementation AppDelegate

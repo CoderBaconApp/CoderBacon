@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CBAMessageSentCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CBAMessageSentCell" id="mV4-yW-IJw" customClass="CBAMessageSentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T28-PL-ecL">
+                        <rect key="frame" x="91" y="0.0" width="219" height="96"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="872" verticalHuggingPriority="849" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="Mzb-aH-pXj">
+                                <rect key="frame" x="9" y="6" width="200" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message Your Crappy Message </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.95902782641518203" green="0.96154766120208435" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mzb-aH-pXj" firstAttribute="leading" secondItem="T28-PL-ecL" secondAttribute="leading" constant="9" id="7di-F5-Gm5"/>
+                            <constraint firstAttribute="bottom" secondItem="Mzb-aH-pXj" secondAttribute="bottom" constant="6" id="SyG-6E-WJO"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" priority="900" constant="220" id="UBV-d4-6yU"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="900" constant="27" id="pY7-Py-unw"/>
+                            <constraint firstItem="Mzb-aH-pXj" firstAttribute="top" secondItem="T28-PL-ecL" secondAttribute="top" constant="6" id="q4P-Xr-cd1"/>
+                            <constraint firstAttribute="trailing" secondItem="Mzb-aH-pXj" secondAttribute="trailing" constant="10" id="uq5-HK-Stz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="T28-PL-ecL" secondAttribute="trailing" constant="10" id="HwD-Mt-b9f"/>
+                <constraint firstItem="T28-PL-ecL" firstAttribute="top" secondItem="mV4-yW-IJw" secondAttribute="top" id="t3p-Gt-aRl"/>
+            </constraints>
+            <size key="customSize" width="320" height="96"/>
+            <connections>
+                <outlet property="messageBubbleView" destination="T28-PL-ecL" id="RsZ-7Q-ns8"/>
+                <outlet property="messageLabel" destination="Mzb-aH-pXj" id="dj4-fV-UGC"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
