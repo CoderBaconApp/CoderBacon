@@ -6,7 +6,7 @@
 //  http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
 
 #import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
+
 
 @interface CBAUser : NSObject
 @property (strong, nonatomic) NSString *name;
@@ -21,9 +21,9 @@
 @property (strong, nonatomic) UIImage *profilePhoto;
 @property (nonatomic) double distance;
 @property (readonly) NSString *distanceFormat;
-@property (strong, nonatomic) PFUser *pfUser;
--(PFObject *) toPFObject;
+
+
 #pragma mark Class Methods
 + (void)allUsersWithCompletion:(void (^)(NSArray *users, NSError *error))complete;
-+ (CBAUser *)fromPFObject:(PFObject *)object;
+
 @end

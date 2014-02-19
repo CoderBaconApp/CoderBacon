@@ -53,29 +53,29 @@
     
     mdvc.title = self.user.name;
     mdvc.messages = [[NSArray alloc] init];
-    mdvc.otherUser = self.user.pfUser;
+    //mdvc.otherUser = self.user.pfUser;
 }
 - (IBAction)blockUserPressed {
     [self showActionSheet];
 }
 
 - (void)blockUser {
-    PFObject *blocker = [[PFObject alloc] initWithClassName:@"BlockedUser"];
-    PFObject *blockee = [[PFObject alloc] initWithClassName:@"BlockedUser"];
-    
-    blocker[@"user"] = [PFUser currentUser];
-    blocker[@"blockedUserString"] = self.user.objectId;
-    
-    blockee[@"user"] = self.user.pfUser;
-    blockee[@"blockedUserString"] = [PFUser currentUser].objectId;
-    
-    [blocker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        NSLog(@"Blocker Succeeded: %d %@", succeeded, error);
-    }];
-    
-    [blockee saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        NSLog(@"Blockee Succeeded: %d %@", succeeded, error);
-    }];
+//    PFObject *blocker = [[PFObject alloc] initWithClassName:@"BlockedUser"];
+//    PFObject *blockee = [[PFObject alloc] initWithClassName:@"BlockedUser"];
+//    
+//    blocker[@"user"] = [PFUser currentUser];
+//    blocker[@"blockedUserString"] = self.user.objectId;
+//    
+//    blockee[@"user"] = self.user.pfUser;
+//    blockee[@"blockedUserString"] = [PFUser currentUser].objectId;
+//    
+//    [blocker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        NSLog(@"Blocker Succeeded: %d %@", succeeded, error);
+//    }];
+//    
+//    [blockee saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        NSLog(@"Blockee Succeeded: %d %@", succeeded, error);
+//    }];
 }
 
 #pragma mark ActionSheet

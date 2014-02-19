@@ -10,10 +10,10 @@
 #define GEO_LOCATION_UPDATED @"GeoLocationUpdated"
 #define LAT_LNG_UPDATED @"LatLngUpdated"
 
-@interface CBAAsyncServices : NSObject <CLLocationManagerDelegate>
+@interface CBAAsyncServices : NSObject //<CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSString *geoLocation;
-@property (strong, nonatomic) CLLocation *lastLocation;
+//@property (strong, nonatomic) CLLocation *lastLocation;
 
 + (CBAAsyncServices *)instance;
 - (void)saveInitialUserData;

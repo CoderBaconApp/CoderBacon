@@ -5,7 +5,6 @@
 //  Licensed under Creative Commons BY-NC-SA
 //  http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
 
-#import <Parse/Parse.h>
 #import "CBAAsyncServices.h"
 #import "CBATabBarController.h"
 #import "CBASplashViewController.h"
@@ -50,7 +49,8 @@
 }
 
 + (BOOL)isLoggedIn {
-    return [PFUser currentUser] && [[FBSession activeSession] isOpen];
+    //return [PFUser currentUser] && [[FBSession activeSession] isOpen];
+    return false;
 }
 
 - (void)loadTabs {

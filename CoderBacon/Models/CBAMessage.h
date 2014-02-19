@@ -5,20 +5,16 @@
 //  Licensed under Creative Commons BY-NC-SA
 //  http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
 
-#import <Parse/Parse.h>
 #import <Foundation/Foundation.h>
+#import "CBAUser.h"
 
 @interface CBAMessage : NSObject
 
 @property (strong, nonatomic) NSString* text;
-@property (strong, nonatomic) PFUser* sender;
-@property (strong, nonatomic) PFUser* receiver;
+@property (strong, nonatomic) CBAUser* sender;
+@property (strong, nonatomic) CBAUser* receiver;
 
 + (void)allMessagesForLoggedInUserWithCompletion:(void (^)(NSMutableDictionary *messages, NSMutableDictionary *users, NSError *error))complete;
-+ (void)allMessagesBetweenUser:(PFUser *)user withCompletion:(void (^)(NSArray *messages, NSError *error))complete;
-+ (CBAMessage *) fromPFObject:(PFObject *) object;
-
-- (id)initWithText:(NSString *) text andReceiver:(PFUser *)receiver;
-- (PFObject *)toPFObject;
+- (id)initWithText:(NSString *) text andReceiver:(CBAUser *)receiver;
 
 @end
