@@ -6,11 +6,11 @@
 //  http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
+#import "CBAUser.h"
 
 @interface CBAMessageDetailViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) PFUser *otherUser;
+@property (strong, nonatomic) CBAUser *otherUser;
 @property (strong, nonatomic) NSArray *messages;
 @property (weak, nonatomic) IBOutlet UICollectionView *messageCollectionView;
 

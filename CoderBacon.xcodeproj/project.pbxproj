@@ -25,7 +25,6 @@
 		C90B3A0B181300F9003CE519 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0A181300F9003CE519 /* QuartzCore.framework */; };
 		C90B3A0D181300FF003CE519 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0C181300FF003CE519 /* Security.framework */; };
 		C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A101813010E003CE519 /* SystemConfiguration.framework */; };
-		C94429E51842AFA10043B974 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94429E41842AFA10043B974 /* Parse.framework */; };
 		C9C513431842BA0B008EE437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86318429A8900398327 /* Main.storyboard */; };
 		D06C89AC1842D718000E5F8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06C89AB1842D718000E5F8B /* Images.xcassets */; };
 		D097659118AD734000A3AB1D /* CBAMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D097658218AD734000A3AB1D /* CBAMessageDetailViewController.m */; };
@@ -85,7 +84,6 @@
 		C90B3A0A181300F9003CE519 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C90B3A0C181300FF003CE519 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C90B3A101813010E003CE519 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C94429E41842AFA10043B974 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D06C89AB1842D718000E5F8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D097658118AD734000A3AB1D /* CBAMessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAMessageDetailViewController.h; sourceTree = "<group>"; };
 		D097658218AD734000A3AB1D /* CBAMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAMessageDetailViewController.m; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				C90B3A0B181300F9003CE519 /* QuartzCore.framework in Frameworks */,
 				C90B3A09181300F3003CE519 /* MobileCoreServices.framework in Frameworks */,
 				C90B3A07181300EC003CE519 /* libz.1.1.3.dylib in Frameworks */,
-				C94429E51842AFA10043B974 /* Parse.framework in Frameworks */,
 				C90B3A05181300DA003CE519 /* CoreLocation.framework in Frameworks */,
 				9BAE3721180CE9020058A7A8 /* CoreGraphics.framework in Frameworks */,
 				C90B3A03181300CF003CE519 /* CFNetwork.framework in Frameworks */,
@@ -187,7 +184,6 @@
 		9BAE371D180CE9020058A7A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C94429E41842AFA10043B974 /* Parse.framework */,
 				C90B3A101813010E003CE519 /* SystemConfiguration.framework */,
 				C90B3A0C181300FF003CE519 /* Security.framework */,
 				C90B3A0A181300F9003CE519 /* QuartzCore.framework */,

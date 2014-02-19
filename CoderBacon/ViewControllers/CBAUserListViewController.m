@@ -116,7 +116,7 @@
 }
 
 - (IBAction)logOutClicked:(id)sender {
-    [PFUser logOut];
+    //[PFUser logOut];
     [[NSNotificationCenter defaultCenter] postNotificationName:LOG_OUT_NOTIFICATION object:self];
 }
 

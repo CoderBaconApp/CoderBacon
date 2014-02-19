@@ -6,7 +6,6 @@
 //  http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
 
 #import "AppDelegate.h"
-#import <Parse/Parse.h>
 #import "CBAMessage.h"
 #define USER @"user"
 
@@ -14,13 +13,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parse setApplicationId:@"0fZteiWeXkv49jX4FkUrBUsWTnuGIhR4qFXNLwAt"
-               clientKey:@"TdxysibqfcIxq85ojnw3uB0UhX9mJ98gMkNy2yuu"];
-    
-    [PFFacebookUtils initializeFacebook];
-    
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
     return YES;
 }
 
@@ -49,34 +41,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-#pragma mark Parse Facebook Integration
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    return [PFFacebookUtils handleOpenURL:url];
-}
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [PFFacebookUtils handleOpenURL:url];
-}
-
-#pragma mark Push Notifications
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
-    // Store the deviceToken in the current installation and save it to Parse.
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [currentInstallation setDeviceTokenFromData:newDeviceToken];
-    [currentInstallation setObject:[PFUser currentUser] forKey:USER];
-    [currentInstallation saveInBackground];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    NSString *senderName = userInfo[@"senderName"];
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Message" message:[NSString stringWithFormat:@"New message from %@", senderName] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-    [alertView show];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"message" object:self userInfo:userInfo];
 }
 
 @end

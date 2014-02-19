@@ -118,15 +118,15 @@
     return _messages.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CBAMessage *msg = _messages[indexPath.row];
-    NSString *type = ([msg.receiver.objectId isEqualToString:[PFUser currentUser].objectId] ? MESSAGE_RECEIVED_CELL : MESSAGE_SENT_CELL);
-    CBAMessageSentCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:type forIndexPath:indexPath];
-    
-    cell.messageLabel.text = msg.text;
-    
-    return cell;
-}
+//- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    CBAMessage *msg = _messages[indexPath.row];
+//    NSString *type = ([msg.receiver.objectId isEqualToString:[PFUser currentUser].objectId] ? MESSAGE_RECEIVED_CELL : MESSAGE_SENT_CELL);
+//    CBAMessageSentCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:type forIndexPath:indexPath];
+//    
+//    cell.messageLabel.text = msg.text;
+//    
+//    return cell;
+//}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -188,27 +188,27 @@
 }
 
 - (void)updateMessages {
-    [CBAMessage allMessagesBetweenUser:_otherUser
-                     withCompletion:^(NSArray *messages, NSError *error) {
-                         _messages = messages;
-                         [self.messageCollectionView reloadData];
-                         [self.messageCollectionView scrollToBottom];
-    }];
+//    [CBAMessage allMessagesBetweenUser:_otherUser
+//                     withCompletion:^(NSArray *messages, NSError *error) {
+//                         _messages = messages;
+//                         [self.messageCollectionView reloadData];
+//                         [self.messageCollectionView scrollToBottom];
+//    }];
 }
 
 - (IBAction)sendMessageTouch:(id)sender {
     CBAMessage *messageNew = [[CBAMessage alloc] initWithText:_messageTextField.text andReceiver:_otherUser];
     
-    [[messageNew toPFObject] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (error) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error sending message" message:[NSString stringWithFormat:@"%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        
-            [alert show];
-        }
-        else {
-            [self updateMessages];
-        }
-    }];
+//    [[messageNew toPFObject] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (error) {
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error sending message" message:[NSString stringWithFormat:@"%@", error] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+//        
+//            [alert show];
+//        }
+//        else {
+//            [self updateMessages];
+//        }
+//    }];
     
     [_messageTextField resignFirstResponder];
     _messageTextField.text = @"";
