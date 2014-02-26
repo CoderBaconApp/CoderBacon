@@ -8,12 +8,36 @@
 #import "AppDelegate.h"
 #import "CBAMessage.h"
 #define USER @"user"
+#import <AFNetworking.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"Hello world!");
+    [self test];
+    
     return YES;
+}
+
+- (void)test {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    //NSURLCredential *credential = [NSURLCredential credentialWithUser:@"user" password:@"passwd" persistence:NSURLCredentialPersistenceNone];
+    NSURLCredential *credential = [NSURLCredential credentialWithUser:@"justindsn@gmail.com" password:@"password" persistence:NSURLCredentialPersistenceNone];
+    
+    //NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"GET" URLString:@"https://httpbin.org/basic-auth/user/passwd" parameters:nil];
+    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"GET" URLString:@"http://localhost:3000/messages.json" parameters:nil];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCredential:credential];
+    [operation setResponseSerializer:[AFJSONResponseSerializer alloc]];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Success: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure: %@", error);
+    }];
+    [manager.operationQueue addOperation:operation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
