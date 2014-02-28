@@ -26,6 +26,8 @@
 		C90B3A0D181300FF003CE519 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A0C181300FF003CE519 /* Security.framework */; };
 		C90B3A111813010E003CE519 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B3A101813010E003CE519 /* SystemConfiguration.framework */; };
 		C9C513431842BA0B008EE437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF4D86318429A8900398327 /* Main.storyboard */; };
+		D01DBE2A18BD81020054DB8E /* CBAUserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DBE2818BD81020054DB8E /* CBAUserLoginViewController.m */; };
+		D01DBE2B18BD81020054DB8E /* CBAUserLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01DBE2918BD81020054DB8E /* CBAUserLoginViewController.xib */; };
 		D06C89AC1842D718000E5F8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06C89AB1842D718000E5F8B /* Images.xcassets */; };
 		D097659118AD734000A3AB1D /* CBAMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D097658218AD734000A3AB1D /* CBAMessageDetailViewController.m */; };
 		D097659218AD734000A3AB1D /* CBAMessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D097658318AD734000A3AB1D /* CBAMessageDetailViewController.xib */; };
@@ -84,6 +86,9 @@
 		C90B3A0A181300F9003CE519 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C90B3A0C181300FF003CE519 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C90B3A101813010E003CE519 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D01DBE2718BD81020054DB8E /* CBAUserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAUserLoginViewController.h; sourceTree = "<group>"; };
+		D01DBE2818BD81020054DB8E /* CBAUserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAUserLoginViewController.m; sourceTree = "<group>"; };
+		D01DBE2918BD81020054DB8E /* CBAUserLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBAUserLoginViewController.xib; sourceTree = "<group>"; };
 		D06C89AB1842D718000E5F8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D097658118AD734000A3AB1D /* CBAMessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAMessageDetailViewController.h; sourceTree = "<group>"; };
 		D097658218AD734000A3AB1D /* CBAMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAMessageDetailViewController.m; sourceTree = "<group>"; };
@@ -276,6 +281,9 @@
 				D097658E18AD734000A3AB1D /* CBAUserOptionsViewController.m */,
 				D097658F18AD734000A3AB1D /* CBAUserProfileViewController.h */,
 				D097659018AD734000A3AB1D /* CBAUserProfileViewController.m */,
+				D01DBE2718BD81020054DB8E /* CBAUserLoginViewController.h */,
+				D01DBE2818BD81020054DB8E /* CBAUserLoginViewController.m */,
+				D01DBE2918BD81020054DB8E /* CBAUserLoginViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -373,8 +381,9 @@
 		9BAE3713180CE9020058A7A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CBA;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Pamela Ocampo";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					9BAE371A180CE9020058A7A8 = {
 						DevelopmentTeam = ZF45BMY3TP;
@@ -421,6 +430,7 @@
 				D097659518AD734000A3AB1D /* CBASplashViewController.xib in Resources */,
 				C9C513431842BA0B008EE437 /* Main.storyboard in Resources */,
 				D09765C018AD768600A3AB1D /* CBAMessageReceivedCell.xib in Resources */,
+				D01DBE2B18BD81020054DB8E /* CBAUserLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +500,7 @@
 				9B0B520A18429C4D002E68D1 /* CBAUserCell.m in Sources */,
 				D097659618AD734000A3AB1D /* CBATabBarController.m in Sources */,
 				D09765A718AD744900A3AB1D /* UIScrollView+ScrollPositions.m in Sources */,
+				D01DBE2A18BD81020054DB8E /* CBAUserLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

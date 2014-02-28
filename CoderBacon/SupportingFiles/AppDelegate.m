@@ -6,38 +6,26 @@
 //  http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US
 
 #import "AppDelegate.h"
+#import "CBAUserLoginViewController.h"
+
+//Old imports
 #import "CBAMessage.h"
 #define USER @"user"
-#import <AFNetworking.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSLog(@"Hello world!");
-    [self test];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // Override point for customization after application launch.
+    CBAUserLoginViewController *userLoginVC = [[CBAUserLoginViewController alloc] init];
+    self.window.rootViewController = userLoginVC;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     return YES;
-}
-
-- (void)test {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
-    //NSURLCredential *credential = [NSURLCredential credentialWithUser:@"user" password:@"passwd" persistence:NSURLCredentialPersistenceNone];
-    NSURLCredential *credential = [NSURLCredential credentialWithUser:@"justindsn@gmail.com" password:@"password" persistence:NSURLCredentialPersistenceNone];
-    
-    //NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"GET" URLString:@"https://httpbin.org/basic-auth/user/passwd" parameters:nil];
-    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"GET" URLString:@"http://localhost:3000/messages.json" parameters:nil];
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    [operation setCredential:credential];
-    [operation setResponseSerializer:[AFJSONResponseSerializer alloc]];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Success: %@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Failure: %@", error);
-    }];
-    [manager.operationQueue addOperation:operation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
